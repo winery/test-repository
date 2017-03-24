@@ -23,5 +23,8 @@
                 <winery:type>xsd:anyURI</winery:type>
             </winery:properties>
         </winery:PropertiesDefinition>
+        <tosca:CapabilityDefinitions>
+            <tosca:CapabilityDefinition xmlns:wfrtc="http://winery.opentosca.org/test/capabilitytypes/fruits" name="ImportConstraintsHealthy" capabilityType="wfrtc:Healthy" lowerBound="1" upperBound="1"/>
+        </tosca:CapabilityDefinitions>
     </tosca:NodeType>
 </tosca:Definitions>
