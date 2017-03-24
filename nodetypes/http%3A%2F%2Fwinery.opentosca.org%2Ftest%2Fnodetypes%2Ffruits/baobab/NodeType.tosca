@@ -24,7 +24,11 @@
             </winery:properties>
         </winery:PropertiesDefinition>
         <tosca:CapabilityDefinitions>
-            <tosca:CapabilityDefinition xmlns:wfrtc="http://winery.opentosca.org/test/capabilitytypes/fruits" name="ImportConstraintsHealthy" capabilityType="wfrtc:Healthy" lowerBound="1" upperBound="1"/>
+            <tosca:CapabilityDefinition xmlns:wfrtc="http://winery.opentosca.org/test/capabilitytypes/fruits" name="ImportConstraintsHealthy" capabilityType="wfrtc:Healthy" lowerBound="1" upperBound="1">
+                <tosca:Constraints>
+                    <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy"/>
+                </tosca:Constraints>
+            </tosca:CapabilityDefinition>
         </tosca:CapabilityDefinitions>
     </tosca:NodeType>
 </tosca:Definitions>
