@@ -23,6 +23,24 @@
                 <winery:type>xsd:anyURI</winery:type>
             </winery:properties>
         </winery:PropertiesDefinition>
+        <tosca:Interfaces>
+            <tosca:Interface name="bananaInterface">
+                <tosca:Operation name="peel">
+                    <tosca:InputParameters>
+                        <tosca:InputParameter name="bananaInShell" type="xsd:string" required="yes"/>
+                        <tosca:InputParameter name="peeler" type="xsd:string" required="yes"/>
+                    </tosca:InputParameters>
+                    <tosca:OutputParameters>
+                        <tosca:OutputParameter name="peeledBanana" type="xsd:string" required="no"/>
+                    </tosca:OutputParameters>
+                </tosca:Operation>
+                <tosca:Operation name="eat">
+                    <tosca:InputParameters>
+                        <tosca:InputParameter name="mouth" type="xsd:string" required="yes"/>
+                    </tosca:InputParameters>
+                </tosca:Operation>
+            </tosca:Interface>
+        </tosca:Interfaces>
         <tosca:CapabilityDefinitions>
             <tosca:CapabilityDefinition xmlns:wfrtc="http://winery.opentosca.org/test/capabilitytypes/fruits" name="ImportConstraintsHealthy" capabilityType="wfrtc:Healthy" lowerBound="1" upperBound="1">
                 <tosca:Constraints>
