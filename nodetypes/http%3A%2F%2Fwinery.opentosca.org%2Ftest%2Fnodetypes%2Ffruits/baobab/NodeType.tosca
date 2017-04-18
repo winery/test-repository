@@ -24,11 +24,6 @@
             </winery:properties>
         </winery:PropertiesDefinition>
         <tosca:RequirementDefinitions>
-            <tosca:RequirementDefinition xmlns:wfrq="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsHealthy" requirementType="wfrq:MinimumWeight" lowerBound="1" upperBound="1">
-                <tosca:Constraints>
-                    <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy"/>
-                </tosca:Constraints>
-            </tosca:RequirementDefinition>
             <tosca:RequirementDefinition xmlns:wfrq="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsMaximumWeight" requirementType="wfrq:MaximumWeight" lowerBound="1" upperBound="1"/>
         </tosca:RequirementDefinitions>
         <tosca:CapabilityDefinitions>
