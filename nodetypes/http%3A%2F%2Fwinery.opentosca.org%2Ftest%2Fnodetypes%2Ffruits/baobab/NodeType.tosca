@@ -49,7 +49,7 @@
             </tosca:CapabilityDefinition>
         </tosca:CapabilityDefinitions>
         <tosca:RequirementDefinitions>
-            <tosca:RequirementDefinition xmlns:wfrtc="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsHealthy" requirementType="wfrtc:Healthy" lowerBound="1" upperBound="1">
+            <tosca:RequirementDefinition xmlns:wfrtc="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsHealthy" requirementType="wfrtc:MinimumWeight" lowerBound="1" upperBound="1">
                 <tosca:Constraints>
                     <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy"/>
                 </tosca:Constraints>
