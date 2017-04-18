@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfn-baobab" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits">
+<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfn-baobab" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits">
     <tosca:NodeType name="baobab" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits" winery:bordercolor="#89ee01">
         <winery:PropertiesDefinition elementname="BaobabProperties" namespace="http://winery.opentosca.org/test/nodetypes/fruits">
             <winery:properties>
@@ -23,6 +23,21 @@
                 <winery:type>xsd:anyURI</winery:type>
             </winery:properties>
         </winery:PropertiesDefinition>
+        <tosca:RequirementDefinitions>
+            <tosca:RequirementDefinition xmlns:wfrq="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsHealthy" requirementType="wfrq:MinimumWeight" lowerBound="1" upperBound="1">
+                <tosca:Constraints>
+                    <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy"/>
+                </tosca:Constraints>
+            </tosca:RequirementDefinition>
+            <tosca:RequirementDefinition xmlns:wfrq="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsMaximumWeight" requirementType="wfrq:MaximumWeight" lowerBound="1" upperBound="1"/>
+        </tosca:RequirementDefinitions>
+        <tosca:CapabilityDefinitions>
+            <tosca:CapabilityDefinition xmlns:wfc="http://winery.opentosca.org/test/capabilitytypes/fruits" name="ImportConstraintsHealthy" capabilityType="wfc:Healthy" lowerBound="1" upperBound="1">
+                <tosca:Constraints>
+                    <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy"/>
+                </tosca:Constraints>
+            </tosca:CapabilityDefinition>
+        </tosca:CapabilityDefinitions>
         <tosca:Interfaces>
             <tosca:Interface name="bananaInterface">
                 <tosca:Operation name="peel">
@@ -41,19 +56,5 @@
                 </tosca:Operation>
             </tosca:Interface>
         </tosca:Interfaces>
-        <tosca:CapabilityDefinitions>
-            <tosca:CapabilityDefinition xmlns:wfrtc="http://winery.opentosca.org/test/capabilitytypes/fruits" name="ImportConstraintsHealthy" capabilityType="wfrtc:Healthy" lowerBound="1" upperBound="1">
-                <tosca:Constraints>
-                    <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy"/>
-                </tosca:Constraints>
-            </tosca:CapabilityDefinition>
-        </tosca:CapabilityDefinitions>
-        <tosca:RequirementDefinitions>
-            <tosca:RequirementDefinition xmlns:wfrtc="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsHealthy" requirementType="wfrtc:MinimumWeight" lowerBound="1" upperBound="1">
-                <tosca:Constraints>
-                    <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy"/>
-                </tosca:Constraints>
-            </tosca:RequirementDefinition>
-        </tosca:RequirementDefinitions>
     </tosca:NodeType>
 </tosca:Definitions>
