@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfs-baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits">
-    <tosca:ServiceTemplate id="baobab_serviceTemplate" name="baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits"/>
+    <tosca:ServiceTemplate id="baobab_serviceTemplate" name="baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits">
+        <tosca:BoundaryDefinitions>
+            <tosca:Properties>
+                <harvest/>
+            </tosca:Properties>
+        </tosca:BoundaryDefinitions>
+    </tosca:ServiceTemplate>
 </tosca:Definitions>
