@@ -10,7 +10,7 @@
             </tosca:Properties>
         </tosca:BoundaryDefinitions>
         <tosca:TopologyTemplate>
-            <tosca:NodeTemplate xmlns:ns3="http://winery.opentosca.org/test/nodetypes/fruits" name="baobab" id="baobab" type="ns3:baobab" winery:location="undefined" winery:x="678" winery:y="287">
+            <tosca:NodeTemplate xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" name="baobab" id="baobab" type="wfn:baobab" winery:location="undefined" winery:x="678" winery:y="287">
                 <tosca:Properties>
                     <wfn:BaobabProperties xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" xmlns="http://winery.opentosca.org/test/nodetypes/fruits" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:ty="http://winery.opentosca.org/test/nodetypes/fruits">
                         <ty:Antioxidants/>
