@@ -3,7 +3,7 @@
     <tosca:ServiceTemplate id="baobab_serviceTemplate" name="baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits">
         <tosca:BoundaryDefinitions>
             <tosca:Properties>
-                <harvest xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice"/>
+                <harvest/>
                 <tosca:PropertyMappings>
                     <tosca:PropertyMapping serviceTemplatePropertyRef="/*[local-name()='harvest']" targetObjectRef="baobab" targetPropertyRef="/*[local-name()='BaobabProperties']/*[local-name()='HarvestedAt']"/>
                 </tosca:PropertyMappings>
@@ -12,7 +12,7 @@
         <tosca:TopologyTemplate>
             <tosca:NodeTemplate xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" name="baobab" id="baobab" type="wfn:baobab" winery:location="undefined" winery:x="678" winery:y="287">
                 <tosca:Properties>
-                    <wfn:BaobabProperties xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" xmlns="http://winery.opentosca.org/test/nodetypes/fruits" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:ty="http://winery.opentosca.org/test/nodetypes/fruits">
+                    <wfn:BaobabProperties xmlns="http://winery.opentosca.org/test/nodetypes/fruits" xmlns:ty="http://winery.opentosca.org/test/nodetypes/fruits">
                         <ty:Antioxidants/>
                         <ty:VitaminC/>
                         <ty:Potassium/>
@@ -22,5 +22,12 @@
                 </tosca:Properties>
             </tosca:NodeTemplate>
         </tosca:TopologyTemplate>
+        <tosca:Plans>
+            <tosca:Plan id="harvest_Plan" name="harvest Plan" planType="http://docs.oasis-open.org/tosca/ns/2011/12/PlanTypes/BuildPlan" planLanguage="http://www.opentosca.org/bpmn4tosca">
+                <tosca:InputParameters/>
+                <tosca:OutputParameters/>
+                <tosca:PlanModelReference reference="../servicetemplates/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fservicetemplates%252Ffruits/baobab_serviceTemplate/plans/harvest_Plan/harvest_Plan.bpmn4tosca"/>
+            </tosca:Plan>
+        </tosca:Plans>
     </tosca:ServiceTemplate>
 </tosca:Definitions>
