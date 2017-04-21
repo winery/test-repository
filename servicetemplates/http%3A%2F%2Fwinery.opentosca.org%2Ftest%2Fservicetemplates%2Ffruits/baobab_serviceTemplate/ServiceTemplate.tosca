@@ -24,8 +24,13 @@
         </tosca:TopologyTemplate>
         <tosca:Plans>
             <tosca:Plan id="harvest_Plan" name="harvest Plan" planType="http://docs.oasis-open.org/tosca/ns/2011/12/PlanTypes/BuildPlan" planLanguage="http://www.opentosca.org/bpmn4tosca">
-                <tosca:InputParameters/>
-                <tosca:OutputParameters/>
+                <tosca:InputParameters>
+                    <tosca:InputParameter name="available_workers" type="list" required="yes"/>
+                    <tosca:InputParameter name="available_machines" type="list" required="yes"/>
+                </tosca:InputParameters>
+                <tosca:OutputParameters>
+                    <tosca:OutputParameter name="harvested_fruits" type="number" required="yes"/>
+                </tosca:OutputParameters>
                 <tosca:PlanModelReference reference="../servicetemplates/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fservicetemplates%252Ffruits/baobab_serviceTemplate/plans/harvest_Plan/harvest_Plan.bpmn4tosca"/>
             </tosca:Plan>
         </tosca:Plans>
