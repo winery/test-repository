@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfatmp-baobab-ArtifactTemplate-Peel" targetNamespace="http://winery.opentosca.org/test/artifacttemplates/fruits">
-    <tosca:ArtifactTemplate xmlns:wfa="http://winery.opentosca.org/test/artifacttypes/fruits" name="baobab-ArtifactTemplate-Peel" id="baobab-ArtifactTemplate-Peel" type="wfa:JAR"/>
+    <tosca:ArtifactTemplate xmlns:wfa="http://winery.opentosca.org/test/artifacttypes/fruits" name="baobab-ArtifactTemplate-Peel" id="baobab-ArtifactTemplate-Peel" type="wfa:JAR">
+        <tosca:Properties>
+            <ns0:Properties xmlns:ns0="http://opentosca.org/artifacttypes/propertiesdefinition/winery" xmlns="http://opentosca.org/artifacttypes/propertiesdefinition/winery">
+                <Configuration/>
+                <Input>fruit in it's shell</Input>
+	</ns0:Properties>
+        </tosca:Properties>
+    </tosca:ArtifactTemplate>
 </tosca:Definitions>
