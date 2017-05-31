@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns3="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfptmp-german" targetNamespace="http://winery.opentosca.org/test/policytemplates/fruits">
+<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfptmp-german" targetNamespace="http://winery.opentosca.org/test/policytemplates/fruits">
     <tosca:PolicyTemplate xmlns:wfptmp="http://winery.opentosca.org/test/policytypes/fruits" name="german" id="german" type="wfptmp:european"/>
 </tosca:Definitions>
