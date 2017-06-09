@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfn-tree" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits">
+    <tosca:NodeType name="tree" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits" winery:bordercolor="#36739e"/>
+</tosca:Definitions>
