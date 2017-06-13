@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns2-straw" targetNamespace="http://winery.opentosca.org/test/ponyuniverse">
+    <tosca:NodeType name="straw" targetNamespace="http://winery.opentosca.org/test/ponyuniverse" winery:bordercolor="#8b0227">
+        <tosca:RequirementDefinitions>
+            <tosca:RequirementDefinition xmlns:ns2="http://winery.opentosca.org/test/ponyuniverse" name="ReqCanHostStraw" requirementType="ns2:ReqCanHostStraw" lowerBound="1" upperBound="unbounded"/>
+        </tosca:RequirementDefinitions>
+        <tosca:CapabilityDefinitions>
+            <tosca:CapabilityDefinition xmlns:ns2="http://winery.opentosca.org/test/ponyuniverse" name="CapWarmFloor" capabilityType="ns2:CapWarmFloor" lowerBound="1" upperBound="unbounded"/>
+        </tosca:CapabilityDefinitions>
+    </tosca:NodeType>
+</tosca:Definitions>

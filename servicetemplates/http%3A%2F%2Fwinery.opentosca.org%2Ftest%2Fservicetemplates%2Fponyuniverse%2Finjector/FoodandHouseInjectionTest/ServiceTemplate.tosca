@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns3-FoodandHouseInjectionTest" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/injector">
+    <tosca:ServiceTemplate id="FoodandHouseInjectionTest" name="FoodandHouseInjectionTest" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/injector">
+        <tosca:TopologyTemplate>
+            <tosca:NodeTemplate xmlns:ns4="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony" id="shetland_pony" type="ns4:shetland_pony" winery:location="undefined" winery:x="695" winery:y="166">
+                <tosca:Requirements>
+                    <tosca:Requirement name="ReqWarmFloor" id="requiresWarmFloor" type="ns4:ReqWarmFloor"/>
+                    <tosca:Requirement name="ReqDryFood" id="requiresDryFood" type="ns4:ReqDryFood"/>
+                </tosca:Requirements>
+            </tosca:NodeTemplate>
+        </tosca:TopologyTemplate>
+    </tosca:ServiceTemplate>
+</tosca:Definitions>
