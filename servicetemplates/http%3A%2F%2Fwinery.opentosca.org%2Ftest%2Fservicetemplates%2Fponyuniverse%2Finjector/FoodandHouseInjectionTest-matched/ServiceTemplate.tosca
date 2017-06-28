@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns7-FoodandHouseInjectionTest-matched" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/injector">
-    <tosca:ServiceTemplate id="FoodandHouseInjectionTest-matched" name="FoodandHouseInjectionTest-matched" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/injector">
+<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns7-FoodandHouseInjectionTest-matched" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/injector">
+    <tosca:ServiceTemplate name="FoodandHouseInjectionTest-matched" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/injector" id="FoodandHouseInjectionTest-matched">
         <tosca:TopologyTemplate>
-            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony" id="shetland_pony" type="ns0:shetland_pony" winery:location="*" winery:x="695" winery:y="166">
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony" type="ns0:shetland_pony" id="shetland_pony" winery:location="*" winery:x="695" winery:y="166">
                 <tosca:Requirements>
-                    <tosca:Requirement name="ReqWarmFloor" id="requiresWarmFloor" type="ns0:ReqWarmFloor"/>
-                    <tosca:Requirement name="ReqDryFood" id="requiresDryFood" type="ns0:ReqDryFood"/>
+                    <tosca:Requirement name="ReqWarmFloor" type="ns0:ReqWarmFloor" id="requiresWarmFloor"/>
+                    <tosca:Requirement name="ReqDryFood" type="ns0:ReqDryFood" id="requiresDryFood"/>
                 </tosca:Requirements>
             </tosca:NodeTemplate>
-            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="pasture" id="pasture" type="ns0:pasture" winery:location="PastureProvider" winery:x="841" winery:y="245">
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="pasture" type="ns0:pasture" id="pasture" winery:location="PastureProvider" winery:x="841" winery:y="245">
                 <tosca:Capabilities>
-                    <tosca:Capability name="CapWarmFloor" id="placeforaPony" type="ns0:CapWarmFloor"/>
+                    <tosca:Capability name="CapWarmFloor" type="ns0:CapWarmFloor" id="placeforaPony"/>
                 </tosca:Capabilities>
             </tosca:NodeTemplate>
-            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_100" id="con_100" type="ns0:standsOn">
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_100" type="ns0:standsOn" id="con_100">
                 <tosca:SourceElement ref="shetland_pony"/>
                 <tosca:TargetElement ref="pasture"/>
             </tosca:RelationshipTemplate>
-            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="oat" id="oat" type="ns0:oat" winery:location="FoodProvider" winery:x="733" winery:y="45">
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="oat" type="ns0:oat" id="oat" winery:location="FoodProvider" winery:x="733" winery:y="45">
                 <tosca:Requirements>
-                    <tosca:Requirement name="ReqCanHostOat" id="requiredAHostingTrough" type="ns0:ReqCanHostOat"/>
+                    <tosca:Requirement name="ReqCanHostOat" type="ns0:ReqCanHostOat" id="requiredAHostingTrough"/>
                 </tosca:Requirements>
                 <tosca:Capabilities>
-                    <tosca:Capability name="CapDryFood" id="provideDryFood" type="ns0:CapDryFood"/>
+                    <tosca:Capability name="CapDryFood" type="ns0:CapDryFood" id="provideDryFood"/>
                 </tosca:Capabilities>
             </tosca:NodeTemplate>
-            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="trough" id="trough" type="ns0:trough" winery:location="FoodProvider" winery:x="727" winery:y="391">
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="trough" type="ns0:trough" id="trough" winery:location="FoodProvider" winery:x="727" winery:y="391">
                 <tosca:Capabilities>
-                    <tosca:Capability name="CapCanHostOat" id="CanHostOat" type="ns0:CapCanHostOat"/>
+                    <tosca:Capability name="CapCanHostOat" type="ns0:CapCanHostOat" id="CanHostOat"/>
                 </tosca:Capabilities>
             </tosca:NodeTemplate>
-            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_19" id="con_19" type="ns0:hostedOn">
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_19" type="ns0:hostedOn" id="con_19">
                 <tosca:SourceElement ref="oat"/>
                 <tosca:TargetElement ref="trough"/>
             </tosca:RelationshipTemplate>
-            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_101" id="con_101" type="ns0:connectsTo">
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_101" type="ns0:connectsTo" id="con_101">
                 <tosca:SourceElement ref="requiresDryFood"/>
                 <tosca:TargetElement ref="provideDryFood"/>
             </tosca:RelationshipTemplate>
