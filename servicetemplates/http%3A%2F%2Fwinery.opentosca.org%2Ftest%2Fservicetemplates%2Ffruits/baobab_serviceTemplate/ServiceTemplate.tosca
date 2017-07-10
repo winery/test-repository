@@ -24,6 +24,11 @@
 			</wfn:BaobabProperties>
                 </tosca:Properties>
             </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="unicorn" type="ns0:unicorn" id="unicorn" winery:location="undefined" winery:x="490" winery:y="71"/>
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_27" type="ns0:eat" id="con_27">
+                <tosca:SourceElement ref="unicorn"/>
+                <tosca:TargetElement ref="baobab"/>
+            </tosca:RelationshipTemplate>
         </tosca:TopologyTemplate>
         <tosca:Plans>
             <tosca:Plan id="harvest_Plan" name="harvest Plan" planType="http://docs.oasis-open.org/tosca/ns/2011/12/PlanTypes/BuildPlan" planLanguage="http://www.opentosca.org/bpmn4tosca">
