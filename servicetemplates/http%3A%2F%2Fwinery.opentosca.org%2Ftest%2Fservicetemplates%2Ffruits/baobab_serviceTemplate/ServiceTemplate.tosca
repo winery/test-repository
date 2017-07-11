@@ -11,6 +11,23 @@
             <tosca:Policies>
                 <tosca:Policy xmlns:wfp="http://winery.opentosca.org/test/policytypes/fruits" xmlns:wfptmp="http://winery.opentosca.org/test/policytemplates/fruits" name="grape" policyType="wfp:european" policyRef="wfptmp:italian"/>
             </tosca:Policies>
+			<tosca:Interfaces>
+                <tosca:Interface name="baobab-nodetemplate-interface">
+                    <tosca:Operation name="baobab-nodetemplate-interface-peel">
+                        <tosca:NodeOperation nodeRef="baobab" interfaceName="bananaInterface" operationName="peel"/>
+                    </tosca:Operation>
+                </tosca:Interface>
+                <tosca:Interface name="baobab-relationshiptemplate-interface">
+                    <tosca:Operation name="eat">
+                        <tosca:RelationshipOperation relationshipRef="con_27" interfaceName="consistency" operationName="isHard"/>
+                    </tosca:Operation>
+                </tosca:Interface>
+                <tosca:Interface name="planInterface">
+                    <tosca:Operation name="harvesting">
+                        <tosca:Plan planRef="harvest_Plan"/>
+                    </tosca:Operation>
+                </tosca:Interface>
+            </tosca:Interfaces>
         </tosca:BoundaryDefinitions>
         <tosca:TopologyTemplate>
             <tosca:NodeTemplate xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" name="baobab" id="baobab" type="wfn:baobab" winery:location="undefined" winery:x="678" winery:y="287">
