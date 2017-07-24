@@ -24,14 +24,6 @@
             </tosca:NodeTemplate>
             <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="ponycompetition" type="ns0:ponycompetition" id="ponycompetition" winery:location="undefined" winery:x="1122" winery:y="140"/>
             <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="ponycompetition_3" type="ns0:ponycompetition" id="ponycompetition_2" winery:location="undefined" winery:x="321" winery:y="118"/>
-            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_42" type="ns0:connectsTo" id="con_42">
-                <tosca:SourceElement ref="shetland_pony"/>
-                <tosca:TargetElement ref="ponycompetition"/>
-            </tosca:RelationshipTemplate>
-            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_54" type="ns0:connectsTo" id="con_54">
-                <tosca:SourceElement ref="shetland_pony"/>
-                <tosca:TargetElement ref="ponycompetition_2"/>
-            </tosca:RelationshipTemplate>
             <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_66" type="ns0:requires" id="con_66">
                 <tosca:SourceElement ref="ponycompetition_2"/>
                 <tosca:TargetElement ref="westernequipment"/>
@@ -39,6 +31,24 @@
             <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_78" type="ns0:requires" id="con_78">
                 <tosca:SourceElement ref="ponycompetition"/>
                 <tosca:TargetElement ref="dressageequipment"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_59" type="ns0:attendTo" id="con_59">
+                <tosca:Properties>
+                    <ns7:Properties xmlns:ns7="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
+                        <Driver/>
+			</ns7:Properties>
+                </tosca:Properties>
+                <tosca:SourceElement ref="shetland_pony"/>
+                <tosca:TargetElement ref="ponycompetition_2"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_71" type="ns0:attendTo" id="con_71">
+                <tosca:Properties>
+                    <ns7:Properties xmlns:ns7="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
+                        <Driver/>
+			</ns7:Properties>
+                </tosca:Properties>
+                <tosca:SourceElement ref="shetland_pony"/>
+                <tosca:TargetElement ref="ponycompetition"/>
             </tosca:RelationshipTemplate>
         </tosca:TopologyTemplate>
     </tosca:ServiceTemplate>
