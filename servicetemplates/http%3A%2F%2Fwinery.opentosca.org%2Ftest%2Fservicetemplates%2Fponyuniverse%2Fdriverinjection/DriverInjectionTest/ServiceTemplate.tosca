@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns9-DriverInjectionTest" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/driverinjection">
+    <tosca:ServiceTemplate name="DriverInjectionTest" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/driverinjection" id="DriverInjectionTest">
+        <tosca:TopologyTemplate>
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony" minInstances="1" maxInstances="1" type="ns0:shetland_pony" id="shetland_pony" winery:location="undefined" winery:x="677" winery:y="161">
+                <tosca:Properties>
+                    <ns3:Properties xmlns:ns3="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ns1="http://winery.opentosca.org/test/ponyuniverse" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse"/>
+                </tosca:Properties>
+                <tosca:Requirements>
+                    <tosca:Requirement name="ReqWarmFloor" type="ns0:ReqWarmFloor" id="ReqWarmFloor"/>
+                    <tosca:Requirement name="ReqCompetition" type="ns0:ReqCompetition" id="ReqCompetition"/>
+                </tosca:Requirements>
+                <tosca:DeploymentArtifacts>
+                    <tosca:DeploymentArtifact xmlns:ns1="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/daspecifier" name="PonyEquipment_abstract" artifactType="ns1:PonyEquipment" artifactRef="ns1:PonyEquipment_abstract"/>
+                </tosca:DeploymentArtifacts>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="straw" minInstances="1" maxInstances="1" type="ns0:straw" id="straw" winery:location="undefined" winery:x="677" winery:y="545">
+                <tosca:Capabilities>
+                    <tosca:Capability name="CapWarmFloor" type="ns0:CapWarmFloor" id="providesAWarmGround"/>
+                </tosca:Capabilities>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="ponycompetition" minInstances="1" maxInstances="1" type="ns0:ponycompetition" id="ponycompetition" winery:location="undefined" winery:x="1237" winery:y="137">
+                <tosca:Requirements>
+                    <tosca:Requirement name="ReqEquipment" type="ns0:ReqEquipment" id="ReqEquipment"/>
+                </tosca:Requirements>
+                <tosca:Capabilities>
+                    <tosca:Capability name="CapCompetition" type="ns0:CapCompetition" id="CapCompetition"/>
+                </tosca:Capabilities>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_25" type="ns0:standsOn" id="con_25">
+                <tosca:SourceElement ref="shetland_pony"/>
+                <tosca:TargetElement ref="straw"/>
+            </tosca:RelationshipTemplate>
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_47" type="ns0:attendTo" id="con_47">
+                <tosca:Properties>
+                    <ns3:Properties xmlns:ns3="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ns1="http://winery.opentosca.org/test/ponyuniverse" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
+                        <Driver/>
+			</ns3:Properties>
+                </tosca:Properties>
+                <tosca:SourceElement ref="shetland_pony"/>
+                <tosca:TargetElement ref="ponycompetition"/>
+            </tosca:RelationshipTemplate>
+        </tosca:TopologyTemplate>
+    </tosca:ServiceTemplate>
+</tosca:Definitions>
