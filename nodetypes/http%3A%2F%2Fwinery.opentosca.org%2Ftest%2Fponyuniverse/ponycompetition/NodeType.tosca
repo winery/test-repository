@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns0-ponycompetition" targetNamespace="http://winery.opentosca.org/test/ponyuniverse">
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://winery.opentosca.org/test/ponyuniverse" id="winery-defs-for_ns0-ponycompetition">
     <tosca:NodeType name="ponycompetition" targetNamespace="http://winery.opentosca.org/test/ponyuniverse" winery:bordercolor="#226f75">
+        <winery:PropertiesDefinition elementname="PonyCompetitionProperties" namespace="http://winery.opentosca.org/test/ponyuniverse/properties">
+            <winery:properties>
+                <winery:key>State</winery:key>
+                <winery:type>xsd:string</winery:type>
+            </winery:properties>
+        </winery:PropertiesDefinition>
         <tosca:RequirementDefinitions>
             <tosca:RequirementDefinition xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="ReqEquipment" requirementType="ns0:ReqEquipment" lowerBound="1" upperBound="unbounded"/>
         </tosca:RequirementDefinitions>
