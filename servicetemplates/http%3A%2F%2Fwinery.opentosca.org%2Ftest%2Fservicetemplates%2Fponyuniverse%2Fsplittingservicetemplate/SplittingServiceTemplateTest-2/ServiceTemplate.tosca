@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/splittingservicetemplate" id="winery-defs-for_splittingservicetemplate-SplittingServiceTemplateTest-2">
+    <tosca:ServiceTemplate>
+        <tosca:documentation>This Service Template is number 2 in the provisioning order amd has to be deployed by B</tosca:documentation>
+        <tosca:documentation>This Service Template requires input from ServiceTemplate number 0 from the Participant B</tosca:documentation>
+        <tosca:documentation>This Service Template requires input from ServiceTemplate number 1 from the Participant A</tosca:documentation>
+        <tosca:TopologyTemplate>
+            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="unicorn" type="ponyuniverse:unicorn" id="unicorn" winery:location="B" winery:x="1508" winery:y="429">
+                <tosca:Properties>
+                    <properties:UnicornProperties xmlns:properties="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
+                        <State/>
+			</properties:UnicornProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_196" type="ponyuniverse:standsOn" id="con_196">
+                <tosca:SourceElement ref="unicorn"/>
+                <tosca:TargetElement ref="straw_2"/>
+            </tosca:RelationshipTemplate>
+            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="straw_3" minInstances="1" maxInstances="1" type="ponyuniverse:straw" id="straw_2" winery:location="B">
+                <tosca:Properties>
+                    <properties:StrawProperties xmlns:properties="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns="http://winery.opentosca.org/test/ponyuniverse/properties">
+                        <State>running</State>
+                    </properties:StrawProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_160" type="ponyuniverse:standsOn" id="con_160">
+                <tosca:SourceElement ref="straw_2"/>
+                <tosca:TargetElement ref="stall_2"/>
+            </tosca:RelationshipTemplate>
+            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="stall_3" minInstances="1" maxInstances="1" type="ponyuniverse:stall" id="stall_2" winery:location="B">
+                <tosca:Properties>
+                    <properties:StallProperties xmlns:properties="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns="http://winery.opentosca.org/test/ponyuniverse/properties">
+                        <State>running</State>
+                    </properties:StallProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_71" type="ponyuniverse:connectsTo" id="con_71">
+                <tosca:SourceElement ref="unicorn"/>
+                <tosca:TargetElement ref="ponycompetition"/>
+            </tosca:RelationshipTemplate>
+            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="ponycompetition" minInstances="1" maxInstances="1" type="ponyuniverse:ponycompetition" id="ponycompetition" winery:location="A">
+                <tosca:Properties>
+                    <properties:PonyCompetitionProperties xmlns:properties="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns="http://winery.opentosca.org/test/ponyuniverse/properties">
+                        <State>running</State>
+                    </properties:PonyCompetitionProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_220" type="ponyuniverse:standsOn" id="con_220">
+                <tosca:SourceElement ref="ponycompetition"/>
+                <tosca:TargetElement ref="straw"/>
+            </tosca:RelationshipTemplate>
+            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="straw" minInstances="1" maxInstances="1" type="ponyuniverse:straw" id="straw" winery:location="A">
+                <tosca:Properties>
+                    <properties:StrawProperties xmlns:properties="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns="http://winery.opentosca.org/test/ponyuniverse/properties">
+                        <State>running</State>
+                    </properties:StrawProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_139" type="ponyuniverse:standsOn" id="con_139">
+                <tosca:SourceElement ref="straw"/>
+                <tosca:TargetElement ref="stall"/>
+            </tosca:RelationshipTemplate>
+            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="stall" minInstances="1" maxInstances="1" type="ponyuniverse:stall" id="stall" winery:location="A">
+                <tosca:Properties>
+                    <properties:StallProperties xmlns:properties="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns="http://winery.opentosca.org/test/ponyuniverse/properties">
+                        <State>running</State>
+                    </properties:StallProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_95" type="ponyuniverse:connectsTo" id="con_95">
+                <tosca:SourceElement ref="unicorn"/>
+                <tosca:TargetElement ref="ponycompetition_3"/>
+            </tosca:RelationshipTemplate>
+            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="ponycompetition_4" minInstances="1" maxInstances="1" type="ponyuniverse:ponycompetition" id="ponycompetition_3" winery:location="B">
+                <tosca:Properties>
+                    <properties:PonyCompetitionProperties xmlns:properties="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns="http://winery.opentosca.org/test/ponyuniverse/properties">
+                        <State>running</State>
+                    </properties:PonyCompetitionProperties>
+                </tosca:Properties>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_184" type="ponyuniverse:standsOn" id="con_184">
+                <tosca:SourceElement ref="ponycompetition_3"/>
+                <tosca:TargetElement ref="straw_2"/>
+            </tosca:RelationshipTemplate>
+        </tosca:TopologyTemplate>
+    </tosca:ServiceTemplate>
+</tosca:Definitions>
