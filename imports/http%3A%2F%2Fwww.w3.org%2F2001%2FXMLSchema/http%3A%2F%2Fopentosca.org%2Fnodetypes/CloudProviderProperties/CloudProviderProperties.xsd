@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+        targetNamespace="http://opentosca.org/nodetypes" xmlns="http://www.w3.org/2001/XMLSchema">
+    <element name="CloudProviderProperties">
+        <complexType>
+            <sequence xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <element name="APIEndpoint" type="xsd:string"/>
+                <element name="APILoginName" type="xsd:string"/>
+                <element name="APILoginPassword" type="xsd:string"/>
+            </sequence>
+        </complexType>
+    </element>
+</schema>
