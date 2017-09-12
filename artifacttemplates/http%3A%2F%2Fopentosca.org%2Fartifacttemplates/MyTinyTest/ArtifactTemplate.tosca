@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_artifacttemplates-MyTinyTest" targetNamespace="http://opentosca.org/artifacttemplates">
-    <tosca:ArtifactTemplate xmlns:artifacttypes="http://opentosca.org/artifacttypes" name="MyTinyTest" type="artifacttypes:DockerContainerArtefact" id="MyTinyTest"/>
+    <tosca:ArtifactTemplate xmlns:artifacttypes="http://opentosca.org/artifacttypes" name="MyTinyTest" type="artifacttypes:MiniArtifactType" id="MyTinyTest"/>
 </tosca:Definitions>
