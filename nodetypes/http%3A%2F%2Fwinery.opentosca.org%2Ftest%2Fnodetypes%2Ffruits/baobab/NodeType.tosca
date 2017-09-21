@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfn-baobab" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits">
-    <tosca:NodeType name="baobab" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits" winery:bordercolor="#89ee01">
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits" id="winery-defs-for_wfn-baobab">
+    <tosca:NodeType name="baobab" abstract="no" final="no" targetNamespace="http://winery.opentosca.org/test/nodetypes/fruits" winery:bordercolor="#89ee01">
         <winery:PropertiesDefinition elementname="BaobabProperties" namespace="http://winery.opentosca.org/test/nodetypes/fruits">
             <winery:properties>
                 <winery:key>Antioxidants</winery:key>
@@ -24,12 +24,14 @@
             </winery:properties>
         </winery:PropertiesDefinition>
         <tosca:RequirementDefinitions>
-            <tosca:RequirementDefinition xmlns:wfrq="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsMaximumWeight" requirementType="wfrq:MaximumWeight" lowerBound="1" upperBound="1"/>
+            <tosca:RequirementDefinition xmlns:fruits1="http://winery.opentosca.org/test/requirementtypes/fruits" name="ImportConstraintsMaximumWeight" requirementType="fruits1:MaximumWeight" lowerBound="1" upperBound="1"/>
         </tosca:RequirementDefinitions>
         <tosca:CapabilityDefinitions>
-            <tosca:CapabilityDefinition xmlns:wfc="http://winery.opentosca.org/test/capabilitytypes/fruits" name="ImportConstraintsHealthy" capabilityType="wfc:Healthy" lowerBound="1" upperBound="1">
+            <tosca:CapabilityDefinition xmlns:fruits="http://winery.opentosca.org/test/capabilitytypes/fruits" name="ImportConstraintsHealthy" capabilityType="fruits:Healthy" lowerBound="1" upperBound="1">
                 <tosca:Constraints>
-                    <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy"/>
+                    <tosca:Constraint constraintType="http://winery.opentosca.org/test/constrainttypes/fruits/healthy">
+                        <fruits:constraintContent>This has to be given, because the TOSCA XSD demands it</fruits:constraintContent>
+                    </tosca:Constraint>
                 </tosca:Constraints>
             </tosca:CapabilityDefinition>
         </tosca:CapabilityDefinitions>
