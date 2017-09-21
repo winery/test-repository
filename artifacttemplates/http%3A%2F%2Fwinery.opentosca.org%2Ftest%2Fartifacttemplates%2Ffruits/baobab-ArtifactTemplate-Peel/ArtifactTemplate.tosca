@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfatmp-baobab-ArtifactTemplate-Peel" targetNamespace="http://winery.opentosca.org/test/artifacttemplates/fruits">
-    <tosca:ArtifactTemplate xmlns:ns10="http://winery.opentosca.org/test/artifacttypes/fruits" name="baobab-ArtifactTemplate-Peel" type="ns10:JAR" id="baobab-ArtifactTemplate-Peel" winery:gitbranch="master" winery:gitsrc="http://www.opentosca.org/winery/extensions/tosca/2013/02/12&quot; winery:gitsrc=&quot;https://github.com/winery/test-repository-src.git">
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://winery.opentosca.org/test/artifacttemplates/fruits" id="winery-defs-for_fruits3-baobab-ArtifactTemplate-Peel">
+    <tosca:ArtifactTemplate xmlns:fruits4="http://winery.opentosca.org/test/artifacttypes/fruits" name="baobab-ArtifactTemplate-Peel" type="fruits4:JAR" id="baobab-ArtifactTemplate-Peel" winery:gitbranch="master" winery:gitsrc="http://www.opentosca.org/winery/extensions/tosca/2013/02/12&quot; winery:gitsrc=&quot;https://github.com/winery/test-repository-src.git">
         <tosca:Properties>
-            <ns0:Properties xmlns:ns0="http://opentosca.org/artifacttypes/propertiesdefinition/winery" xmlns="http://opentosca.org/artifacttypes/propertiesdefinition/winery" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:wfa="http://winery.opentosca.org/test/artifacttypes/fruits">
+            <ns0:Properties xmlns:ns0="http://opentosca.org/artifacttypes/propertiesdefinition/winery" xmlns="http://opentosca.org/artifacttypes/propertiesdefinition/winery" xmlns:ns10="http://winery.opentosca.org/test/artifacttypes/fruits" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" xmlns:wfa="http://winery.opentosca.org/test/artifacttypes/fruits">
                 <Configuration/>
                 <Input>fruit in it's shell</Input>
 	</ns0:Properties>
         </tosca:Properties>
         <tosca:ArtifactReferences>
-            <tosca:ArtifactReference reference="files/"/>
+            <tosca:ArtifactReference reference="artifacttemplates/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fartifacttemplates%252Ffruits/baobab-ArtifactTemplate-Peel/files/loremIpsum.zip"/>
         </tosca:ArtifactReferences>
     </tosca:ArtifactTemplate>
 </tosca:Definitions>

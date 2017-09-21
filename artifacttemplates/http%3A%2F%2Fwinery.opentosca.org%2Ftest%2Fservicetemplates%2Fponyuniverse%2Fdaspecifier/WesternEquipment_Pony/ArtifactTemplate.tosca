@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns8-WesternEquipment_Pony" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/daspecifier">
-    <tosca:ArtifactTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" type="ns0:WesternEquipment_Pony" id="WesternEquipment_Pony">
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/daspecifier" id="winery-defs-for_daspecifier-WesternEquipment_Pony">
+    <tosca:ArtifactTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" type="ponyuniverse:WesternEquipment_Pony" id="WesternEquipment_Pony">
         <tosca:Properties>
-            <ns7:Properties xmlns:ns7="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery">
+            <ns7:Properties xmlns:ns7="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice">
                 <Driver>org.test.westerndriver</Driver>
 	</ns7:Properties>
         </tosca:Properties>

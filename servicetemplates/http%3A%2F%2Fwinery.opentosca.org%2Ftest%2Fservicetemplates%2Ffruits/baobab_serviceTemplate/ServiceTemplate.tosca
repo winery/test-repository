@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_wfs-baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits">
-    <tosca:ServiceTemplate id="baobab_serviceTemplate" name="baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits">
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits" id="winery-defs-for_fruits10-baobab_serviceTemplate">
+    <tosca:ServiceTemplate name="baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits" id="baobab_serviceTemplate">
         <tosca:BoundaryDefinitions>
             <tosca:Properties>
                 <harvest/>
@@ -9,9 +9,9 @@
                 </tosca:PropertyMappings>
             </tosca:Properties>
             <tosca:Policies>
-                <tosca:Policy xmlns:wfp="http://winery.opentosca.org/test/policytypes/fruits" xmlns:wfptmp="http://winery.opentosca.org/test/policytemplates/fruits" name="grape" policyType="wfp:european" policyRef="wfptmp:italian"/>
+                <tosca:Policy xmlns:fruits7="http://winery.opentosca.org/test/policytypes/fruits" xmlns:fruits6="http://winery.opentosca.org/test/policytemplates/fruits" name="grape" policyType="fruits7:european" policyRef="fruits6:italian"/>
             </tosca:Policies>
-			<tosca:Interfaces>
+            <tosca:Interfaces>
                 <tosca:Interface name="baobab-nodetemplate-interface">
                     <tosca:Operation name="baobab-nodetemplate-interface-peel">
                         <tosca:NodeOperation nodeRef="baobab" interfaceName="bananaInterface" operationName="peel"/>
@@ -30,9 +30,9 @@
             </tosca:Interfaces>
         </tosca:BoundaryDefinitions>
         <tosca:TopologyTemplate>
-            <tosca:NodeTemplate xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" name="baobab" id="baobab" type="wfn:baobab" winery:location="undefined" winery:x="678" winery:y="287">
+            <tosca:NodeTemplate xmlns:fruits="http://winery.opentosca.org/test/nodetypes/fruits" name="baobab" type="fruits:baobab" id="baobab" winery:location="undefined" winery:x="678" winery:y="287">
                 <tosca:Properties>
-                    <wfn:BaobabProperties xmlns="http://winery.opentosca.org/test/nodetypes/fruits" xmlns:ty="http://winery.opentosca.org/test/nodetypes/fruits">
+                    <wfn:BaobabProperties xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" xmlns="http://winery.opentosca.org/test/nodetypes/fruits" xmlns:ty="http://winery.opentosca.org/test/nodetypes/fruits">
                         <ty:Antioxidants/>
                         <ty:VitaminC/>
                         <ty:Potassium/>
@@ -41,8 +41,8 @@
 			</wfn:BaobabProperties>
                 </tosca:Properties>
             </tosca:NodeTemplate>
-            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="unicorn" type="ns0:unicorn" id="unicorn" winery:location="undefined" winery:x="490" winery:y="71"/>
-            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_27" type="ns0:eat" id="con_27">
+            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="unicorn" type="ponyuniverse:unicorn" id="unicorn" winery:location="undefined" winery:x="490" winery:y="71"/>
+            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_27" type="ponyuniverse:eat" id="con_27">
                 <tosca:SourceElement ref="unicorn"/>
                 <tosca:TargetElement ref="baobab"/>
             </tosca:RelationshipTemplate>
