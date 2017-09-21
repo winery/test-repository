@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_artifacttemplates-MyTinyTest" targetNamespace="http://opentosca.org/artifacttemplates">
-    <tosca:ArtifactTemplate xmlns:artifacttypes="http://opentosca.org/artifacttypes" name="MyTinyTest" type="artifacttypes:MiniArtifactType" id="MyTinyTest"/>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://opentosca.org/artifacttemplates" id="winery-defs-for_artifacttemplates-MyTinyTest">
+    <tosca:ArtifactTemplate xmlns:artifacttypes="http://winery.opentosca.org/test/artifacttypes" name="MyTinyTest" type="artifacttypes:MiniArtifactType" id="MyTinyTest">
+        <tosca:ArtifactReferences>
+            <tosca:ArtifactReference reference="artifacttemplates/http%253A%252F%252Fopentosca.org%252Fartifacttemplates/MyTinyTest/files/blub.zip"/>
+        </tosca:ArtifactReferences>
+    </tosca:ArtifactTemplate>
 </tosca:Definitions>
