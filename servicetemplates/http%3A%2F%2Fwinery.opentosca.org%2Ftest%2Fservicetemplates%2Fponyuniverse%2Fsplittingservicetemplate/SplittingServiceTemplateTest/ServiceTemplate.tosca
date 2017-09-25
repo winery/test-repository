@@ -114,10 +114,5 @@
                 <tosca:TargetElement ref="straw"/>
             </tosca:RelationshipTemplate>
         </tosca:TopologyTemplate>
-        <tosca:Plans>
-            <tosca:Plan id="test" name="test" planType="http://docs.oasis-open.org/tosca/ns/2011/12/PlanTypes/BuildPlan" planLanguage="http://docs.oasis-open.org/wsbpel/2.0/process/executable">
-                <tosca:PlanModelReference reference="../servicetemplates/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fservicetemplates%252Fponyuniverse%252Fsplittingservicetemplate/SplittingServiceTemplateTest/plans/test/test.bpmn4tosca"/>
-            </tosca:Plan>
-        </tosca:Plans>
     </tosca:ServiceTemplate>
 </tosca:Definitions>
