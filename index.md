@@ -12,4 +12,5 @@ The test definitions are split up into "universes", which should not interrelate
   This is used for quick tests.
 - The "pony universe" is about horses and tries to be as consistent as possible.
   A longer explanation of that universe is contained in [ponyuniverse](ponyuniverse).
-
+- The "plain" types are used for testing without trying to be aligned with a fantasy world.
+  A longer explanation is contained in [plain](plain).
