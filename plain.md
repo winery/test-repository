@@ -8,4 +8,4 @@ For each type, there are following variants defined:
 - `...WithoutProperties`: Having no property
 - `...WithOneKvProperty`: Having one property with `key`
 - `...WithTwoKvProperties`: Having two properties with `key1` and `key2`
-- `...WithXmlElementProperty`: Having a property based on an XML schema
+- `...WithXmlElementProperty`: Having the properties based on the XML Schema Element "ShipOrderTemplate"
