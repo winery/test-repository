@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://winery.opentosca.org/test/artifacttemplates/fruits" id="winery-defs-for_fruitsats-baobab_bananaInterface_IA">
-    <tosca:ArtifactTemplate xmlns:artifacttypes="http://winery.opentosca.org/test/artifacttypes" type="artifacttypes:MiniArtifactType" id="baobab_bananaInterface_IA"/>
-</tosca:Definitions>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/artifacttemplates/fruits" id="winery-defs-for_fruits-baobab_bananaInterface_IA">
+    <ArtifactTemplate xmlns:artifacttypes2="http://winery.opentosca.org/test/artifacttypes" type="artifacttypes2:MiniArtifactType" id="baobab_bananaInterface_IA"/>
+</Definitions>

@@ -1,63 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits" id="winery-defs-for_fruitsst-baobab_serviceTemplate">
-    <tosca:ServiceTemplate name="baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits" id="baobab_serviceTemplate">
-        <tosca:BoundaryDefinitions>
-            <tosca:Properties>
-                <harvest/>
-                <tosca:PropertyMappings>
-                    <tosca:PropertyMapping serviceTemplatePropertyRef="/*[local-name()='harvest']" targetObjectRef="baobab" targetPropertyRef="/*[local-name()='BaobabProperties']/*[local-name()='HarvestedAt']"/>
-                </tosca:PropertyMappings>
-            </tosca:Properties>
-            <tosca:Policies>
-                <tosca:Policy xmlns:fruitspty="http://winery.opentosca.org/test/policytypes/fruits" xmlns:fruitspt="http://winery.opentosca.org/test/policytemplates/fruits" name="grape" policyType="fruitspty:european" policyRef="fruitspt:italian"/>
-            </tosca:Policies>
-            <tosca:Interfaces>
-                <tosca:Interface name="baobab-nodetemplate-interface">
-                    <tosca:Operation name="baobab-nodetemplate-interface-peel">
-                        <tosca:NodeOperation nodeRef="baobab" interfaceName="bananaInterface" operationName="peel"/>
-                    </tosca:Operation>
-                </tosca:Interface>
-                <tosca:Interface name="baobab-relationshiptemplate-interface">
-                    <tosca:Operation name="eat">
-                        <tosca:RelationshipOperation relationshipRef="con_27" interfaceName="consistency" operationName="isHard"/>
-                    </tosca:Operation>
-                </tosca:Interface>
-                <tosca:Interface name="planInterface">
-                    <tosca:Operation name="harvesting">
-                        <tosca:Plan planRef="harvest_Plan"/>
-                    </tosca:Operation>
-                </tosca:Interface>
-            </tosca:Interfaces>
-        </tosca:BoundaryDefinitions>
-        <tosca:TopologyTemplate>
-            <tosca:NodeTemplate xmlns:fruits="http://winery.opentosca.org/test/nodetypes/fruits" name="baobab" type="fruits:baobab" id="baobab" winery:location="undefined" winery:x="678" winery:y="287">
-                <tosca:Properties>
-                    <wfn:BaobabProperties xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" xmlns="http://winery.opentosca.org/test/nodetypes/fruits" xmlns:ty="http://winery.opentosca.org/test/nodetypes/fruits">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits" id="winery-defs-for_fruits10-baobab_serviceTemplate">
+    <ServiceTemplate name="baobab_serviceTemplate" targetNamespace="http://winery.opentosca.org/test/servicetemplates/fruits" id="baobab_serviceTemplate">
+        <BoundaryDefinitions>
+            <Properties>
+                <harvest xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12"/>
+                <PropertyMappings>
+                    <PropertyMapping serviceTemplatePropertyRef="/*[local-name()='harvest']" targetObjectRef="baobab" targetPropertyRef="/*[local-name()='BaobabProperties']/*[local-name()='HarvestedAt']"/>
+                </PropertyMappings>
+            </Properties>
+            <Policies>
+                <Policy xmlns:fruits6="http://winery.opentosca.org/test/policytypes/fruits" xmlns:fruits5="http://winery.opentosca.org/test/policytemplates/fruits" name="grape" policyType="fruits6:european" policyRef="fruits5:italian"/>
+            </Policies>
+            <Interfaces>
+                <Interface name="baobab-nodetemplate-interface">
+                    <Operation name="baobab-nodetemplate-interface-peel">
+                        <NodeOperation nodeRef="baobab" interfaceName="bananaInterface" operationName="peel"/>
+                    </Operation>
+                </Interface>
+                <Interface name="baobab-relationshiptemplate-interface">
+                    <Operation name="eat">
+                        <RelationshipOperation relationshipRef="con_27" interfaceName="consistency" operationName="isHard"/>
+                    </Operation>
+                </Interface>
+                <Interface name="planInterface">
+                    <Operation name="harvesting">
+                        <Plan planRef="harvest_Plan"/>
+                    </Operation>
+                </Interface>
+            </Interfaces>
+        </BoundaryDefinitions>
+        <TopologyTemplate>
+            <NodeTemplate xmlns:fruits4="http://winery.opentosca.org/test/nodetypes/fruits" name="baobab" type="fruits4:baobab" id="baobab" winery:location="undefined" winery:x="678" winery:y="287">
+                <Properties>
+                    <wfn:BaobabProperties xmlns:wfn="http://winery.opentosca.org/test/nodetypes/fruits" xmlns="http://winery.opentosca.org/test/nodetypes/fruits" xmlns:fruits="http://winery.opentosca.org/test/nodetypes/fruits" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ty="http://winery.opentosca.org/test/nodetypes/fruits">
                         <ty:Antioxidants/>
                         <ty:VitaminC/>
                         <ty:Potassium/>
                         <ty:Superfood/>
                         <ty:HarvestedAt/>
 			</wfn:BaobabProperties>
-                </tosca:Properties>
-            </tosca:NodeTemplate>
-            <tosca:NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="unicorn" type="ponyuniverse:unicorn" id="unicorn" winery:location="undefined" winery:x="490" winery:y="71"/>
-            <tosca:RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_27" type="ponyuniverse:eat" id="con_27">
-                <tosca:SourceElement ref="unicorn"/>
-                <tosca:TargetElement ref="baobab"/>
-            </tosca:RelationshipTemplate>
-        </tosca:TopologyTemplate>
-        <tosca:Plans>
-            <tosca:Plan id="harvest_Plan" name="harvest Plan" planType="http://docs.oasis-open.org/tosca/ns/2011/12/PlanTypes/BuildPlan" planLanguage="http://www.opentosca.org/bpmn4tosca">
-                <tosca:InputParameters>
-                    <tosca:InputParameter name="available_workers" type="list" required="yes"/>
-                    <tosca:InputParameter name="available_machines" type="list" required="yes"/>
-                </tosca:InputParameters>
-                <tosca:OutputParameters>
-                    <tosca:OutputParameter name="harvested_fruits" type="number" required="yes"/>
-                </tosca:OutputParameters>
-                <tosca:PlanModelReference reference="../servicetemplates/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fservicetemplates%252Ffruits/baobab_serviceTemplate/plans/harvest_Plan/harvest_Plan.bpmn4tosca"/>
-            </tosca:Plan>
-        </tosca:Plans>
-    </tosca:ServiceTemplate>
-</tosca:Definitions>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="unicorn" type="ponyuniverse:unicorn" id="unicorn" winery:location="undefined" winery:x="490" winery:y="71"/>
+            <RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_27" type="ponyuniverse:eat" id="con_27">
+                <SourceElement ref="unicorn"/>
+                <TargetElement ref="baobab"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+        <Plans>
+            <Plan id="harvest_Plan" name="harvest Plan" planType="http://docs.oasis-open.org/tosca/ns/2011/12/PlanTypes/BuildPlan" planLanguage="http://www.opentosca.org/bpmn4tosca">
+                <InputParameters>
+                    <InputParameter name="available_workers" type="list" required="yes"/>
+                    <InputParameter name="available_machines" type="list" required="yes"/>
+                </InputParameters>
+                <OutputParameters>
+                    <OutputParameter name="harvested_fruits" type="number" required="yes"/>
+                </OutputParameters>
+                <PlanModelReference reference="../servicetemplates/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fservicetemplates%252Ffruits/baobab_serviceTemplate/plans/harvest_Plan/harvest_Plan.bpmn4tosca"/>
+            </Plan>
+        </Plans>
+    </ServiceTemplate>
+</Definitions>
