@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<tosca:Definitions id="winery-defs-for_ns2-CloudProviderProperties" targetNamespace="http://opentosca.org/nodetypes" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns6="http://www.eclipse.org/winery/model/selfservice" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12">
-    <tosca:Import namespace="http://opentosca.org/nodetypes" location="CloudProviderProperties.xsd" importType="http://www.w3.org/2001/XMLSchema" winery:wpd="true"/>
-</tosca:Definitions>

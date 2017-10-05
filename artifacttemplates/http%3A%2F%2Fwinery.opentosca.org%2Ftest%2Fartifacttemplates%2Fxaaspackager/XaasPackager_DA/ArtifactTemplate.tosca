@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/artifacttemplates/xaaspackager" id="winery-defs-for_xaaspackager-XaasPackager_DA">
-    <ArtifactTemplate xmlns:xaaspackager1="http://winery.opentosca.org/test/artifacttypes/xaaspackager" name="XaasPackager_DA" type="xaaspackager1:XaasPackagerArtifact" id="XaasPackager_DA">
-        <ArtifactReferences>
-            <ArtifactReference reference="artifacttemplates/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fartifacttemplates%252Fxaaspackager/XaasPackager_DA/files/XaasPackager.zip"/>
-        </ArtifactReferences>
-    </ArtifactTemplate>
-</Definitions>
