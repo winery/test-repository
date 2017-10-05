@@ -1,5 +1,9 @@
 # The plain universe
 
+[![Build Status](https://circleci.com/gh/winery/test-repository/tree/plain.svg?style=shield)](https://circleci.com/gh/winery/test-repository/tree/plain)
+
+The plain universe is contained in the [plain branch](https://github.com/winery/test-repository/tree/plain).
+
 The namespace pattern is `http://plain.winery.opentosca.org/TYPE`.
 Thus, nodetypes are contained in the namespace `http://plain.winery.opentosca.org/nodetypes`
 

@@ -7,6 +7,8 @@ This repository contains TOSCA artifacts managed by Winery used for automated te
 The consistency check is done using Winery's CLI as described at <https://github.com/OpenTOSCA/winery#running-cli-via-docker>.
 
 The test definitions are split up into "universes", which should not interrelate, but build separate testable entities.
+To ensure the distinction between the universes, each universe is contained in a separate branch.
+Currently, this is implemented for the plain universe.
 
 - [Baobab](http://baobab.org/) universe, which is about plants and trees.
   This is used for quick tests.
