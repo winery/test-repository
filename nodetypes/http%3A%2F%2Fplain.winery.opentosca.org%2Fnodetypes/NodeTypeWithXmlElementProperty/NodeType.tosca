@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/nodetypes" id="winery-defs-for_nodetypes-NodeTypeWithXmlElementProperty">
-    <NodeType name="NodeTypeWithXmlElementProperty" targetNamespace="http://plain.winery.opentosca.org/nodetypes" winery:bordercolor="#82aedc">
-        <PropertiesDefinition xmlns:schemaexampleasp="https://www.w3schools.com/xml/schema_example.asp" element="schemaexampleasp:shiporder"/>
-    </NodeType>
-</Definitions>
