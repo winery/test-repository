@@ -5,4 +5,7 @@ jobs:
        - image: opentosca/winery:consistencycheck
      steps:
        - checkout
+       - run: git branch
+       - run: git status
+       - run: ls -la artifacttemplates
        - run: winery --path .
