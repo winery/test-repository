@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            xmlns:tns="https://www.w3schools.com/xml/schema_example.asp"
-           targetNamespace="https://www.w3schools.com/xml/schema_example.asp">
+           targetNamespace="https://www.w3schools.com/xml/schema_example.asp"
+           elementFormDefault="qualified">
 
     <xs:simpleType name="stringtype">
         <xs:restriction base="xs:string"/>
