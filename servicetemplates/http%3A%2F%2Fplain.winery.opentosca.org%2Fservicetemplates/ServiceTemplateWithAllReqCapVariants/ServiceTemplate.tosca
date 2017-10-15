@@ -14,7 +14,23 @@
                         </Properties>
                     </Requirement>
                     <Requirement xmlns:requirementtypes="http://plain.winery.opentosca.org/requirementtypes" name="RequirementDefinition-RequirementTypeWithXmlElementProperty" type="requirementtypes:RequirementTypeWithXmlElementProperty" id="req3">
-                        <Properties/>
+                        <Properties>
+                            <ns0:shiporder xmlns:ns0="https://www.w3schools.com/xml/schema_example.asp" orderid="123456">
+                                <ns0:orderperson>
+                                </ns0:orderperson>
+                                <ns0:shipto>
+                                    <ns0:name>Name</ns0:name>
+                                    <ns0:address>Address</ns0:address>
+                                    <ns0:city>City</ns0:city>
+                                    <ns0:country>Country</ns0:country>
+                                </ns0:shipto>
+                                <ns0:item>
+                                    <ns0:title>Title</ns0:title>
+                                    <ns0:quantity>5</ns0:quantity>
+                                    <ns0:price>5.5</ns0:price>
+                                </ns0:item>
+                            </ns0:shiporder>
+                        </Properties>
                     </Requirement>
                 </Requirements>
                 <Capabilities>
