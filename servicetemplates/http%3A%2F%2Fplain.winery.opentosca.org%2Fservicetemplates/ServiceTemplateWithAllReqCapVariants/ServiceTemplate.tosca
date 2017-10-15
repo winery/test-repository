@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates-ServiceTemplateWithAllReqCapVariants">
+    <ServiceTemplate name="ServiceTemplateWithAllReqCapVariants" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="ServiceTemplateWithAllReqCapVariants">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants" type="nodetypes:NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants" id="NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants" winery:location="undefined" winery:x="786" winery:y="451">
+                <Requirements>
+                    <Requirement xmlns:requirementtypes="http://plain.winery.opentosca.org/requirementtypes" name="RequirementDefinition-RequirementTypeWithoutProperties" type="requirementtypes:RequirementTypeWithoutProperties" id="req1"/>
+                    <Requirement xmlns:requirementtypes="http://plain.winery.opentosca.org/requirementtypes" name="RequirementDefinition-RequirementTypeWithTwoKvProperties" type="requirementtypes:RequirementWithTwoKvProperties" id="req2">
+                        <Properties>
+                            <winery2:properties xmlns:winery2="http://plain.winery.opentosca.org/requirementtypes/propertiesdefinition/winery" xmlns="http://plain.winery.opentosca.org/requirementtypes/propertiesdefinition/winery" xmlns:ty="http://plain.winery.opentosca.org/requirementtypes">
+<key1>val1</key1>
+<key2>val2</key2>
+					</winery2:properties>
+                        </Properties>
+                    </Requirement>
+                    <Requirement xmlns:requirementtypes="http://plain.winery.opentosca.org/requirementtypes" name="RequirementDefinition-RequirementTypeWithXmlElementProperty" type="requirementtypes:RequirementTypeWithXmlElementProperty" id="req3">
+                        <Properties/>
+                    </Requirement>
+                </Requirements>
+                <Capabilities>
+                    <Capability xmlns:capabilitytypes="http://plain.winery.opentosca.org/capabilitytypes" name="CapabilityDefinition-CapabilityTypeWithoutProperties" type="capabilitytypes:CapabilityTypeWithoutProperties" id="cap1"/>
+                    <Capability xmlns:capabilitytypes="http://plain.winery.opentosca.org/capabilitytypes" name="CapabilityDefinition-CapabilityTypeWithTwoKvProperties" type="capabilitytypes:CapabilitiyTypeWithTwoKvProperties" id="cap2">
+                        <Properties>
+                            <winery3:properties xmlns:winery3="http://plain.winery.opentosca.org/capabilitytypes/propertiesdefinition/winery" xmlns="http://plain.winery.opentosca.org/capabilitytypes/propertiesdefinition/winery" xmlns:ty="http://plain.winery.opentosca.org/capabilitytypes">
+<key1/>
+<key2/>
+					</winery3:properties>
+                        </Properties>
+                    </Capability>
+                    <Capability xmlns:capabilitytypes="http://plain.winery.opentosca.org/capabilitytypes" name="CapabilityDefinition-CapabilityTypeWithXmlElementProperty" type="capabilitytypes:CapabilityTypeWithXmlElementProperty" id="cap3"/>
+                </Capabilities>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithOneReqCapPairWithoutProperties" type="nodetypes:NodeTypeWithOneReqCapPairWithoutProperties" id="NodeTypeWithOneReqCapPairWithoutProperties" winery:location="undefined" winery:x="785" winery:y="154"/>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="con_13" type="relationshiptypes:RelationshipTypeWithoutProperties" id="con_13">
+                <SourceElement ref="NodeTypeWithOneReqCapPairWithoutProperties"/>
+                <TargetElement ref="NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>

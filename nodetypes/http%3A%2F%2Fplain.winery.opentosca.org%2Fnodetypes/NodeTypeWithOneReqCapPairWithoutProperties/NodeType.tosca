@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/nodetypes" id="winery-defs-for_nodetypes-NodeTypeWithOneReqCapPairWithoutProperties">
+    <NodeType name="NodeTypeWithOneReqCapPairWithoutProperties" targetNamespace="http://plain.winery.opentosca.org/nodetypes">
+        <RequirementDefinitions>
+            <RequirementDefinition xmlns:requirementtypes="http://plain.winery.opentosca.org/requirementtypes" name="RequirementDefinition" requirementType="requirementtypes:RequirementTypeWithoutProperties" lowerBound="1" upperBound="1"/>
+        </RequirementDefinitions>
+        <CapabilityDefinitions>
+            <CapabilityDefinition xmlns:capabilitytypes="http://plain.winery.opentosca.org/capabilitytypes" name="CapabilityDefinition" capabilityType="capabilitytypes:CapabilityTypeWithoutProperties" lowerBound="1" upperBound="1"/>
+        </CapabilityDefinitions>
+    </NodeType>
+</Definitions>
