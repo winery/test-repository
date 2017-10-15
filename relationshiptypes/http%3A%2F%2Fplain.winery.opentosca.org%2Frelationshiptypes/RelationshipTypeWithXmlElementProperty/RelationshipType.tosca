@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/relationshiptypes" id="winery-defs-for_relationshiptypes-RelationshipTypeWithXmlElementProperty">
-    <RelationshipType name="RelationshipTypeWithXmlElementProperty" targetNamespace="http://plain.winery.opentosca.org/relationshiptypes">
+    <RelationshipType name="RelationshipTypeWithXmlElementProperty" targetNamespace="http://plain.winery.opentosca.org/relationshiptypes" winery:color="#24df92">
         <PropertiesDefinition xmlns:schemaexampleasp="https://www.w3schools.com/xml/schema_example.asp" element="schemaexampleasp:shiporder"/>
     </RelationshipType>
 </Definitions>
