@@ -45,6 +45,7 @@
                 <TargetElement ref="NodeTypeWithXmlElementProperty"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="con_40" type="relationshiptypes:RelationshipTypeWithXmlElementProperty" id="con_40">
+                <Properties>
                 <ns0:shiporder xmlns:ns0="https://www.w3schools.com/xml/schema_example.asp" orderid="123456">
                     <ns0:orderperson>
                     </ns0:orderperson>
@@ -60,6 +61,7 @@
                         <ns0:price>5.5</ns0:price>
                     </ns0:item>
                 </ns0:shiporder>
+                </Properties>
                 <SourceElement ref="NodeTypeWithTwoKVProperties"/>
                 <TargetElement ref="NodeTypeWithXmlElementProperty"/>
             </RelationshipTemplate>
