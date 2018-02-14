@@ -1,7 +1,12 @@
 # Pony Universe
 
-The TOSCA elements of the pony universe are intended to be used for splitting and matching test cases.
+The TOSCA elements of the pony universe are intended to be used for splitting and matching test cases. For the matching of node templates a specific semantic of the requirement, capability, and relationship types is required. There are several options to find out which relationship type can be used for the matching:
+  1. For requirement and capability types the property *requiredRelationshipType* can be used to mention the QName of a specific relationship type. This type is selected if it is available in the repository.
+  2. For a relationship type a valid source and valid target can be specified. If there is a relationship type which the requirement type as valid source and the capability types as valid target element, this relationship is selected. If there is no matching the same is checked for the requirement and capability type the original types are derived from.
+  3. It is assumed that two base capability types exist: *container* and *endpoint*. Container means the Node Template serves as host and endpoint indicates that a connection is required. Thus, based on the TOSCA YAML Simple Profile either a *hostedOn* or a *connectsTo* relationship is required. These types are available in each TOSCA runtime and are the fallback solutions for the matching.
+
+Additionally, for the splitting of topologies the semantic of the relationship types have to be known to identify, e.g., all hosted node templates of a specific node template. For this the relationship types also required a strong inheritance hierarchy. The *base type*, which has no further parent must be either the type *hostedOn* or as valid target the capability tyüe *container*. The same applies for the connectsTo semmantics.
 The ideas of the different node types and relationship types are as follows:
   - in the universe two different pony breeds are available: [shetlan_pony](https://github.com/winery/test-repository/tree/black/nodetypes/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fponyuniverse/shetland_pony) and [unicorn](https://github.com/winery/test-repository/tree/black/nodetypes/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fponyuniverse/unicorn)
   - a pony can, for example [attendTo](https://github.com/winery/test-repository/tree/black/relationshiptypes/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fponyuniverse/attendTo) a [ponycompetition](https://github.com/winery/test-repository/tree/black/nodetypes/http%253A%252F%252Fwinery.opentosca.org%252Ftest%252Fponyuniverse/ponycompetition)
-  - 
+ 
