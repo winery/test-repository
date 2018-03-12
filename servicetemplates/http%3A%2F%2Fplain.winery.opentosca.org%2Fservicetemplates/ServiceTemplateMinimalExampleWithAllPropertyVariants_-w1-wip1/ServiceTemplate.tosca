@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates-ServiceTemplateMinimalExampleWithAllPropertyVariants_-w1-wip1">
+    <ServiceTemplate name="ServiceTemplateMinimalExampleWithAllPropertyVariants_-w1-wip1" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="ServiceTemplateMinimalExampleWithAllPropertyVariants_-w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:nodetypes1="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes1:NodeTypeWithoutProperties" id="NodeTypeWithoutProperties" winery:location="" winery:x="617" winery:y="44"/>
+            <NodeTemplate xmlns:nodetypes1="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithXmlElementProperty" minInstances="1" maxInstances="1" type="nodetypes1:NodeTypeWithXmlElementProperty" id="NodeTypeWithXmlElementProperty" winery:location="" winery:x="874" winery:y="462">
+                <Properties>
+                    <ns0:shiporder xmlns:ns0="https://www.w3schools.com/xml/schema_example.asp" xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" orderid="123456">
+                        <ns0:orderperson>
+                        </ns0:orderperson>
+                        <ns0:shipto>
+                            <ns0:name>Name</ns0:name>
+                            <ns0:address>Address</ns0:address>
+                            <ns0:city>City</ns0:city>
+                            <ns0:country>Country</ns0:country>
+                        </ns0:shipto>
+                        <ns0:item>
+                            <ns0:title>Title</ns0:title>
+                            <ns0:quantity>5</ns0:quantity>
+                            <ns0:price>5.5</ns0:price>
+                        </ns0:item>
+                    </ns0:shiporder>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes1="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes1:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:location="" winery:x="387" winery:y="461">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes">
+                        <key1>testValue</key1>
+                        <key2/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="con_16" type="relationshiptypes:RelationshipTypeWithoutProperties" id="NodeTypeWithoutProperties_RelationshipTypeWithoutProperties_NodeTypeWithTwoKVProperties">
+                <SourceElement ref="NodeTypeWithoutProperties"/>
+                <TargetElement ref="NodeTypeWithTwoKVProperties"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="con_28" type="relationshiptypes:RelationshipTypeWithTwoKvPropertie" id="NodeTypeWithoutProperties_RelationshipTypeWithTwoKvPropertie_NodeTypeWithXmlElementProperty">
+                <SourceElement ref="NodeTypeWithoutProperties"/>
+                <TargetElement ref="NodeTypeWithXmlElementProperty"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="con_40" type="relationshiptypes:RelationshipTypeWithXmlElementProperty" id="NodeTypeWithTwoKVProperties_RelationshipTypeWithXmlElementProperty_NodeTypeWithXmlElementProperty">
+                <SourceElement ref="NodeTypeWithTwoKVProperties"/>
+                <TargetElement ref="NodeTypeWithXmlElementProperty"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
