@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.winery.opentosca.org/test/targetallocation/policytemplates" id="winery-defs-for_policytemplates1-FloorWarmth10">
+    <PolicyTemplate xmlns:policytypes="http://winery.opentosca.org/test/ponyuniverse/policytypes" name="FloorWarmth10" type="policytypes:FloorWarmth" id="FloorWarmth10">
+        <Properties>
+            <properties xmlns="http://winery.opentosca.org/test/ponyuniverse/policytypes/propertiesdefinition/winery">
+                <warmth>10</warmth>
+            </properties>
+        </Properties>
+    </PolicyTemplate>
+</Definitions>
