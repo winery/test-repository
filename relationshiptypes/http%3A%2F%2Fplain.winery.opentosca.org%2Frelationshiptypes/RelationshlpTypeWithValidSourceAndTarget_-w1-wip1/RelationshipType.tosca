@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/relationshiptypes" id="winery-defs-for_relationshiptypes-RelationshlpTypeWithValidSourceAndTarget_-w1-wip1">
-    <RelationshipType name="RelationshlpTypeWithValidSourceAndTarget_-w1-wip1" targetNamespace="http://plain.winery.opentosca.org/relationshiptypes">
+    <RelationshipType name="RelationshlpTypeWithValidSourceAndTarget_-w1-wip1" targetNamespace="http://plain.winery.opentosca.org/relationshiptypes" winery:color="#339152">
         <ValidSource xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" typeRef="nodetypes:NodeTypeWithXmlElementProperty"/>
         <ValidTarget xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" typeRef="nodetypes:NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants"/>
     </RelationshipType>
