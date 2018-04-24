@@ -86,7 +86,7 @@
                     <Requirement name="ReqWarmFloor" type="ponyuniverse:ReqWarmFloor" id="9"/>
                 </Requirements>
             </NodeTemplate>
-            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_9" type="ponyuniverse:shetland_pony" id="shetland_pony_8" winery:x="1226" winery:y="601">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_9" type="ponyuniverse:shetland_pony" id="shetland_pony_8" winery:x="1243" winery:y="597">
                 <Properties>
                     <ShetlandPonyProperties xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
                         <State/>
@@ -126,7 +126,7 @@
                     <Requirement name="ReqWarmFloor" type="ponyuniverse:ReqWarmFloor" id="15"/>
                 </Requirements>
             </NodeTemplate>
-            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_13" type="ponyuniverse:shetland_pony" id="shetland_pony_12" winery:x="1254" winery:y="434">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_13" type="ponyuniverse:shetland_pony" id="shetland_pony_12" winery:location="PastureProvider" winery:x="1254" winery:y="434">
                 <Properties>
                     <ShetlandPonyProperties xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
                         <State/>
@@ -395,6 +395,10 @@
             <RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_603" type="ponyuniverse:connectsTo" id="con_603">
                 <SourceElement ref="shetland_pony_6"/>
                 <TargetElement ref="shetland_pony_3"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_453" type="ponyuniverse:connectsTo" id="con_453">
+                <SourceElement ref="shetland_pony_8"/>
+                <TargetElement ref="shetland_pony_20"/>
             </RelationshipTemplate>
         </TopologyTemplate>
     </ServiceTemplate>
