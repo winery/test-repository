@@ -2,64 +2,64 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.winery.opentosca.org/test/targetallocation/servicetemplates" id="winery-defs-for_servicetemplates2-TargetAllocationFulfillPoliciesTest1">
     <ServiceTemplate name="TargetAllocationFulfillPoliciesTest1" targetNamespace="http://www.winery.opentosca.org/test/targetallocation/servicetemplates" id="TargetAllocationFulfillPoliciesTest1">
         <TopologyTemplate>
-            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony" minInstances="1" maxInstances="1" type="ponyuniverse:shetland_pony" id="shetland_pony" winery:location="PastureProvider" winery:x="341" winery:y="83">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony" type="ponyuniverse:shetland_pony" id="shetland_pony" winery:location="PastureProvider" winery:x="391" winery:y="1">
                 <Properties>
-                    <Properties xmlns="http://www.example.org">
+                    <ShetlandPonyProperties xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
                         <State/>
-                    </Properties>
+			</ShetlandPonyProperties>
                 </Properties>
                 <Requirements>
                     <Requirement name="ReqWarmFloor" type="ponyuniverse:ReqWarmFloor" id="21"/>
                 </Requirements>
             </NodeTemplate>
-            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_3" minInstances="1" maxInstances="1" type="ponyuniverse:shetland_pony" id="shetland_pony_2" winery:location="FieldProvider" winery:x="832" winery:y="36">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_3" type="ponyuniverse:shetland_pony" id="shetland_pony_2" winery:location="FieldProvider" winery:x="832" winery:y="36">
                 <Properties>
-                    <Properties xmlns="http://www.example.org">
+                    <ShetlandPonyProperties xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
                         <State/>
-                    </Properties>
+			</ShetlandPonyProperties>
                 </Properties>
                 <Requirements>
                     <Requirement name="ReqWarmFloor" type="ponyuniverse:ReqWarmFloor" id="1"/>
                 </Requirements>
             </NodeTemplate>
-            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="straw" minInstances="1" maxInstances="1" type="ponyuniverse:straw" id="straw" winery:x="637" winery:y="394">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="straw" type="ponyuniverse:straw" id="straw" winery:x="637" winery:y="394">
                 <Properties>
-                    <Properties xmlns="http://www.example.org">
+                    <StrawProperties xmlns="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
                         <State/>
-                    </Properties>
+			</StrawProperties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="stall" minInstances="1" maxInstances="1" type="ponyuniverse:stall" id="stall" winery:x="719" winery:y="826">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="stall" type="ponyuniverse:stall" id="stall" winery:x="719" winery:y="826">
                 <Properties>
-                    <Properties xmlns="http://www.example.org">
+                    <StallProperties xmlns="http://winery.opentosca.org/test/ponyuniverse/properties" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
                         <State/>
-                    </Properties>
+			</StallProperties>
                 </Properties>
             </NodeTemplate>
-            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_4" minInstances="1" maxInstances="1" type="ponyuniverse:shetland_pony" id="shetland_pony_3" winery:x="91" winery:y="213">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_4" type="ponyuniverse:shetland_pony" id="shetland_pony_3" winery:x="91" winery:y="213">
                 <Properties>
-                    <Properties xmlns="http://www.example.org">
+                    <ShetlandPonyProperties xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
                         <State/>
-                    </Properties>
+			</ShetlandPonyProperties>
                 </Properties>
                 <Requirements>
                     <Requirement name="ReqWarmFloor" type="ponyuniverse:ReqWarmFloor" id="213"/>
                 </Requirements>
                 <Policies>
-                    <Policy xmlns:policytypes="http://winery.opentosca.org/test/ponyuniverse/policytypes" xmlns:policytemplates="http://www.winery.opentosca.org/test/targetallocation/policytemplates" name="floorwarmth10" policyType="policytypes:FloorWarmth" policyRef="policytemplates:FloorWarmth10"/>
+                    <Policy xmlns:policytypes="http://winery.opentosca.org/test/ponyuniverse/policytypes" xmlns:policytemplates1="http://www.winery.opentosca.org/test/targetallocation/policytemplates" name="floorwarmth10" policyType="policytypes:FloorWarmth" policyRef="policytemplates1:FloorWarmth10"/>
                 </Policies>
             </NodeTemplate>
-            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_5" minInstances="1" maxInstances="1" type="ponyuniverse:shetland_pony" id="shetland_pony_4" winery:x="212" winery:y="485">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="shetland_pony_5" type="ponyuniverse:shetland_pony" id="shetland_pony_4" winery:x="212" winery:y="485">
                 <Properties>
-                    <Properties xmlns="http://www.example.org">
+                    <ShetlandPonyProperties xmlns="http://winery.opentosca.org/test/ponyuniverse/propertiesdefinition/winery" xmlns:ty="http://winery.opentosca.org/test/ponyuniverse">
                         <State/>
-                    </Properties>
+			</ShetlandPonyProperties>
                 </Properties>
                 <Requirements>
                     <Requirement name="ReqWarmFloor" type="ponyuniverse:ReqWarmFloor" id="11234"/>
                 </Requirements>
                 <Policies>
-                    <Policy xmlns:policytypes="http://winery.opentosca.org/test/ponyuniverse/policytypes" xmlns:policytemplates="http://www.winery.opentosca.org/test/targetallocation/policytemplates" name="floorwarmth30" policyType="policytypes:FloorWarmth" policyRef="policytemplates:FloorWarmth30"/>
+                    <Policy xmlns:policytypes="http://winery.opentosca.org/test/ponyuniverse/policytypes" xmlns:policytemplates1="http://www.winery.opentosca.org/test/targetallocation/policytemplates" name="floorwarmth30" policyType="policytypes:FloorWarmth" policyRef="policytemplates1:FloorWarmth30"/>
                 </Policies>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_39" type="ponyuniverse:standsOn" id="shetland_pony_standsOn_straw">
@@ -82,22 +82,22 @@
                 <SourceElement ref="straw"/>
                 <TargetElement ref="stall"/>
             </RelationshipTemplate>
-            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" name="shetland_pony_3_connectsTo_shetland_pony" type="connectsTo" id="shetland_pony_3_connectsTo_shetland_pony">
-                <ns5:SourceElement ref="shetland_pony_3"/>
-                <ns5:TargetElement ref="shetland_pony"/>
-            </ns5:RelationshipTemplate>
-            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" name="shetland_pony_3_connectsTo_shetland_pony_2" type="connectsTo" id="shetland_pony_3_connectsTo_shetland_pony_2">
-                <ns5:SourceElement ref="shetland_pony_3"/>
-                <ns5:TargetElement ref="shetland_pony_2"/>
-            </ns5:RelationshipTemplate>
-            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" name="shetland_pony_4_connectsTo_shetland_pony" type="connectsTo" id="shetland_pony_4_connectsTo_shetland_pony">
-                <ns5:SourceElement ref="shetland_pony_4"/>
-                <ns5:TargetElement ref="shetland_pony"/>
-            </ns5:RelationshipTemplate>
-            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" name="shetland_pony_4_connectsTo_shetland_pony_2" type="connectsTo" id="shetland_pony_4_connectsTo_shetland_pony_2">
-                <ns5:SourceElement ref="shetland_pony_4"/>
-                <ns5:TargetElement ref="shetland_pony_2"/>
-            </ns5:RelationshipTemplate>
+            <RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_85" type="ponyuniverse:connectsTo" id="con_85">
+                <SourceElement ref="shetland_pony_3"/>
+                <TargetElement ref="shetland_pony"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_97" type="ponyuniverse:connectsTo" id="con_97">
+                <SourceElement ref="shetland_pony_3"/>
+                <TargetElement ref="shetland_pony_2"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_109" type="ponyuniverse:connectsTo" id="con_109">
+                <SourceElement ref="shetland_pony_4"/>
+                <TargetElement ref="shetland_pony"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="con_121" type="ponyuniverse:connectsTo" id="con_121">
+                <SourceElement ref="shetland_pony_4"/>
+                <TargetElement ref="shetland_pony_2"/>
+            </RelationshipTemplate>
         </TopologyTemplate>
     </ServiceTemplate>
 </Definitions>
