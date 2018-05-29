@@ -2,13 +2,16 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.opentosca.org/providers/FieldProvider" id="winery-defs-for_FieldProvider-FieldProvider">
     <ServiceTemplate name="FieldProvider" targetNamespace="http://www.opentosca.org/providers/FieldProvider" id="FieldProvider">
         <TopologyTemplate>
-            <NodeTemplate xmlns:ponyuniverse1="http://www.winery.opentosca.org/test/ponyuniverse" name="field" type="ponyuniverse1:field" id="field" winery:x="456" winery:y="324">
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="field_-w1-wip1" minInstances="1" maxInstances="1" type="ponyuniverse:field_-w1-wip1" id="field_-w1-wip1" winery:x="664" winery:y="421">
+                <Properties/>
+                <Requirements/>
                 <Capabilities>
-                    <Capability xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="CapWarmFloor" type="ponyuniverse:CapWarmFloor" id="fieldCap"/>
+                    <Capability name="CapWarmFloor" type="ponyuniverse:CapWarmFloor" id="fieldCapWarmFloor"/>
                 </Capabilities>
                 <Policies>
-                    <Policy xmlns:policytypes="http://winery.opentosca.org/test/ponyuniverse/policytypes" xmlns:policytemplates="http://winery.opentosca.org/test/ponyuniverse/policytemplates" name="floorwarmth" policyType="policytypes:FloorWarmth" policyRef="policytemplates:FieldFloorWarmth"/>
+                    <Policy xmlns:ptyIgeneral="http://winery.opentosca.org/test/ponyuniverse/policytypes" xmlns:pteIgeneral="http://winery.opentosca.org/test/ponyuniverse/policytemplates" name="fieldFloorWarmth" policyType="ptyIgeneral:FloorWarmth" policyRef="pteIgeneral:FieldFloorWarmth"/>
                 </Policies>
+                <DeploymentArtifacts/>
             </NodeTemplate>
         </TopologyTemplate>
     </ServiceTemplate>
