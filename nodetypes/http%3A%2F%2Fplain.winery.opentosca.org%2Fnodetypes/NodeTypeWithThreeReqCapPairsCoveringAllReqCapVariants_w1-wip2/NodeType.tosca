@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/nodetypes" id="winery-defs-for_nodetypes-NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants_-w1-wip1">
-    <NodeType name="NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants_-w1-wip1" targetNamespace="http://plain.winery.opentosca.org/nodetypes">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/nodetypes" id="winery-defs-for_nodetypes-NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants_w1-wip2">
+    <NodeType name="NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants_w1-wip2" targetNamespace="http://plain.winery.opentosca.org/nodetypes">
         <winery:PropertiesDefinition elementname="properties" namespace="http://plain.winery.opentosca.org/nodetypes/propertiesdefinition/winery">
             <winery:properties>
                 <winery:key>prop1</winery:key>
                 <winery:type>xsd:string</winery:type>
             </winery:properties>
             <winery:properties>
-                <winery:key>prop2</winery:key>
-                <winery:type>xsd:QName</winery:type>
+                <winery:key>prop3</winery:key>
+                <winery:type>xsd:float</winery:type>
+            </winery:properties>
+            <winery:properties>
+                <winery:key>another</winery:key>
+                <winery:type>xsd:string</winery:type>
             </winery:properties>
         </winery:PropertiesDefinition>
         <RequirementDefinitions>

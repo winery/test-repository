@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates-ServiceTemplateWithOneNodeTemplate_w1-wip1">
+    <ServiceTemplate name="ServiceTemplateWithOneNodeTemplate_w1-wip1" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="ServiceTemplateWithOneNodeTemplate_w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="NodeTypeWith5Versions_0.3.4-w3-wip1" type="nodetypes1:NodeTypeWith5Versions_0.3.4-w3-wip1" id="NodeTypeWith5Versions_0_3.4-w3-wip1" winery:location="undefined" winery:x="502" winery:y="325"/>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>

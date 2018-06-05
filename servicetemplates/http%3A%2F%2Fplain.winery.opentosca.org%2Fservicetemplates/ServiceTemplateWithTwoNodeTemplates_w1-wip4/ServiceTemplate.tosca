@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates-ServiceTemplateWithTwoNodeTemplates_-w1-wip4">
-    <ServiceTemplate name="ServiceTemplateWithTwoNodeTemplates_-w1-wip4" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="ServiceTemplateWithTwoNodeTemplates_-w1-wip4">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates-ServiceTemplateWithTwoNodeTemplates_w1-wip4">
+    <ServiceTemplate name="ServiceTemplateWithTwoNodeTemplates_w1-wip4" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="ServiceTemplateWithTwoNodeTemplates_w1-wip4">
         <TopologyTemplate>
             <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" x="400" y="193" location="" winery:x="400" winery:y="193">
                 <DeploymentArtifacts>
@@ -8,7 +8,7 @@
                 </DeploymentArtifacts>
             </NodeTemplate>
             <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties_2" x="388" y="454" location="" winery:x="388" winery:y="454"/>
-            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" name="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_-w1-wip1_NodeTypeWithTwoKVProperties_2" type="RelationshlpTypeWithValidSourceAndTarget_-w1-wip1" id="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_-w1-wip1_NodeTypeWithTwoKVProperties_2">
+            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" name="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_w1-wip1_NodeTypeWithTwoKVProperties_2" type="RelationshlpTypeWithValidSourceAndTarget_w1-wip1" id="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_w1-wip1_NodeTypeWithTwoKVProperties_2">
                 <ns5:SourceElement ref="NodeTypeWithTwoKVProperties"/>
                 <ns5:TargetElement ref="NodeTypeWithTwoKVProperties_2"/>
             </ns5:RelationshipTemplate>
