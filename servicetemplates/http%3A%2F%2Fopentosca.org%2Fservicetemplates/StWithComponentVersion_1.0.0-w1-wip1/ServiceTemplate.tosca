@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates1-StWithComponentVersion_1.0.0-w1-wip1">
+    <ServiceTemplate name="StWithComponentVersion_1.0.0-w1-wip1" targetNamespace="http://opentosca.org/servicetemplates" id="StWithComponentVersion_1.0.0-w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="ntyIgeneral:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:x="537" winery:y="325">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <key1/>
+                        <key2/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
