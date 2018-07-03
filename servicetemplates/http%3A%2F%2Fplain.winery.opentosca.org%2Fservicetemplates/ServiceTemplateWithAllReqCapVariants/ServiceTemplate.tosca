@@ -43,9 +43,7 @@
 					</properties>
                         </Properties>
                     </Capability>
-                    <Capability xmlns:capabilitytypes="http://plain.winery.opentosca.org/capabilitytypes" name="CapabilityDefinition-CapabilityTypeWithXmlElementProperty" type="capabilitytypes:CapabilityTypeWithXmlElementProperty" id="cap3">
-                        <Properties/>
-                    </Capability>
+                    <Capability xmlns:capabilitytypes="http://plain.winery.opentosca.org/capabilitytypes" name="CapabilityDefinition-CapabilityTypeWithXmlElementProperty" type="capabilitytypes:CapabilityTypeWithXmlElementProperty" id="cap3" />
                 </Capabilities>
             </NodeTemplate>
             <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithOneReqCapPairWithoutProperties" type="nodetypes:NodeTypeWithOneReqCapPairWithoutProperties" id="NodeTypeWithOneReqCapPairWithoutProperties" winery:location="undefined" winery:x="782" winery:y="147">

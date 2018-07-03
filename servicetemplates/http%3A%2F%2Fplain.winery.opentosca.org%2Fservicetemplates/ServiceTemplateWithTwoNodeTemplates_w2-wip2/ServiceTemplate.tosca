@@ -11,7 +11,7 @@
                 </Properties>
             </NodeTemplate>
             <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithoutProperties" id="NodeTypeWithoutProperties" winery:x="970" winery:y="237"/>
-            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" name="NodeTypeWithTwoKVProperties_RelationshipTypeWithoutProperties_NodeTypeWithoutProperties" type="RelationshipTypeWithoutProperties" id="NodeTypeWithTwoKVProperties_RelationshipTypeWithoutProperties_NodeTypeWithoutProperties">
+            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="http://plain.winery.opentosca.org/relationshiptypes" name="NodeTypeWithTwoKVProperties_RelationshipTypeWithoutProperties_NodeTypeWithoutProperties" type="RelationshipTypeWithoutProperties" id="NodeTypeWithTwoKVProperties_RelationshipTypeWithoutProperties_NodeTypeWithoutProperties">
                 <ns5:SourceElement ref="NodeTypeWithTwoKVProperties"/>
                 <ns5:TargetElement ref="NodeTypeWithoutProperties"/>
             </ns5:RelationshipTemplate>

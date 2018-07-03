@@ -8,7 +8,7 @@
                 </DeploymentArtifacts>
             </NodeTemplate>
             <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties_2" x="388" y="454" location="" winery:x="388" winery:y="454"/>
-            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="" name="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_w1-wip1_NodeTypeWithTwoKVProperties_2" type="RelationshlpTypeWithValidSourceAndTarget_w1-wip1" id="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_w1-wip1_NodeTypeWithTwoKVProperties_2">
+            <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="http://plain.winery.opentosca.org/relationshiptypes" name="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_w1-wip1_NodeTypeWithTwoKVProperties_2" type="RelationshlpTypeWithValidSourceAndTarget_w1-wip1" id="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_w1-wip1_NodeTypeWithTwoKVProperties_2">
                 <ns5:SourceElement ref="NodeTypeWithTwoKVProperties"/>
                 <ns5:TargetElement ref="NodeTypeWithTwoKVProperties_2"/>
             </ns5:RelationshipTemplate>
