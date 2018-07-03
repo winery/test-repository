@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/nodetypeimplementations" id="winery-defs-for_nodetypeimplementations-NodeTypeWithImplementation-Implementation-DeploymentArtifact">
-    <ArtifactTemplate xmlns:artifacttypes="http://plain.winery.opentosca.org/artifacttypes" name="NodeTypeWithImplementation-Implementation-DeploymentArtifact" type="artifacttypes:ArtifactTypeWithoutProperties" id="NodeTypeWithImplementation-Implementation-DeploymentArtifact"/>
-</Definitions>
