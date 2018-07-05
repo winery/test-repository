@@ -3,11 +3,24 @@
     <ServiceTemplate name="ServiceTemplateWithTwoNodeTemplates_w1-wip4" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="ServiceTemplateWithTwoNodeTemplates_w1-wip4">
         <TopologyTemplate>
             <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:x="400" winery:y="193">
+                <Properties>
+                    <properties xmlns="http://plain.winery.opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <key1/>
+                        <key2/>
+                    </properties>
+                </Properties>
                 <DeploymentArtifacts>
-                    <DeploymentArtifact name="test"/>
+                    <DeploymentArtifact name="test" artifactType="artifacttypes:ArtifactTypeWithoutProperties" xmlns:artifacttypes="http://plain.winery.opentosca.org/artifacttypes"/>
                 </DeploymentArtifacts>
             </NodeTemplate>
-            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties_2" winery:x="388" winery:y="454"/>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties_2" winery:x="388" winery:y="454">
+                <Properties>
+                    <properties xmlns="http://plain.winery.opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <key1/>
+                        <key2/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
             <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="http://plain.winery.opentosca.org/relationshiptypes" name="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_w1-wip1_NodeTypeWithTwoKVProperties_2" type="RelationshlpTypeWithValidSourceAndTarget_w1-wip1" id="NodeTypeWithTwoKVProperties_RelationshlpTypeWithValidSourceAndTarget_w1-wip1_NodeTypeWithTwoKVProperties_2">
                 <ns5:SourceElement ref="NodeTypeWithTwoKVProperties"/>
                 <ns5:TargetElement ref="NodeTypeWithTwoKVProperties_2"/>

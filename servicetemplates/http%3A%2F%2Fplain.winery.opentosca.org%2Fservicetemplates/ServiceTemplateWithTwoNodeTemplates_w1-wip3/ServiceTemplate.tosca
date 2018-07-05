@@ -2,7 +2,14 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates-ServiceTemplateWithTwoNodeTemplates_w1-wip3">
     <ServiceTemplate name="ServiceTemplateWithTwoNodeTemplates_w1-wip3" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="ServiceTemplateWithTwoNodeTemplates_w1-wip3">
         <TopologyTemplate>
-            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:x="399" winery:y="193"/>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:x="399" winery:y="193">
+                <Properties>
+                    <properties xmlns="http://plain.winery.opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <key1/>
+                        <key2/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
             <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithoutProperties" id="NodeTypeWithoutProperties" winery:x="500" winery:y="409"/>
             <ns5:RelationshipTemplate xmlns:ns5="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns="http://plain.winery.opentosca.org/relationshiptypes" name="NodeTypeWithTwoKVProperties_RelationshipTypeWithoutProperties_NodeTypeWithoutProperties" type="RelationshipTypeWithoutProperties" id="NodeTypeWithTwoKVProperties_RelationshipTypeWithoutProperties_NodeTypeWithoutProperties">
                 <ns5:SourceElement ref="NodeTypeWithTwoKVProperties"/>
