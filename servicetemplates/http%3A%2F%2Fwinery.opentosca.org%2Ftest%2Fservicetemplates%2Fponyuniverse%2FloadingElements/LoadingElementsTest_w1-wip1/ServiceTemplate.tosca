@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/loadingElements" id="winery-defs-for_steIloadingElements-LoadingElementsTest_w1-wip1">
+    <ServiceTemplate name="LoadingElementsTest_w1-wip1" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/loadingElements" id="LoadingElementsTest_w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:ponyuniverse="http://winery.opentosca.org/test/ponyuniverse" name="unicorn" minInstances="1" maxInstances="1" type="ponyuniverse:unicorn" id="unicorn" winery:x="766" winery:y="232">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <State/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
