@@ -2,7 +2,7 @@ version: 2
 jobs:
    build:
      docker:
-       - image: opentosca/winery:consistencycheck
+       - image: opentosca/winery-cli:latest
      steps:
        - checkout
        - run: winery --path .
