@@ -1,0 +1,212 @@
+{
+  "http://www.opentosca.org/nodetypes" : {
+    "namespace" : "http://www.opentosca.org/nodetypes",
+    "prefix" : "otnt",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/capabilitytypes/propertiesdefinition/winery" : {
+    "namespace" : "http://plain.winery.opentosca.org/capabilitytypes/propertiesdefinition/winery",
+    "prefix" : "winery3",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/nodetypes" : {
+    "namespace" : "http://plain.winery.opentosca.org/nodetypes",
+    "prefix" : "nodetypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://docs.oasis-open.org/tosca/ns/2011/12" : {
+    "namespace" : "http://docs.oasis-open.org/tosca/ns/2011/12",
+    "prefix" : "tosca",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/nodetypes/propertiesdefinition/winery" : {
+    "namespace" : "http://plain.winery.opentosca.org/nodetypes/propertiesdefinition/winery",
+    "prefix" : "winery1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/requirementtypes/propertiesdefinition/winery" : {
+    "namespace" : "http://plain.winery.opentosca.org/requirementtypes/propertiesdefinition/winery",
+    "prefix" : "winery2",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.w3.org/2001/XMLSchema" : {
+    "namespace" : "http://www.w3.org/2001/XMLSchema",
+    "prefix" : "xsd",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/policytemplates" : {
+    "namespace" : "http://plain.winery.opentosca.org/policytemplates",
+    "prefix" : "policytemplates",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "https://www.w3schools.com/xml/schema_example.asp" : {
+    "namespace" : "https://www.w3schools.com/xml/schema_example.asp",
+    "prefix" : "schemaexampleasp",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.opentosca.org/winery/extensions/tosca/2013/02/12" : {
+    "namespace" : "http://www.opentosca.org/winery/extensions/tosca/2013/02/12",
+    "prefix" : "winery",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://opentosca.org/servicetemplates" : {
+    "namespace" : "http://opentosca.org/servicetemplates",
+    "prefix" : "servicetemplates1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/servicetemplates" : {
+    "namespace" : "http://plain.winery.opentosca.org/servicetemplates",
+    "prefix" : "servicetemplates",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://test.winery.opentosca.org" : {
+    "namespace" : "http://test.winery.opentosca.org",
+    "prefix" : "testwineryopentoscaorg",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/artifacttemplates" : {
+    "namespace" : "http://plain.winery.opentosca.org/artifacttemplates",
+    "prefix" : "artifacttemplates",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/requirementtypes" : {
+    "namespace" : "http://plain.winery.opentosca.org/requirementtypes",
+    "prefix" : "requirementtypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/nodetypeimplementations" : {
+    "namespace" : "http://plain.winery.opentosca.org/nodetypeimplementations",
+    "prefix" : "nodetypeimplementations",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/artifacttypes" : {
+    "namespace" : "http://plain.winery.opentosca.org/artifacttypes",
+    "prefix" : "artifacttypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.example.org" : {
+    "namespace" : "http://www.example.org",
+    "prefix" : "ex",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/capabilitytypes" : {
+    "namespace" : "http://plain.winery.opentosca.org/capabilitytypes",
+    "prefix" : "capabilitytypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/artifacttypes/propertiesdefinition/winery" : {
+    "namespace" : "http://plain.winery.opentosca.org/artifacttypes/propertiesdefinition/winery",
+    "prefix" : "winery4",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://opentosca.org/nodetypes" : {
+    "namespace" : "http://opentosca.org/nodetypes",
+    "prefix" : "nodetypes1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.example.org/tosca/compliancerules" : {
+    "namespace" : "http://www.example.org/tosca/compliancerules",
+    "prefix" : "compliancerules",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/policytypes/propertiesdefinition/winery" : {
+    "namespace" : "http://plain.winery.opentosca.org/policytypes/propertiesdefinition/winery",
+    "prefix" : "winery5",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/policytypes" : {
+    "namespace" : "http://plain.winery.opentosca.org/policytypes",
+    "prefix" : "policytypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/relationshiptype/properties" : {
+    "namespace" : "http://plain.winery.opentosca.org/relationshiptype/properties",
+    "prefix" : "properties",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.example.org/tosca/nodetypes" : {
+    "namespace" : "http://www.example.org/tosca/nodetypes",
+    "prefix" : "nodetypes2",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/relationshiptypes" : {
+    "namespace" : "http://plain.winery.opentosca.org/relationshiptypes",
+    "prefix" : "relationshiptypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.w3.org/XML/1998/namespace" : {
+    "namespace" : "http://www.w3.org/XML/1998/namespace",
+    "prefix" : "xmlns",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.eclipse.org/winery/model/selfservice" : {
+    "namespace" : "http://www.eclipse.org/winery/model/selfservice",
+    "prefix" : "selfservice",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.opentosca.org/patterns": {
+    "namespace" : "http://plain.winery.opentosca.org/patterns",
+    "prefix" : "ot-patterns",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : true
+  }
+}
