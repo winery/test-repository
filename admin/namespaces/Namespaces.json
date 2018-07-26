@@ -6,6 +6,13 @@
     "upstreamRepository" : "",
     "patternCollection" : false
   },
+  "http://plain.winery.org/pattern-based/nodetypes/propertiesdefinition/winery" : {
+    "namespace" : "http://plain.winery.org/pattern-based/nodetypes/propertiesdefinition/winery",
+    "prefix" : "ntypdInodetypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
   "http://plain.winery.opentosca.org/capabilitytypes/propertiesdefinition/winery" : {
     "namespace" : "http://plain.winery.opentosca.org/capabilitytypes/propertiesdefinition/winery",
     "prefix" : "winery3",
@@ -20,10 +27,17 @@
     "upstreamRepository" : "",
     "patternCollection" : false
   },
+  "http://plain.winery.org/pattern-based/servicetemplates" : {
+    "namespace" : "http://plain.winery.org/pattern-based/servicetemplates",
+    "prefix" : "steIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
   "http://docs.oasis-open.org/tosca/ns/2011/12" : {
     "namespace" : "http://docs.oasis-open.org/tosca/ns/2011/12",
     "prefix" : "tosca",
-    "readableName" : "",
+    "readableName" : "Predefined TOSCA elements",
     "upstreamRepository" : "",
     "patternCollection" : false
   },
@@ -44,7 +58,7 @@
   "http://www.w3.org/2001/XMLSchema" : {
     "namespace" : "http://www.w3.org/2001/XMLSchema",
     "prefix" : "xsd",
-    "readableName" : "",
+    "readableName" : "W3C XML schema namespace",
     "upstreamRepository" : "",
     "patternCollection" : false
   },
@@ -65,7 +79,7 @@
   "http://www.opentosca.org/winery/extensions/tosca/2013/02/12" : {
     "namespace" : "http://www.opentosca.org/winery/extensions/tosca/2013/02/12",
     "prefix" : "winery",
-    "readableName" : "",
+    "readableName" : "TOSCA extension by Eclipse Winery",
     "upstreamRepository" : "",
     "patternCollection" : false
   },
@@ -79,6 +93,13 @@
   "http://plain.winery.opentosca.org/servicetemplates" : {
     "namespace" : "http://plain.winery.opentosca.org/servicetemplates",
     "prefix" : "servicetemplates",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://plain.winery.org/pattern-based/nodetypes" : {
+    "namespace" : "http://plain.winery.org/pattern-based/nodetypes",
+    "prefix" : "ntyIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : false
@@ -121,7 +142,7 @@
   "http://www.example.org" : {
     "namespace" : "http://www.example.org",
     "prefix" : "ex",
-    "readableName" : "",
+    "readableName" : "Namespace for creating examples",
     "upstreamRepository" : "",
     "patternCollection" : false
   },
@@ -160,6 +181,13 @@
     "upstreamRepository" : "",
     "patternCollection" : false
   },
+  "http://plain.winery.opentosca.org/patterns" : {
+    "namespace" : "http://plain.winery.opentosca.org/patterns",
+    "prefix" : "ot-patterns",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : true
+  },
   "http://plain.winery.opentosca.org/policytypes" : {
     "namespace" : "http://plain.winery.opentosca.org/policytypes",
     "prefix" : "policytypes",
@@ -191,7 +219,7 @@
   "http://www.w3.org/XML/1998/namespace" : {
     "namespace" : "http://www.w3.org/XML/1998/namespace",
     "prefix" : "xmlns",
-    "readableName" : "",
+    "readableName" : "W3C XML namespace",
     "upstreamRepository" : "",
     "patternCollection" : false
   },
@@ -201,12 +229,5 @@
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : false
-  },
-  "http://plain.winery.opentosca.org/patterns": {
-    "namespace" : "http://plain.winery.opentosca.org/patterns",
-    "prefix" : "ot-patterns",
-    "readableName" : "",
-    "upstreamRepository" : "",
-    "patternCollection" : true
   }
 }
