@@ -14,6 +14,9 @@
                     <PropertyMapping serviceTemplatePropertyRef="prop2" targetObjectRef="NodeTypeWithThreeReqCapPairsCoveringAllReqCapVariants_w1-wip1" targetPropertyRef="/*[local-name()='properties']/*[local-name()='prop2']"/>
                 </PropertyMappings>
             </Properties>
+            <Requirements>
+                <Requirement name="exposedRequirement" ref="req"/>
+            </Requirements>
             <Capabilities>
                 <Capability name="exposedCapability" ref="cap"/>
             </Capabilities>
@@ -35,6 +38,9 @@
                         <prop2/>
                     </Properties>
                 </Properties>
+                <Requirements>
+                    <Requirement xmlns:requirementtypes="http://plain.winery.opentosca.org/requirementtypes" name="RequirementTypeWithoutProperties" type="requirementtypes:RequirementTypeWithoutProperties" id="req"/>
+                </Requirements>
                 <Capabilities>
                     <Capability xmlns:capabilitytypes="http://plain.winery.opentosca.org/capabilitytypes" name="CapabilityTypeWithoutProperties" type="capabilitytypes:CapabilityTypeWithoutProperties" id="cap"/>
                 </Capabilities>

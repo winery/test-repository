@@ -18,5 +18,8 @@
         <CapabilityDefinitions>
             <CapabilityDefinition xmlns:capabilitytypes="http://plain.winery.opentosca.org/capabilitytypes" name="cap" capabilityType="capabilitytypes:CapabilityTypeWithoutProperties" lowerBound="1" upperBound="1"/>
         </CapabilityDefinitions>
+		<RequirementDefinitions>
+            <RequirementDefinition xmlns:requirementtypes="http://plain.winery.opentosca.org/requirementtypes" name="req" requirementType="requirementtypes:RequirementTypeWithoutProperties" lowerBound="1" upperBound="1"/>
+        </RequirementDefinitions>
     </NodeType>
 </Definitions>
