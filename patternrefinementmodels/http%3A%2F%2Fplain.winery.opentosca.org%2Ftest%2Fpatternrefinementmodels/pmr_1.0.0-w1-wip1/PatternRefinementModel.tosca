@@ -22,8 +22,8 @@
                 <TargetElement ref="12"/>
             </RelationshipTemplate>
         </RefinementStructure>
-        <RelationshipMappings>
+        <RelationMappings>
             <RelationMapping xmlns:tosca1="http://ex.org/tosca" id="mapping1" detectorNode="7" refinementNode="10" relationType="tosca1:test-rel" direction="ingoing" validSourceOrTarget="tosca1:node-type"/>
-        </RelationshipMappings>
+        </RelationMappings>
     </PatternRefinementModel>
 </Definitions>
