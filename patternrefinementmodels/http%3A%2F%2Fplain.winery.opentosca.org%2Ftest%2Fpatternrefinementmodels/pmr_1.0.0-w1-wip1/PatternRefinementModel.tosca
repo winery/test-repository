@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/test/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels-pmr_1.0.0-w1-wip1">
+    <PatternRefinementModel name="pmr_1.0.0-w1-wip1" targetNamespace="http://plain.winery.opentosca.org/test/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:exorg="http://ex.org" type="exorg:nodeType_2" id="7"/>
+            <NodeTemplate xmlns:exorg="http://ex.org" type="exorg:nodeType_4" id="8"/>
+            <RelationshipTemplate xmlns:exorg="http://ex.org" type="exorg:relType_2" id="78">
+                <SourceElement ref="7"/>
+                <TargetElement ref="8"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RefinementStructure>
+            <NodeTemplate xmlns:exorg="http://ex.org" type="exorg:nodeType_10" id="10"/>
+            <NodeTemplate xmlns:exorg="http://ex.org" type="exorg:nodeType_11" id="11"/>
+            <NodeTemplate xmlns:exorg="http://ex.org" type="exorg:nodeType_12" id="12"/>
+            <RelationshipTemplate xmlns:exorg="http://ex.org" type="exorg:relType_2" id="1012">
+                <SourceElement ref="10"/>
+                <TargetElement ref="12"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:exorg="http://ex.org" type="exorg:relType_2" id="1112">
+                <SourceElement ref="11"/>
+                <TargetElement ref="12"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <RelationshipMappings>
+            <RelationMapping xmlns:tosca1="http://ex.org/tosca" id="mapping1" detectorNode="7" refinementNode="10" relationType="tosca1:test-rel" direction="ingoing" validSourceOrTarget="tosca1:node-type"/>
+        </RelationshipMappings>
+    </PatternRefinementModel>
+</Definitions>
