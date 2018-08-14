@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/servicetemplates" id="winery-defs-for_steIgeneral-Webshop_w1">
+    <ServiceTemplate name="Webshop_w1" targetNamespace="http://winery.opentosca.org/test/servicetemplates" id="Webshop_w1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/nodetypes" name="Frontend" minInstances="1" maxInstances="1" type="ntyIgeneral2:Java_8-Servelet-w1" id="Java_8-Servelet-w1" winery:x="330" winery:y="158"/>
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/nodetypes" name="Processor" minInstances="1" maxInstances="1" type="ntyIgeneral2:Java_8-Application-w1" id="Java_8-Application-w1" winery:x="1203" winery:y="161"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Elastic-Infrastructure" minInstances="1" maxInstances="1" type="ntyIgeneral:Elastic-Infrastructure_w1" id="Elastic-Infrastructure_w1" winery:x="330" winery:y="291"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Public-Cloud" minInstances="1" maxInstances="1" type="ntyIgeneral:Public-Cloud_w1" id="Public-Cloud_w1" winery:x="536" winery:y="449"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Message-oriented-Middleware" minInstances="1" maxInstances="1" type="ntyIgeneral:Message-oriented-Middleware_w1" id="Message-oriented-Middleware_w1" winery:x="729" winery:y="286"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="MessageChannel" minInstances="1" maxInstances="1" type="ntyIgeneral:MessageChannel_w1" id="MessageChannel_w1" winery:x="732" winery:y="160"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Execution-Environment" minInstances="1" maxInstances="1" type="ntyIgeneral:Execution-Environment_w1" id="Execution-Environment_w1" winery:x="1204" winery:y="297"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Private-Cloud" minInstances="1" maxInstances="1" type="ntyIgeneral:Private-Cloud_w1" id="Private-Cloud_w1" winery:x="1413" winery:y="451"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Relational-Database" minInstances="1" maxInstances="1" type="ntyIgeneral:Relational-Database_w1" id="Relational-Database_w1" winery:x="1602" winery:y="154"/>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+                <SourceElement ref="Java_8-Servelet-w1"/>
+                <TargetElement ref="Elastic-Infrastructure_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_2" type="ntyIgeneral1:hostedOn" id="con_2">
+                <SourceElement ref="Elastic-Infrastructure_w1"/>
+                <TargetElement ref="Public-Cloud_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_3" type="ntyIgeneral1:hostedOn" id="con_3">
+                <SourceElement ref="Message-oriented-Middleware_w1"/>
+                <TargetElement ref="Public-Cloud_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_4" type="ntyIgeneral1:hostedOn" id="con_4">
+                <SourceElement ref="MessageChannel_w1"/>
+                <TargetElement ref="Message-oriented-Middleware_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_5" type="ntyIgeneral1:JMS-Queue_2.0" id="con_5">
+                <SourceElement ref="Java_8-Servelet-w1"/>
+                <TargetElement ref="MessageChannel_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_6" type="ntyIgeneral1:JMS-Queue_2.0" id="con_6">
+                <SourceElement ref="Java_8-Application-w1"/>
+                <TargetElement ref="MessageChannel_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_7" type="ntyIgeneral1:hostedOn" id="con_7">
+                <SourceElement ref="Java_8-Application-w1"/>
+                <TargetElement ref="Execution-Environment_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_8" type="ntyIgeneral1:hostedOn" id="con_8">
+                <SourceElement ref="Execution-Environment_w1"/>
+                <TargetElement ref="Private-Cloud_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_9" type="ntyIgeneral1:hostedOn" id="con_9">
+                <SourceElement ref="Relational-Database_w1"/>
+                <TargetElement ref="Private-Cloud_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_10" type="ntyIgeneral1:SQL-Con" id="con_10">
+                <SourceElement ref="Java_8-Application-w1"/>
+                <TargetElement ref="Relational-Database_w1"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
