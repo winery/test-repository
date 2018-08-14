@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/nodetypes" id="winery-defs-for_ntyIgeneral1-Java_8-Servelet-w1">
+    <NodeType name="Java_8-Servelet-w1" targetNamespace="http://winery.opentosca.org/test/nodetypes">
+        <RequirementDefinitions>
+            <RequirementDefinition xmlns:rtyIgeneral="http://winery.opentosca.org/test/requirementtypes" name="Linux VM" requirementType="rtyIgeneral:Linux-OperatingSystem_w1" lowerBound="1" upperBound="1"/>
+        </RequirementDefinitions>
+        <CapabilityDefinitions>
+            <CapabilityDefinition xmlns:ctyIgeneral="http://winery.opentosca.org/test/capabilitytypes" name="Java VM 8" capabilityType="ctyIgeneral:Java-8-Runtime_w1" lowerBound="1" upperBound="1"/>
+        </CapabilityDefinitions>
+    </NodeType>
+</Definitions>
