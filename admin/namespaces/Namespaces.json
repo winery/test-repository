@@ -1,0 +1,79 @@
+{
+  "http://winery.opentosca.org/test/concrete/patternrefinementmodels" : {
+    "namespace" : "http://winery.opentosca.org/test/concrete/patternrefinementmodels",
+    "prefix" : "patternrefinementmodels",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.opentosca.org/winery/extensions/tosca/2013/02/12" : {
+    "namespace" : "http://www.opentosca.org/winery/extensions/tosca/2013/02/12",
+    "prefix" : "winery",
+    "readableName" : "TOSCA extension by Eclipse Winery",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.example.org" : {
+    "namespace" : "http://www.example.org",
+    "prefix" : "ex",
+    "readableName" : "Namespace for creating examples",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://winery.opentosca.org/test/patternrefinementmodels" : {
+    "namespace" : "http://winery.opentosca.org/test/patternrefinementmodels",
+    "prefix" : "patternrefinementmodels1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://docs.oasis-open.org/tosca/ns/2011/12" : {
+    "namespace" : "http://docs.oasis-open.org/tosca/ns/2011/12",
+    "prefix" : "tosca",
+    "readableName" : "Predefined TOSCA elements",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.w3.org/XML/1998/namespace" : {
+    "namespace" : "http://www.w3.org/XML/1998/namespace",
+    "prefix" : "xmlns",
+    "readableName" : "W3C XML namespace",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://winery.opentosca.org/test/relationshiptypes" : {
+    "namespace" : "http://winery.opentosca.org/test/relationshiptypes",
+    "prefix" : "ntyIgeneral1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://www.w3.org/2001/XMLSchema" : {
+    "namespace" : "http://www.w3.org/2001/XMLSchema",
+    "prefix" : "xsd",
+    "readableName" : "W3C XML schema namespace",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://winery.opentosca.org/test/concrete/nodetypes" : {
+    "namespace" : "http://winery.opentosca.org/test/concrete/nodetypes",
+    "prefix" : "ntyIgeneral2",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://winery.opentosca.org/test/servicetemplates" : {
+    "namespace" : "http://winery.opentosca.org/test/servicetemplates",
+    "prefix" : "steIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
+  "http://winery.opentosca.org/test/patterns/nodetypes" : {
+    "namespace" : "http://winery.opentosca.org/test/patterns/nodetypes",
+    "prefix" : "ntyIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : true
+  }
+}
