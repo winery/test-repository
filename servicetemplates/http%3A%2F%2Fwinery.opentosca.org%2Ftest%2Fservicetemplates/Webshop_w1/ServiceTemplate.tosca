@@ -2,21 +2,21 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/servicetemplates" id="winery-defs-for_steIgeneral-Webshop_w1">
     <ServiceTemplate name="Webshop_w1" targetNamespace="http://winery.opentosca.org/test/servicetemplates" id="Webshop_w1">
         <TopologyTemplate>
-            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/nodetypes" name="Frontend" minInstances="1" maxInstances="1" type="ntyIgeneral2:Java_8-Servelet-w1" id="Java_8-Servelet-w1" winery:x="330" winery:y="158"/>
-            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/nodetypes" name="Processor" minInstances="1" maxInstances="1" type="ntyIgeneral2:Java_8-Application-w1" id="Java_8-Application-w1" winery:x="1203" winery:y="161"/>
-            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Elastic-Infrastructure" minInstances="1" maxInstances="1" type="ntyIgeneral:Elastic-Infrastructure_w1" id="Elastic-Infrastructure_w1" winery:x="330" winery:y="291"/>
-            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Public-Cloud" minInstances="1" maxInstances="1" type="ntyIgeneral:Public-Cloud_w1" id="Public-Cloud_w1" winery:x="536" winery:y="449"/>
-            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Message-oriented-Middleware" minInstances="1" maxInstances="1" type="ntyIgeneral:Message-oriented-Middleware_w1" id="Message-oriented-Middleware_w1" winery:x="729" winery:y="286"/>
-            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="MessageChannel" minInstances="1" maxInstances="1" type="ntyIgeneral:MessageChannel_w1" id="MessageChannel_w1" winery:x="732" winery:y="160"/>
-            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Execution-Environment" minInstances="1" maxInstances="1" type="ntyIgeneral:Execution-Environment_w1" id="Execution-Environment_w1" winery:x="1204" winery:y="297"/>
-            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Private-Cloud" minInstances="1" maxInstances="1" type="ntyIgeneral:Private-Cloud_w1" id="Private-Cloud_w1" winery:x="1413" winery:y="451"/>
-            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Relational-Database" minInstances="1" maxInstances="1" type="ntyIgeneral:Relational-Database_w1" id="Relational-Database_w1" winery:x="1602" winery:y="154"/>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Frontend" minInstances="1" maxInstances="1" type="ntyIgeneral3:Java_8-Servelet-w1" id="Java_8-Servelet-w1" winery:x="354" winery:y="71"/>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Processor" minInstances="1" maxInstances="1" type="ntyIgeneral3:Java_8-Application-w1" id="Java_8-Application-w1" winery:x="965" winery:y="72"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Elastic-Platform" minInstances="1" maxInstances="1" type="ntyIgeneral:Elastic-Platform_w1" id="Elastic-Platform_w1" winery:x="427" winery:y="212"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Public-Cloud" minInstances="1" maxInstances="1" type="ntyIgeneral:Public-Cloud_w1" id="Public-Cloud_w1" winery:x="574" winery:y="422"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Message-oriented-Middleware" minInstances="1" maxInstances="1" type="ntyIgeneral:Message-oriented-Middleware_w1" id="Message-oriented-Middleware_w1" winery:x="721" winery:y="212"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="MessageChannel" minInstances="1" maxInstances="1" type="ntyIgeneral:MessageChannel_w1" id="MessageChannel_w1" winery:x="719" winery:y="66"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Execution-Environment" minInstances="1" maxInstances="1" type="ntyIgeneral:Execution-Environment_w1" id="Execution-Environment_w1" winery:x="1036" winery:y="221"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Private-Cloud" minInstances="1" maxInstances="1" type="ntyIgeneral:Private-Cloud_w1" id="Private-Cloud_w1" winery:x="1138" winery:y="400"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Relational-Database" minInstances="1" maxInstances="1" type="ntyIgeneral:Relational-Database_w1" id="Relational-Database_w1" winery:x="1287" winery:y="67"/>
             <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
                 <SourceElement ref="Java_8-Servelet-w1"/>
-                <TargetElement ref="Elastic-Infrastructure_w1"/>
+                <TargetElement ref="Elastic-Platform_w1"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_2" type="ntyIgeneral1:hostedOn" id="con_2">
-                <SourceElement ref="Elastic-Infrastructure_w1"/>
+                <SourceElement ref="Elastic-Platform_w1"/>
                 <TargetElement ref="Public-Cloud_w1"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_3" type="ntyIgeneral1:hostedOn" id="con_3">

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/concrete/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels-Amazon-SQS_AWS-already-available-w1-wip1">
+    <PatternRefinementModel name="Amazon-SQS_AWS-already-available-w1-wip1" targetNamespace="http://winery.opentosca.org/test/concrete/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="MessageChannel_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:MessageChannel_w1" id="MessageChannel_w1" winery:x="459" winery:y="232">
+                <Properties/>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Message-oriented-Middleware_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:Message-oriented-Middleware_w1" id="Message-oriented-Middleware_w1" winery:x="489" winery:y="391">
+                <Properties/>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+                <SourceElement ref="MessageChannel_w1"/>
+                <TargetElement ref="Message-oriented-Middleware_w1"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RefinementStructure>
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-Queue_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-Queue_w1" id="Amazon-Queue_w1" winery:x="426" winery:y="134">
+                <Properties/>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-SQS_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-SQS_w1" id="Amazon-SQS_w1" winery:x="459" winery:y="304">
+                <Properties/>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+                <SourceElement ref="Amazon-Queue_w1"/>
+                <TargetElement ref="Amazon-SQS_w1"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <RelationMappings>
+            <RelationMapping xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" id="mapping0" detectorNode="MessageChannel_w1" refinementNode="Amazon-Queue_w1" relationType="ntyIgeneral1:JMS-Queue_2.0" direction="ingoing"/>
+            <RelationMapping xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" id="mapping1" detectorNode="Message-oriented-Middleware_w1" refinementNode="Amazon-SQS_w1" relationType="ntyIgeneral1:hostedOn" direction="outgoing" validSourceOrTarget="ntyIgeneral2:AmazonWebServices_w1"/>
+        </RelationMappings>
+    </PatternRefinementModel>
+</Definitions>
