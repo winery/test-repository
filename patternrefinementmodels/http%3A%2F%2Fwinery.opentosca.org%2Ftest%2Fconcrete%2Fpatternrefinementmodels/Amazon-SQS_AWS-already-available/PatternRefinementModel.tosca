@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/concrete/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels-Amazon-SQS_AWS-already-available-w1-wip1">
-    <PatternRefinementModel name="Amazon-SQS_AWS-already-available-w1-wip1" targetNamespace="http://winery.opentosca.org/test/concrete/patternrefinementmodels">
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/concrete/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels-Amazon-SQS_AWS-already-available">
+    <PatternRefinementModel name="Amazon-SQS_AWS-already-available" targetNamespace="http://winery.opentosca.org/test/concrete/patternrefinementmodels">
         <Detector>
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="MessageChannel_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:MessageChannel_w1" id="MessageChannel_w1" winery:x="459" winery:y="232">
                 <Properties/>
@@ -22,7 +22,7 @@
             </RelationshipTemplate>
         </Detector>
         <RefinementStructure>
-            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-Queue_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-Queue_w1" id="Amazon-Queue_w1" winery:x="426" winery:y="134">
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-Queue_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-Queue_w1" id="Amazon-Queue_w1" winery:x="459" winery:y="155">
                 <Properties/>
                 <Requirements/>
                 <Capabilities/>
