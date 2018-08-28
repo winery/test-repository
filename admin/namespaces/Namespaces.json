@@ -139,6 +139,13 @@
     "upstreamRepository" : "",
     "patternCollection" : false
   },
+  "http://winery.opentosca.org/test/concrete/patternrefinementmodels" : {
+    "namespace" : "http://winery.opentosca.org/test/concrete/patternrefinementmodels",
+    "prefix" : "patternrefinementmodels",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
   "http://www.example.org" : {
     "namespace" : "http://www.example.org",
     "prefix" : "ex",
