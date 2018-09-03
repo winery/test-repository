@@ -5,13 +5,7 @@
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Execution-Environment_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:Execution-Environment_w1" id="Execution-Environment_w1" winery:x="396" winery:y="191"/>
         </Detector>
         <RefinementStructure>
-            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Java_8-Runtime-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Java_8-Runtime-w1" id="Java_8-Runtime-w1" winery:x="468" winery:y="226">
-                <Properties/>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
-            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Java_8-Runtime-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Java_8-Runtime-w1" id="Java_8-Runtime-w1" winery:x="468" winery:y="226" />
             <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Ubuntu_18.04-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Ubuntu_18.04-w1" id="Ubuntu_18.04-w1" winery:x="467" winery:y="349">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
@@ -25,10 +19,6 @@
                         <VMKeyPairName/>
                     </Properties>
                 </Properties>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
             </NodeTemplate>
             <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
                 <SourceElement ref="Java_8-Runtime-w1"/>

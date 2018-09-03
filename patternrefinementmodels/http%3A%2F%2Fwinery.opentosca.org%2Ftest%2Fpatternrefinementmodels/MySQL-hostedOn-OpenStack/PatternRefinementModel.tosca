@@ -4,7 +4,7 @@
         <Detector>
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Relational-Database_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:Relational-Database_w1" id="Relational-Database_w1" winery:x="454" winery:y="190"/>
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Private-Cloud_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:Private-Cloud_w1" id="Private-Cloud_w1" winery:x="448" winery:y="371"/>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="d_con_1" type="ntyIgeneral1:hostedOn" id="d_con_1">
                 <SourceElement ref="Relational-Database_w1"/>
                 <TargetElement ref="Private-Cloud_w1"/>
             </RelationshipTemplate>
@@ -19,10 +19,6 @@
                         <HypervisorUserPassword/>
                     </Properties>
                 </Properties>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
             </NodeTemplate>
             <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Ubuntu_18.04-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Ubuntu_18.04-w1" id="Ubuntu_18.04-w1" winery:x="481" winery:y="316">
                 <Properties>
@@ -37,34 +33,18 @@
                         <VMKeyPairName/>
                     </Properties>
                 </Properties>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="MySQL-DBMS_5.7-w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:MySQL-DBMS_5.7-w1" id="MySQL-DBMS_5.7-w1" winery:x="488" winery:y="180">
-                <Properties/>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
-            </NodeTemplate>
-            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="MySQL-Database_5.7-w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:MySQL-Database_5.7-w1" id="MySQL-Database_5.7-w1" winery:x="482" winery:y="60">
-                <Properties/>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
-            </NodeTemplate>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="MySQL-DBMS_5.7-w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:MySQL-DBMS_5.7-w1" id="MySQL-DBMS_5.7-w1" winery:x="488" winery:y="180" />
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="MySQL-Database_5.7-w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:MySQL-Database_5.7-w1" id="MySQL-Database_5.7-w1" winery:x="482" winery:y="60" />
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="rs_con_1" type="ntyIgeneral1:hostedOn" id="rs_con_1">
                 <SourceElement ref="Ubuntu_18.04-w1"/>
                 <TargetElement ref="OpenStack_liberty-12-w1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_2" type="ntyIgeneral1:hostedOn" id="con_2">
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="rs_con_2" type="ntyIgeneral1:hostedOn" id="rs_con_2">
                 <SourceElement ref="MySQL-DBMS_5.7-w1"/>
                 <TargetElement ref="Ubuntu_18.04-w1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_3" type="ntyIgeneral1:hostedOn" id="con_3">
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="rs_con_3" type="ntyIgeneral1:hostedOn" id="rs_con_3">
                 <SourceElement ref="MySQL-Database_5.7-w1"/>
                 <TargetElement ref="MySQL-DBMS_5.7-w1"/>
             </RelationshipTemplate>

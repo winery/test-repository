@@ -5,11 +5,11 @@
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="MessageChannel_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:MessageChannel_w1" id="MessageChannel_w1" winery:x="459" winery:y="232"/>
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Message-oriented-Middleware_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:Message-oriented-Middleware_w1" id="Message-oriented-Middleware_w1" winery:x="489" winery:y="391"/>
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Public-Cloud_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:Public-Cloud_w1" id="Public-Cloud_w1" winery:x="501" winery:y="574"/>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="d_con_1" type="ntyIgeneral1:hostedOn" id="d_con_1">
                 <SourceElement ref="MessageChannel_w1"/>
                 <TargetElement ref="Message-oriented-Middleware_w1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_2" type="ntyIgeneral1:hostedOn" id="con_2">
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="d_con_2" type="ntyIgeneral1:hostedOn" id="d_con_2">
                 <SourceElement ref="Message-oriented-Middleware_w1"/>
                 <TargetElement ref="Public-Cloud_w1"/>
             </RelationshipTemplate>
@@ -22,7 +22,7 @@
                 <SourceElement ref="Amazon-Queue_w1"/>
                 <TargetElement ref="Amazon-SQS_w1"/>
             </RelationshipTemplate>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_2" type="ntyIgeneral1:hostedOn" id="con_2">
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="rs_con_2" type="ntyIgeneral1:hostedOn" id="rs_con_2">
                 <SourceElement ref="Amazon-SQS_w1"/>
                 <TargetElement ref="AmazonWebServices_w1"/>
             </RelationshipTemplate>

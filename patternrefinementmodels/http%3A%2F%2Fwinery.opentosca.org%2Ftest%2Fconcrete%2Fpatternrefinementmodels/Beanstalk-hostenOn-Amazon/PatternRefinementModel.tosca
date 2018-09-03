@@ -4,27 +4,15 @@
         <Detector>
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Elastic-Platform_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:Elastic-Platform_w1" id="Elastic-Platform_w1" winery:x="506" winery:y="181"/>
             <NodeTemplate xmlns:ntyIgeneral="http://winery.opentosca.org/test/patterns/nodetypes" name="Public-Cloud_w1" minInstances="1" maxInstances="1" type="ntyIgeneral:Public-Cloud_w1" id="Public-Cloud_w1" winery:x="519" winery:y="339"/>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="d_con_1" type="ntyIgeneral1:hostedOn" id="d_con_1">
                 <SourceElement ref="Elastic-Platform_w1"/>
                 <TargetElement ref="Public-Cloud_w1"/>
             </RelationshipTemplate>
         </Detector>
         <RefinementStructure>
-            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-Beanstalk_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-Beanstalk_w1" id="Amazon-Beanstalk_w1" winery:x="338" winery:y="214">
-                <Properties/>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
-            </NodeTemplate>
-            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="AmazonWebServices_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:AmazonWebServices_w1" id="AmazonWebServices_w1" winery:x="431" winery:y="368">
-                <Properties/>
-                <Requirements/>
-                <Capabilities/>
-                <Policies/>
-                <DeploymentArtifacts/>
-            </NodeTemplate>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-Beanstalk_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-Beanstalk_w1" id="Amazon-Beanstalk_w1" winery:x="338" winery:y="214" />
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="AmazonWebServices_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:AmazonWebServices_w1" id="AmazonWebServices_w1" winery:x="431" winery:y="368" />
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="rs_con_1" type="ntyIgeneral1:hostedOn" id="rs_con_1">
                 <SourceElement ref="Amazon-Beanstalk_w1"/>
                 <TargetElement ref="AmazonWebServices_w1"/>
             </RelationshipTemplate>
