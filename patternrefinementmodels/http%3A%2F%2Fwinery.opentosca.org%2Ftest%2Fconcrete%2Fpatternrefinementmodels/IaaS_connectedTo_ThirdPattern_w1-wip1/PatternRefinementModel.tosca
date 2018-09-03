@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/concrete/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels-IaaS_connectedTo_ThirdPattern_w1-wip1">
+    <PatternRefinementModel name="IaaS_connectedTo_ThirdPattern_w1-wip1" targetNamespace="http://winery.opentosca.org/test/concrete/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="Infrastructure-As-A-Service_w1" minInstances="1" maxInstances="1" type="ot-patterns:Infrastructure-As-A-Service_w1" id="Infrastructure-As-A-Service_w1" winery:x="481" winery:y="194"/>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="ThirdPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:ThirdPattern_w1" id="ThirdPattern_w1" winery:x="481" winery:y="344"/>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="con_1" type="relationshiptypes:RelationshipTypeWithoutProperties" id="con_1">
+                <SourceElement ref="Infrastructure-As-A-Service_w1"/>
+                <TargetElement ref="ThirdPattern_w1"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RefinementStructure>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:x="484" winery:y="267">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <key1/>
+                        <key2/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithXmlElementProperty" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithXmlElementProperty" id="NodeTypeWithXmlElementProperty" winery:x="477" winery:y="429"/>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithoutProperties" id="NodeTypeWithoutProperties" winery:x="479" winery:y="601"/>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="con_1" type="relationshiptypes:RelationshipTypeWithoutProperties" id="con_1">
+                <SourceElement ref="NodeTypeWithTwoKVProperties"/>
+                <TargetElement ref="NodeTypeWithXmlElementProperty"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="con_2" type="relationshiptypes:RelationshipTypeWithoutProperties" id="con_2">
+                <SourceElement ref="NodeTypeWithXmlElementProperty"/>
+                <TargetElement ref="NodeTypeWithoutProperties"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <RelationMappings>
+            <RelationMapping xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" id="mapping0" detectorNode="Infrastructure-As-A-Service_w1" refinementNode="NodeTypeWithTwoKVProperties" relationType="relationshiptypes:RelationshipTypeWithoutProperties" direction="ingoing"/>
+            <RelationMapping xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" id="mapping1" detectorNode="ThirdPattern_w1" refinementNode="NodeTypeWithoutProperties" relationType="relationshiptypes:RelationshipTypeWithoutProperties" direction="ingoing"/>
+        </RelationMappings>
+    </PatternRefinementModel>
+</Definitions>
