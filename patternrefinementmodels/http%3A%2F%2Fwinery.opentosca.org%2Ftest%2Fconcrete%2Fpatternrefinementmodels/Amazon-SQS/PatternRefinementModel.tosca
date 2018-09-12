@@ -18,7 +18,7 @@
             <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-Queue_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-Queue_w1" id="Amazon-Queue_w1" winery:x="426" winery:y="134"/>
             <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-SQS_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-SQS_w1" id="Amazon-SQS_w1" winery:x="459" winery:y="304"/>
             <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="AmazonWebServices_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:AmazonWebServices_w1" id="AmazonWebServices_w1" winery:x="454" winery:y="484"/>
-            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="con_1" type="ntyIgeneral1:hostedOn" id="con_1">
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="rs_con_1" type="ntyIgeneral1:hostedOn" id="con_1">
                 <SourceElement ref="Amazon-Queue_w1"/>
                 <TargetElement ref="Amazon-SQS_w1"/>
             </RelationshipTemplate>
