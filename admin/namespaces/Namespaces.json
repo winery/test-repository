@@ -34,6 +34,13 @@
     "upstreamRepository" : "",
     "patternCollection" : false
   },
+  "http://winery.opentosca.org/test/patternrefinementmodels" : {
+    "namespace" : "http://winery.opentosca.org/test/patternrefinementmodels",
+    "prefix" : "patternrefinementmodels1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
   "http://docs.oasis-open.org/tosca/ns/2011/12" : {
     "namespace" : "http://docs.oasis-open.org/tosca/ns/2011/12",
     "prefix" : "tosca",
