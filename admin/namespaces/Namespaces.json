@@ -139,6 +139,13 @@
     "upstreamRepository" : "",
     "patternCollection" : false
   },
+  "http://opentosca.org/patternrefinementmodels" : {
+    "namespace" : "http://opentosca.org/patternrefinementmodels",
+    "prefix" : "otIpatternrefinementmodels",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
+  },
   "http://plain.opentosca.org/policytypes/patterns/propertiesdefinition/winery" : {
     "namespace" : "http://plain.opentosca.org/policytypes/patterns/propertiesdefinition/winery",
     "prefix" : "ptypdIpatterns",
@@ -229,6 +236,13 @@
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : true
+  },
+  "http://opentosca.org/patterns/policytemplates" : {
+    "namespace" : "http://opentosca.org/patterns/policytemplates",
+    "prefix" : "otpteIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false
   },
   "http://www.example.org/tosca/nodetypes" : {
     "namespace" : "http://www.example.org/tosca/nodetypes",

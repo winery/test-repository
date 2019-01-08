@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patterns/policytemplates" id="winery-defs-for_otpteIgeneral-PatternSpecificationOfAnnotatablePattern_w1-wip1">
+    <PolicyTemplate xmlns:ptyIpatterns="http://plain.opentosca.org/policytypes/patterns" name="PatternSpecificationOfAnnotatablePattern_w1-wip1" type="ptyIpatterns:AnnotatablePattern_w1-wip1" id="PatternSpecificationOfAnnotatablePattern_w1-wip1">
+        <Properties>
+            <properties xmlns="http://plain.opentosca.org/policytypes/patterns/propertiesdefinition/winery">
+                <test/>
+            </properties>
+        </Properties>
+    </PolicyTemplate>
+</Definitions>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/patternrefinementmodels" id="winery-defs-for_otIpatternrefinementmodels-PolicyAnnotatedNtWithTwoKvProps_w1-wip1">
+    <PatternRefinementModel name="PolicyAnnotatedNtWithTwoKvProps_w1-wip1" targetNamespace="http://opentosca.org/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="Infrastructure-As-A-Service_w1" minInstances="1" maxInstances="1" type="ot-patterns:Infrastructure-As-A-Service_w1" id="d_Infrastructure-As-A-Service_w1" winery:x="479" winery:y="441"/>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="d_NodeTypeWithTwoKVProperties" winery:x="389" winery:y="202">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <key1/>
+                        <key2/>
+                    </Properties>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:ptyIpatterns="http://plain.opentosca.org/policytypes/patterns" name="annoteatedPattern" policyType="ptyIpatterns:AnnotatablePattern_w1-wip1"/>
+                </Policies>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="RelationshipTypeWithoutProperties" type="relationshiptypes:RelationshipTypeWithoutProperties" id="d_con_RelationshipTypeWithoutProperties_0">
+                <SourceElement ref="d_NodeTypeWithTwoKVProperties"/>
+                <TargetElement ref="d_Infrastructure-As-A-Service_w1"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings>
+            <RelationMapping xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" detectorNode="d_NodeTypeWithTwoKVProperties" refinementNode="rs_NodeTypeWith5Versions_0.3.4-w3" relationType="relationshiptypes:RelationshipTypeWithTwoKvPropertie" direction="outgoing" id="mapping0"/>
+        </RelationMappings>
+        <RefinementStructure>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="NodeTypeWith5Versions_0.3.4-w3" minInstances="1" maxInstances="1" type="nodetypes1:NodeTypeWith5Versions_0.3.4-w3" id="rs_NodeTypeWith5Versions_0.3.4-w3" winery:x="429" winery:y="237"/>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithoutProperties" id="rs_NodeTypeWithoutProperties" winery:x="484" winery:y="447"/>
+            <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="RelationshipTypeWithoutProperties" type="relationshiptypes:RelationshipTypeWithoutProperties" id="rs_con_RelationshipTypeWithoutProperties_0">
+                <SourceElement ref="rs_NodeTypeWith5Versions_0.3.4-w3"/>
+                <TargetElement ref="rs_NodeTypeWithoutProperties"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+    </PatternRefinementModel>
+</Definitions>

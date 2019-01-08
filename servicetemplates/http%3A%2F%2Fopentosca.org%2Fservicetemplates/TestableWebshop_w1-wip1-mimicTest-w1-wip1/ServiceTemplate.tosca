@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/servicetemplates" id="winery-defs-for_otsteIgeneral-TestableWebshop_w1-wip1-mimicTest-w1-wip1">
+    <ServiceTemplate name="TestableWebshop_w1-wip1-mimicTest-w1-wip1" targetNamespace="http://opentosca.org/servicetemplates" id="TestableWebshop_w1-wip1-mimicTest-w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Java_8-Servelet-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Java_8-Servelet-w1" id="Java_8-Servelet-w1" winery:x="503" winery:y="183"/>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Tomcat_8.5-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Tomcat_8.5-w1" id="Tomcat_8.5-w1" winery:x="494" winery:y="323"/>
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="MySQL-Database_5.7-w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:MySQL-Database_5.7-w1" id="MySQL-Database_5.7-w1" winery:x="873" winery:y="181"/>
+            <NodeTemplate xmlns:ntyIgeneral2="http://winery.opentosca.org/test/concrete/nodetypes" name="Amazon-Beanstalk_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Amazon-Beanstalk_w1" id="Amazon-Beanstalk_w1" winery:x="488" winery:y="469"/>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="OpenStack_liberty-12-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:OpenStack_liberty-12-w1" id="OpenStack_liberty-12-w1" winery:x="868" winery:y="491">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <HypervisorEndpoint/>
+                        <HypervisorTenantID/>
+                        <HypervisorUserName/>
+                        <HypervisorUserPassword/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Ubuntu_18.04-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Ubuntu_18.04-w1" id="Ubuntu_18.04-w1" winery:x="865" winery:y="319">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <VMIP/>
+                        <VMInstanceID/>
+                        <VMType/>
+                        <VMUserName/>
+                        <VMUserPassword/>
+                        <VMPrivateKey/>
+                        <VMPublicKey/>
+                        <VMKeyPairName/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Java_8-Servelet-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Java_8-Servelet-w1" id="Java_8-Servelet-w1_2" winery:x="1318" winery:y="175"/>
+            <NodeTemplate xmlns:ntyIgeneral3="http://winery.opentosca.org/test/nodetypes" name="Tomcat_8.5-w1" minInstances="1" maxInstances="1" type="ntyIgeneral3:Tomcat_8.5-w1" id="Tomcat_8.5-w1_2" winery:x="1297" winery:y="315"/>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral1:hostedOn" id="con_hostedOn_0">
+                <SourceElement ref="Java_8-Servelet-w1"/>
+                <TargetElement ref="Tomcat_8.5-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="SQL-Con" type="ntyIgeneral1:SQL-Con" id="con_SQL-Con_0">
+                <SourceElement ref="Java_8-Servelet-w1"/>
+                <TargetElement ref="MySQL-Database_5.7-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral1:hostedOn" id="con_hostedOn_1">
+                <SourceElement ref="Tomcat_8.5-w1"/>
+                <TargetElement ref="Amazon-Beanstalk_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral1:hostedOn" id="con_hostedOn_2">
+                <SourceElement ref="MySQL-Database_5.7-w1"/>
+                <TargetElement ref="Ubuntu_18.04-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral1:hostedOn" id="con_hostedOn_3">
+                <SourceElement ref="Ubuntu_18.04-w1"/>
+                <TargetElement ref="OpenStack_liberty-12-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral1:hostedOn" id="con_hostedOn_4">
+                <SourceElement ref="Java_8-Servelet-w1_2"/>
+                <TargetElement ref="Tomcat_8.5-w1_2"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral1="http://winery.opentosca.org/test/relationshiptypes" name="SQL-Con" type="ntyIgeneral1:SQL-Con" id="con_SQL-Con_1">
+                <SourceElement ref="Java_8-Servelet-w1_2"/>
+                <TargetElement ref="MySQL-Database_5.7-w1"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
