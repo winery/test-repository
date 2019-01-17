@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates-ServiceTemplateWithIpSecProblem_w1-wip1">
+    <ServiceTemplate name="ServiceTemplateWithIpSecProblem_w1-wip1" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="ServiceTemplateWithIpSecProblem_w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="ubuntu-replacable_18-w1-wip1" minInstances="1" maxInstances="1" type="nodetypes:ubuntu-replacable_18-w1-wip1" id="replaceableNode_1" winery:x="516" winery:y="367"/>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithImplementation_1.0-w1-wip1" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithImplementation_1.0-w1-wip1" id="NodeTypeWithImplementation_1.0-w1-wip1" winery:x="514" winery:y="206"/>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="ubuntu-replacable_18-w1-wip1" minInstances="1" maxInstances="1" type="nodetypes:ubuntu-replacable_18-w1-wip1" id="replaceableNode_2" winery:x="1078" winery:y="359"/>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithXmlElementProperty" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithXmlElementProperty" id="NodeTypeWithXmlElementProperty" winery:x="1063" winery:y="204"/>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="NodeTypeWithImplementation_1.0-w1-wip1"/>
+                <TargetElement ref="replaceableNode_1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="NodeTypeWithXmlElementProperty"/>
+                <TargetElement ref="replaceableNode_2"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="ConnectsTo" type="ToscaBaseTypes:ConnectsTo" id="con_ConnectsTo_0">
+                <SourceElement ref="NodeTypeWithImplementation_1.0-w1-wip1"/>
+                <TargetElement ref="NodeTypeWithXmlElementProperty"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
