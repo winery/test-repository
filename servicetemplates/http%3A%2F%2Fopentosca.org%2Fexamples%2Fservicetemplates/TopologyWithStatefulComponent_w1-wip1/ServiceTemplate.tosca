@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/examples/servicetemplates" id="winery-defs-for_otsteIgeneral-TopologyWithStatefulComponent_w1-wip1">
+    <ServiceTemplate name="TopologyWithStatefulComponent_w1-wip1" targetNamespace="http://opentosca.org/examples/servicetemplates" id="TopologyWithStatefulComponent_w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/examples/nodetypes" name="StatefulComponent_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:StatefulComponent_w1-wip1" id="statefulComponent" winery:x="833" winery:y="286"/>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/baseelements/nodetypes" name="VM" minInstances="1" maxInstances="1" type="otntyIgeneral:VM" id="stateless" winery:x="377" winery:y="237"/>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>

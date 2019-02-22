@@ -79,6 +79,14 @@
     "patternCollection" : false,
     "secureCollection" : false
   },
+  "http://opentosca.org/policytypes" : {
+    "namespace" : "http://opentosca.org/policytypes",
+    "prefix" : "otptyIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
   "http://www.w3.org/2001/XMLSchema" : {
     "namespace" : "http://www.w3.org/2001/XMLSchema",
     "prefix" : "xsd",
@@ -255,9 +263,25 @@
     "patternCollection" : false,
     "secureCollection" : false
   },
+  "http://opentosca.org/examples/servicetemplates" : {
+    "namespace" : "http://opentosca.org/examples/servicetemplates",
+    "prefix" : "otsteIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
   "http://plain.winery.opentosca.org/policytypes/propertiesdefinition/winery" : {
     "namespace" : "http://plain.winery.opentosca.org/policytypes/propertiesdefinition/winery",
     "prefix" : "winery5",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
+  "http://opentosca.org/examples/nodetypes" : {
+    "namespace" : "http://opentosca.org/examples/nodetypes",
+    "prefix" : "otntyIgeneral1",
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : false,
