@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/examples/servicetemplates" id="winery-defs-for_otsteIgeneral-TopologyWithStatefulComponent_w1-wip3">
+    <ServiceTemplate name="TopologyWithStatefulComponent_w1-wip3" targetNamespace="http://opentosca.org/examples/servicetemplates" id="TopologyWithStatefulComponent_w1-wip3">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/examples/nodetypes" name="StatefulComponent_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral1:StatefulComponent_w1-wip1" id="statefulNotFreezableComponent" winery:x="730" winery:y="176">
+                <Policies>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="stateful" policyType="otptyIgeneral:StatefulComponent"/>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="freezable" policyType="otptyIgeneral:FreezableComponent"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/baseelements/nodetypes" name="VM" minInstances="1" maxInstances="1" type="otntyIgeneral:VM" id="statelessFreezableComponent" winery:x="870" winery:y="466">
+                <Policies>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="freezable" policyType="otptyIgeneral:FreezableComponent"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="http://plain.winery.org/pattern-based/nodetypes" name="Infrastructure-As-A-Service-Implementation_1-w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral:Infrastructure-As-A-Service-Implementation_1-w1-wip1" id="Infrastructure-As-A-Service-Implementation_1-w1-wip1" winery:x="856" winery:y="668"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://plain.winery.org/pattern-based/nodetypes" name="AbstractNodeTypeWithProperties_1-w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral:AbstractNodeTypeWithProperties_1-w1-wip1" id="AbstractNodeTypeWithProperties_1-w1-wip1" winery:x="1057" winery:y="203">
+                <Policies>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="freezable" policyType="otptyIgeneral:FreezableComponent"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/baseelements/nodetypes" name="VM" minInstances="1" maxInstances="1" type="otntyIgeneral:VM" id="VM_2" winery:x="309" winery:y="461"/>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/examples/nodetypes" name="StatefulComponent_w1-wip2" minInstances="1" maxInstances="1" type="otntyIgeneral1:StatefulComponent_w1-wip2" id="statefulFreezableComponent" winery:x="329" winery:y="174">
+                <Policies>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="stateful" policyType="otptyIgeneral:StatefulComponent"/>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="freezable" policyType="otptyIgeneral:FreezableComponent"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/baseelements/nodetypes" name="VM" minInstances="1" maxInstances="1" type="otntyIgeneral:VM" id="VM_3" winery:x="1296" winery:y="630">
+                <Policies>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="freezable" policyType="otptyIgeneral:FreezableComponent"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral="http://opentosca.org/baseelements/nodetypes" name="DockerEngine" minInstances="1" maxInstances="1" type="otntyIgeneral:DockerEngine" id="DockerEngine" winery:x="1388" winery:y="366"/>
+            <NodeTemplate xmlns:otntyIgeneral1="http://opentosca.org/examples/nodetypes" name="StatefulComponent_w1-wip2" minInstances="1" maxInstances="1" type="otntyIgeneral1:StatefulComponent_w1-wip2" id="statefulFreezableImplicitlyProvisioned" winery:x="1388" winery:y="123">
+                <Policies>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="stateful" policyType="otptyIgeneral:StatefulComponent"/>
+                    <Policy xmlns:otptyIgeneral="http://opentosca.org/policytypes" name="freezable" policyType="otptyIgeneral:FreezableComponent"/>
+                </Policies>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="statefulNotFreezableComponent"/>
+                <TargetElement ref="statelessFreezableComponent"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="statelessFreezableComponent"/>
+                <TargetElement ref="Infrastructure-As-A-Service-Implementation_1-w1-wip1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
+                <SourceElement ref="AbstractNodeTypeWithProperties_1-w1-wip1"/>
+                <TargetElement ref="statelessFreezableComponent"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
+                <SourceElement ref="statefulFreezableComponent"/>
+                <TargetElement ref="VM_2"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="ConnectsTo" type="ToscaBaseTypes:ConnectsTo" id="con_ConnectsTo_0">
+                <SourceElement ref="statefulFreezableComponent"/>
+                <TargetElement ref="statefulNotFreezableComponent"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_4">
+                <SourceElement ref="DockerEngine"/>
+                <TargetElement ref="VM_3"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_5">
+                <SourceElement ref="statefulFreezableImplicitlyProvisioned"/>
+                <TargetElement ref="DockerEngine"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
