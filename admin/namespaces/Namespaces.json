@@ -422,5 +422,13 @@
     "upstreamRepository" : "",
     "patternCollection" : false,
     "secureCollection" : false
+  },
+  "http://opentosca.org/add/management/to/instances/servicetemplates" : {
+    "namespace" : "http://opentosca.org/add/management/to/instances/servicetemplates",
+    "prefix" : "otsteIgeneral1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false
   }
 }
