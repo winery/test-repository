@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12"
+             targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes"
+             id="winery-defs-for_otntyIgeneral2-MySQL-Database_freezable-w1">
+    <NodeType name="MySQL-Database_freezable-w1" abstract="no" final="no"
+              targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes">
+        <DerivedFrom xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes"
+                     typeRef="otntyIgeneral2:MySQL-Database_w1"/>
+        <Interfaces>
+            <Interface name="http://opentosca.org/interfaces/state">
+                <Operation name="freeze">
+                    <InputParameters>
+                        <InputParameter name="DBName" type="xsd:string" required="yes"/>
+                        <InputParameter name="DBUser" type="xsd:string" required="yes"/>
+                        <InputParameter name="DBPassword" type="xsd:string" required="yes"/>
+                    </InputParameters>
+                </Operation>
+                <Operation name="defrost">
+                    <InputParameters>
+                        <InputParameter name="DBName" type="xsd:string" required="yes"/>
+                        <InputParameter name="DBUser" type="xsd:string" required="yes"/>
+                        <InputParameter name="DBPassword" type="xsd:string" required="yes"/>
+                        <InputParameter name="DBMSUser" type="xsd:string" required="yes"/>
+                        <InputParameter name="DBMSPassword" type="xsd:string" required="yes"/>
+                    </InputParameters>
+                </Operation>
+            </Interface>
+        </Interfaces>
+    </NodeType>
+</Definitions>

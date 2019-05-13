@@ -7,6 +7,14 @@
     "patternCollection" : false,
     "secureCollection" : false
   },
+  "http://opentosca.org/add/management/to/instances/requirementtypes" : {
+    "namespace" : "http://opentosca.org/add/management/to/instances/requirementtypes",
+    "prefix" : "otrtyIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
   "http://winery.opentosca.org/test/patternrefinementmodels" : {
     "namespace" : "http://winery.opentosca.org/test/patternrefinementmodels",
     "prefix" : "patternrefinementmodels1",
@@ -34,6 +42,14 @@
   "http://winery.opentosca.org/test/servicetemplates" : {
     "namespace" : "http://winery.opentosca.org/test/servicetemplates",
     "prefix" : "steIgeneral2",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
+  "http://opentosca.org/add/management/to/instances/nodetypeimplementations" : {
+    "namespace" : "http://opentosca.org/add/management/to/instances/nodetypeimplementations",
+    "prefix" : "otntyiIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : false,
@@ -255,6 +271,14 @@
     "patternCollection" : false,
     "secureCollection" : false
   },
+  "http://opentosca.org/add/management/to/instances/nodetypes" : {
+    "namespace" : "http://opentosca.org/add/management/to/instances/nodetypes",
+    "prefix" : "otntyIgeneral2",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
   "http://plain.winery.opentosca.org/artifacttemplates" : {
     "namespace" : "http://plain.winery.opentosca.org/artifacttemplates",
     "prefix" : "artifacttemplates",
@@ -358,6 +382,14 @@
     "upstreamRepository" : "",
     "patternCollection" : false,
     "secureCollection" : true
+  },
+  "http://opentosca.org/add/management/to/instances/capabilitytypes" : {
+    "namespace" : "http://opentosca.org/add/management/to/instances/capabilitytypes",
+    "prefix" : "otctyIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false
   },
   "http://plain.winery.opentosca.org/relationshiptype/properties" : {
     "namespace" : "http://plain.winery.opentosca.org/relationshiptype/properties",

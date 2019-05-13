@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes" id="winery-defs-for_otntyIgeneral2-Ubuntu_16.04-testable-w1">
+    <NodeType name="Ubuntu_16.04-testable-w1" abstract="no" final="no" targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes">
+        <DerivedFrom xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" typeRef="otntyIgeneral2:Ubuntu_16.04-w1"/>
+        <Interfaces>
+            <Interface name="http://opentosca.org/interfaces/tests">
+                <Operation name="testPortBinding">
+                    <InputParameters>
+                        <InputParameter name="Port" type="xsd:string" required="yes"/>
+                    </InputParameters>
+                    <OutputParameters>
+                        <OutputParameter name="Result" type="xsd:string" required="yes"/>
+                    </OutputParameters>
+                </Operation>
+            </Interface>
+        </Interfaces>
+    </NodeType>
+</Definitions>
