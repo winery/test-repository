@@ -4,6 +4,10 @@
              id="winery-defs-for_otntyIgeneral2-MySQL-Database_freezable-w1">
     <NodeType name="MySQL-Database_freezable-w1" abstract="no" final="no"
               targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes">
+        <Tags>
+            <Tag name="isStateful" value="true"/>
+            <Tag name="feature" value="Freeze and defrost"/>
+        </Tags>
         <DerivedFrom xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes"
                      typeRef="otntyIgeneral2:MySQL-Database_w1"/>
         <Interfaces>

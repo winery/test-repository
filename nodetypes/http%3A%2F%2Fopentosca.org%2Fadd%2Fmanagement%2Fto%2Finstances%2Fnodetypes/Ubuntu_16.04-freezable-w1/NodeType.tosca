@@ -3,6 +3,7 @@
     <NodeType name="Ubuntu_16.04-freezable-w1" abstract="no" final="no" targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes">
         <Tags>
             <Tag name="isStateful" value="true"/>
+            <Tag name="feature" value="Freeze and Defrost"/>
         </Tags>
         <DerivedFrom xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" typeRef="otntyIgeneral2:Ubuntu_16.04-w1"/>
         <Interfaces>
