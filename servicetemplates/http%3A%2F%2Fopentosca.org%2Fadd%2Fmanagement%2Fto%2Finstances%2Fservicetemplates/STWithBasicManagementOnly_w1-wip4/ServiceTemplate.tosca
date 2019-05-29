@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/add/management/to/instances/servicetemplates" id="winery-defs-for_otsteIgeneral1-STWithBasicManagementOnly_w1-wip4">
+    <ServiceTemplate name="STWithBasicManagementOnly_w1-wip4" targetNamespace="http://opentosca.org/add/management/to/instances/servicetemplates" id="STWithBasicManagementOnly_w1-wip4">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" name="Ubuntu_16.04-w1" minInstances="1" maxInstances="1" type="otntyIgeneral2:Ubuntu_16.04-w1" id="Ubuntu_16.04-w1" winery:x="697" winery:y="509">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <VMIP/>
+                        <VMInstanceID/>
+                        <VMType/>
+                        <VMUserName/>
+                        <VMUserPassword/>
+                        <VMPrivateKey/>
+                        <VMPublicKey/>
+                        <VMKeyPairName/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" name="MySQL-Database_w2" minInstances="1" maxInstances="1" type="otntyIgeneral2:MySQL-Database_w2" id="MySQL-Database_w2" winery:x="724" winery:y="203">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <DBName/>
+                        <DBUser/>
+                        <DBPassword/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:x="676" winery:y="356">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <key1/>
+                        <key2/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithoutProperties" id="NodeTypeWithoutProperties" winery:x="756" winery:y="714"/>
+            <NodeTemplate xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" name="MySQL-Database_w2" minInstances="1" maxInstances="1" type="otntyIgeneral2:MySQL-Database_w2" id="MySQL-Database_w2-2" winery:x="279" winery:y="205">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <DBName/>
+                        <DBUser/>
+                        <DBPassword/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties-2" winery:x="282" winery:y="436">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <key1/>
+                        <key2/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
+                <SourceElement ref="MySQL-Database_w2-2"/>
+                <TargetElement ref="NodeTypeWithTwoKVProperties-2"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="MySQL-Database_w2"/>
+                <TargetElement ref="NodeTypeWithTwoKVProperties"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="NodeTypeWithTwoKVProperties"/>
+                <TargetElement ref="Ubuntu_16.04-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
+                <SourceElement ref="Ubuntu_16.04-w1"/>
+                <TargetElement ref="NodeTypeWithoutProperties"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
