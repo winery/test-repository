@@ -4,6 +4,7 @@
     "prefix" : "otnt",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -12,6 +13,7 @@
     "prefix" : "otrtyIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -20,6 +22,7 @@
     "prefix" : "patternrefinementmodels1",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -28,6 +31,7 @@
     "prefix" : "winery1",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -36,6 +40,7 @@
     "prefix" : "xsd",
     "readableName" : "W3C XML schema namespace",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -44,6 +49,7 @@
     "prefix" : "steIgeneral2",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -52,6 +58,7 @@
     "prefix" : "otntyiIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -60,6 +67,7 @@
     "prefix" : "policytemplates",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -68,6 +76,7 @@
     "prefix" : "schemaexampleasp",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -76,6 +85,7 @@
     "prefix" : "winery",
     "readableName" : "TOSCA extension by Eclipse Winery",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -84,6 +94,16 @@
     "prefix" : "servicetemplates1",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
+  "http://opentosca.org/add/management/to/instances/artifacttemplates" : {
+    "namespace" : "http://opentosca.org/add/management/to/instances/artifacttemplates",
+    "prefix" : "otateIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -92,6 +112,7 @@
     "prefix" : "ntyIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -100,6 +121,7 @@
     "prefix" : "servicetemplates",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -108,6 +130,7 @@
     "prefix" : "testwineryopentoscaorg",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -116,6 +139,7 @@
     "prefix" : "otIpatternrefinementmodels",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -124,6 +148,7 @@
     "prefix" : "ptypdIpatterns",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -132,6 +157,7 @@
     "prefix" : "ex",
     "readableName" : "Namespace for creating examples",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -140,6 +166,7 @@
     "prefix" : "otatyIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -148,6 +175,7 @@
     "prefix" : "otntyIbasetypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -156,6 +184,7 @@
     "prefix" : "capabilitytypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -164,6 +193,7 @@
     "prefix" : "compliancerules",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -172,6 +202,7 @@
     "prefix" : "ptyIpatterns",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : true,
     "secureCollection" : false
   },
@@ -180,6 +211,7 @@
     "prefix" : "otntyIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -188,6 +220,7 @@
     "prefix" : "nodetypes2",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -196,6 +229,7 @@
     "prefix" : "policytypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -204,6 +238,7 @@
     "prefix" : "xmlns",
     "readableName" : "W3C XML namespace",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -212,6 +247,7 @@
     "prefix" : "ntypdInodetypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -220,6 +256,7 @@
     "prefix" : "winery3",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -228,6 +265,7 @@
     "prefix" : "nodetypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -236,6 +274,7 @@
     "prefix" : "steIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -244,6 +283,7 @@
     "prefix" : "tosca",
     "readableName" : "Predefined TOSCA elements",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -252,6 +292,7 @@
     "prefix" : "winery2",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -260,6 +301,7 @@
     "prefix" : "steIgeneral1",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -268,6 +310,7 @@
     "prefix" : "otptyIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -276,6 +319,7 @@
     "prefix" : "otntyIgeneral2",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -284,6 +328,7 @@
     "prefix" : "artifacttemplates",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -292,6 +337,7 @@
     "prefix" : "requirementtypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -300,6 +346,7 @@
     "prefix" : "nodetypeimplementations",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -308,6 +355,7 @@
     "prefix" : "artifacttypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -316,6 +364,7 @@
     "prefix" : "patternrefinementmodels",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -324,6 +373,7 @@
     "prefix" : "winery4",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -332,6 +382,16 @@
     "prefix" : "nodetypes1",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
+  "http://opentosca.org/add/management/to/instances/artifacttypes" : {
+    "namespace" : "http://opentosca.org/add/management/to/instances/artifacttypes",
+    "prefix" : "otatyIgeneral1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -340,6 +400,7 @@
     "prefix" : "otsteIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -348,6 +409,7 @@
     "prefix" : "winery5",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -356,6 +418,7 @@
     "prefix" : "otntyIgeneral1",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -364,6 +427,7 @@
     "prefix" : "ot-patterns",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : true,
     "secureCollection" : false
   },
@@ -372,6 +436,7 @@
     "prefix" : "otpteIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -380,6 +445,7 @@
     "prefix" : "secure",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : true
   },
@@ -388,6 +454,7 @@
     "prefix" : "otctyIgeneral",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -396,6 +463,7 @@
     "prefix" : "properties",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -404,6 +472,7 @@
     "prefix" : "relationshiptypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -412,6 +481,7 @@
     "prefix" : "ToscaBaseTypes",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -420,6 +490,7 @@
     "prefix" : "selfservice",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   },
@@ -428,6 +499,7 @@
     "prefix" : "otsteIgeneral1",
     "readableName" : "",
     "upstreamRepository" : "",
+    "generatedNamespace" : false,
     "patternCollection" : false,
     "secureCollection" : false
   }

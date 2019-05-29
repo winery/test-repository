@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/add/management/to/instances/artifacttemplates" id="winery-defs-for_otateIgeneral-MySQL-Database-Testing-IA_w1-wip1">
+    <ArtifactTemplate xmlns:otatyIgeneral1="http://opentosca.org/add/management/to/instances/artifacttypes" name="MySQL-Database-Testing-IA_w1-wip1" type="otatyIgeneral1:ScriptArtifact_w1-wip1" id="MySQL-Database-Testing-IA_w1-wip1"/>
+</Definitions>
