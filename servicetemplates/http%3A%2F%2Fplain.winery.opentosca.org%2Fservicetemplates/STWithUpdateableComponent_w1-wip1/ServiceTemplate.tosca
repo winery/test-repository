@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates-STWithUpdateableComponent_w1-wip1">
+    <ServiceTemplate name="STWithUpdateableComponent_w1-wip1" targetNamespace="http://plain.winery.opentosca.org/servicetemplates" id="STWithUpdateableComponent_w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" name="MySQL-Database_w1" minInstances="1" maxInstances="1" type="otntyIgeneral2:MySQL-Database_w1" id="MySQL-Database_w1" winery:x="551" winery:y="204">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <DBName/>
+                        <DBUser/>
+                        <DBPassword/>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
