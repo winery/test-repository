@@ -2,7 +2,7 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels1-PropertyMappingsTest_w1-wip1">
     <PatternRefinementModel name="PropertyMappingsTest_w1-wip1" targetNamespace="http://winery.opentosca.org/test/patternrefinementmodels">
         <Detector>
-            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:x="446" winery:y="269">
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="d_NodeTypeWithTwoKVProperties" winery:x="446" winery:y="269">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <key1/>
@@ -14,14 +14,14 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="FifthPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:FifthPattern_w1" id="FifthPattern_w1" winery:x="522" winery:y="452">
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="FifthPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:FifthPattern_w1" id="d_FifthPattern_w1" winery:x="522" winery:y="452">
                 <Properties/>
                 <Requirements/>
                 <Capabilities/>
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="SecondThing" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties_2" winery:x="451" winery:y="77">
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="SecondThing" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="d_NodeTypeWithTwoKVProperties_2" winery:x="451" winery:y="77">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <key1/>
@@ -30,16 +30,16 @@
                 </Properties>
             </NodeTemplate>
             <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="RelationshipTypeWithoutProperties" type="relationshiptypes:RelationshipTypeWithoutProperties" id="d_con_RelationshipTypeWithoutProperties_0">
-                <SourceElement ref="NodeTypeWithTwoKVProperties"/>
-                <TargetElement ref="FifthPattern_w1"/>
+                <SourceElement ref="d_NodeTypeWithTwoKVProperties"/>
+                <TargetElement ref="d_FifthPattern_w1"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="RelationshipTypeWithoutProperties" type="relationshiptypes:RelationshipTypeWithoutProperties" id="d_con_RelationshipTypeWithoutProperties_1">
-                <SourceElement ref="NodeTypeWithTwoKVProperties_2"/>
-                <TargetElement ref="NodeTypeWithTwoKVProperties"/>
+                <SourceElement ref="d_NodeTypeWithTwoKVProperties_2"/>
+                <TargetElement ref="d_NodeTypeWithTwoKVProperties"/>
             </RelationshipTemplate>
         </Detector>
         <RefinementStructure>
-            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties" winery:x="552" winery:y="276">
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithTwoKVProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="rs_NodeTypeWithTwoKVProperties" winery:x="552" winery:y="276">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <key1/>
@@ -51,14 +51,14 @@
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithoutProperties" id="NodeTypeWithoutProperties" winery:x="561" winery:y="421">
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithoutProperties" id="rs_NodeTypeWithoutProperties" winery:x="561" winery:y="421">
                 <Properties/>
                 <Requirements/>
                 <Capabilities/>
                 <Policies/>
                 <DeploymentArtifacts/>
             </NodeTemplate>
-            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="SecondThing" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="NodeTypeWithTwoKVProperties_2" winery:x="559" winery:y="99">
+            <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="SecondThing" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithTwoKVProperties" id="rs_NodeTypeWithTwoKVProperties_2" winery:x="559" winery:y="99">
                 <Properties>
                     <Properties xmlns="http://www.example.org">
                         <key1/>
@@ -67,17 +67,17 @@
                 </Properties>
             </NodeTemplate>
             <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="RelationshipTypeWithoutProperties" type="relationshiptypes:RelationshipTypeWithoutProperties" id="rs_con_RelationshipTypeWithoutProperties_0">
-                <SourceElement ref="NodeTypeWithTwoKVProperties"/>
-                <TargetElement ref="NodeTypeWithoutProperties"/>
+                <SourceElement ref="rs_NodeTypeWithTwoKVProperties"/>
+                <TargetElement ref="rs_NodeTypeWithoutProperties"/>
             </RelationshipTemplate>
             <RelationshipTemplate xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" name="RelationshipTypeWithoutProperties" type="relationshiptypes:RelationshipTypeWithoutProperties" id="rs_con_RelationshipTypeWithoutProperties_1">
-                <SourceElement ref="NodeTypeWithTwoKVProperties_2"/>
-                <TargetElement ref="NodeTypeWithTwoKVProperties"/>
+                <SourceElement ref="rs_NodeTypeWithTwoKVProperties_2"/>
+                <TargetElement ref="rs_NodeTypeWithTwoKVProperties"/>
             </RelationshipTemplate>
         </RefinementStructure>
-        <PrmPropertyMappings>
-            <PropertyMapping detectorNode="NodeTypeWithTwoKVProperties" refinementNode="NodeTypeWithTwoKVProperties" type="selective" detectorProperty="key1" refinementProperty="key2" id="propMap0"/>
-            <PropertyMapping detectorNode="NodeTypeWithTwoKVProperties_2" refinementNode="NodeTypeWithTwoKVProperties_2" type="all" id="propMap1"/>
-        </PrmPropertyMappings>
+        <AttributeMappings>
+            <AttributeMapping detectorNode="d_NodeTypeWithTwoKVProperties" refinementNode="rs_NodeTypeWithTwoKVProperties" type="selective" detectorProperty="key1" refinementProperty="key2" id="propMap0"/>
+            <AttributeMapping detectorNode="d_NodeTypeWithTwoKVProperties_2" refinementNode="rs_NodeTypeWithTwoKVProperties_2" type="all" id="propMap1"/>
+        </AttributeMappings>
     </PatternRefinementModel>
 </Definitions>
