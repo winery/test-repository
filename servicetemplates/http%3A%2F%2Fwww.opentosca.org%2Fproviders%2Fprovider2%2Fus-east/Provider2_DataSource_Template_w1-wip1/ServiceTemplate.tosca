@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/provider/templates" id="winery-defs-for_otteIgeneral-Provider2_DataSource_Template_w1-wip1">
+    <ServiceTemplate name="Provider2_DataSource_Template_w1-wip1" targetNamespace="http://opentosca.org/provider/templates" id="Provider2_DataSource_Template_w1-wip1">
+        <Tags>
+            <Tag name="Location" value="US-East"/>
+            <Tag name="Provider" value="Provider2"/>
+        </Tags>
+        <TopologyTemplate>
+            <NodeTemplate xmlns:ntyIgeneral1="http://plain.winery.opentosca.org/placement/nodetypes" name="CloudProvider2_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:CloudProvider2_w1-wip1" id="CloudProvider2_w1-wip1" winery:x="680" winery:y="450"/>
+            <NodeTemplate xmlns:ntyIgeneral1="http://plain.winery.opentosca.org/placement/nodetypes" name="DataSource_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:DataSource_w1-wip1" id="DataSource_w1-wip1" winery:x="681" winery:y="284"/>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="DataSource_w1-wip1"/>
+                <TargetElement ref="CloudProvider2_w1-wip1"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>

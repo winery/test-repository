@@ -2,7 +2,19 @@
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.opentosca.org/providers/aws/us-east" id="winery-defs-for_us-east-Provider2_Offerings_w1-wip1">
     <ServiceTemplate name="Provider2_Offerings_w1-wip1" targetNamespace="http://www.opentosca.org/providers/aws/us-east" id="Provider2_Offerings_w1-wip1">
         <TopologyTemplate>
-			
+			<NodeTemplate name="CloudProvider2_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:CloudProvider2_w1-wip1" id="CloudProvider2_w1-wip1" winery:x="546" winery:y="381" xmlns:ntyIgeneral1="http://plain.winery.opentosca.org/placement/nodetypes">
+                <Capabilities>
+                    <Capability name="CapCanHostUbuntuVM" type="ctyIgeneral:CapCanHostUbuntuVM" id="CapCanHostUbuntuVM" xmlns:ctyIgeneral="http://plain.winery.opentosca.org/placement/capabilitytypes"/>
+                </Capabilities>
+            </NodeTemplate>
+            <NodeTemplate name="Ubuntu_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:Ubuntu_w1-wip1" id="Ubuntu_w1-wip1" winery:x="552" winery:y="115" xmlns:ntyIgeneral1="http://plain.winery.opentosca.org/placement/nodetypes">
+                <Requirements>
+                    <Requirement name="ReqCanHostUbuntuVM" type="rtyIgeneral:ReqCanHostUbuntuVM" id="ReqCanHostUbuntuVM" xmlns:rtyIgeneral="http://plain.winery.opentosca.org/placement/requirementtypes"/>
+                </Requirements>
+                <Capabilities>
+                    <Capability name="CapCanHostProcessingComponent" type="ctyIgeneral:CapCanHostProcessingComponent" id="CapCanHostProcessingComponent" xmlns:ctyIgeneral="http://plain.winery.opentosca.org/placement/capabilitytypes"/>
+                </Capabilities>
+            </NodeTemplate>
         </TopologyTemplate>
     </ServiceTemplate>
 </Definitions>
