@@ -1,0 +1,40 @@
+{
+  "oneToOneMapping" : [ {
+    "edmmType" : "hosted_on",
+    "toscaType" : "{http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes}HostedOn"
+  }, {
+    "edmmType" : "hosted_on",
+    "toscaType" : "{http://winery.opentosca.org/test/relationshiptypes}hostedOn"
+  }, {
+    "edmmType" : "connects_to",
+    "toscaType" : "{http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes}ConnectsTo"
+  }, {
+    "edmmType" : "depends_on",
+    "toscaType" : "{http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes}DependsOn"
+  }, {
+    "edmmType" : "compute",
+    "toscaType" : "{http://opentosca.org/baseelements/nodetypes}VM"
+  }, {
+    "edmmType" : "aws_beanstalk",
+    "toscaType" : "{http://winery.opentosca.org/test/concrete/nodetypes}Amazon-Beanstalk_w1"
+  } ],
+  "edmmTypeMapping" : [ {
+    "edmmType" : "compute",
+    "toscaType" : "{http://plain.winery.opentosca.org/placement/nodetypes}Ubuntu_w1-wip1"
+  }, {
+    "edmmType" : "compute",
+    "toscaType" : "{http://winery.opentosca.org/test/nodetypes}Ubuntu_18.04-w1"
+  }, {
+    "edmmType" : "mysql_database",
+    "toscaType" : "{http://opentosca.org/add/management/to/instances/nodetypes}MySQL-Database_w1"
+  }, {
+    "edmmType" : "mysql_database",
+    "toscaType" : "{http://winery.opentosca.org/test/concrete/nodetypes}MySQL-Database_5.7-w1"
+  }, {
+    "edmmType" : "tomcat",
+    "toscaType" : "{http://winery.opentosca.org/test/nodetypes}Tomcat_8.5-w1"
+  }, {
+    "edmmType" : "mysql_database",
+    "toscaType" : "{http://opentosca.org/add/management/to/instances/nodetypes}MySQL-Database_w2"
+  } ]
+}
