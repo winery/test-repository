@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="https://edmm.uni-stuttgart.de/servicetemplates" id="winery-defs-for_steIgeneral2-PetClinic-Cloud">
+    <ServiceTemplate name="PetClinic-Cloud" targetNamespace="https://edmm.uni-stuttgart.de/servicetemplates" id="PetClinic-Cloud">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="https://edmm.uni-stuttgart.de/nodetypes" name="pet_clinic" minInstances="1" maxInstances="1" type="ntyIgeneral:PetClinic" id="PetClinic" winery:x="727" winery:y="104">
+                <DeploymentArtifacts>
+                    <DeploymentArtifact xmlns:atyIgeneral="https://edmm.uni-stuttgart.de/artifacttypes" xmlns:ateIgeneral1="https://edmm.uni-stuttgart.de/artifacttemplates" name="war" artifactType="atyIgeneral:WAR" artifactRef="ateIgeneral1:PetClinic-App"/>
+                </DeploymentArtifacts>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="https://edmm.uni-stuttgart.de/nodetypes" name="pet_clinic_platform" minInstances="1" maxInstances="1" type="ntyIgeneral:AWS_Beanstalk" id="AWS_Beanstalk" winery:x="728" winery:y="369">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <region>eu-west-1</region>
+                        <archetype>java</archetype>
+                        <min_instances>1</min_instances>
+                        <max_instances>1</max_instances>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="https://edmm.uni-stuttgart.de/nodetypes" name="db" minInstances="1" maxInstances="1" type="ntyIgeneral:MySQL_Database" id="MySQL_Database" winery:x="1172" winery:y="103">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <schema_name>petclinic</schema_name>
+                        <user>pc</user>
+                        <password>petclinic</password>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="https://edmm.uni-stuttgart.de/nodetypes" name="dbms" minInstances="1" maxInstances="1" type="ntyIgeneral:AWS_Aurora" id="AWS_Aurora" winery:x="1172" winery:y="374">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <region>eu-west-1</region>
+                        <instance_type>large</instance_type>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="https://edmm.uni-stuttgart.de/nodetypes" name="auth" minInstances="1" maxInstances="1" type="ntyIgeneral:Auth0" id="Auth0" winery:x="374" winery:y="102">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <region>eu-west-1</region>
+                        <client_id/>
+                        <client_secret>xyz123abc</client_secret>
+                        <domain>example.test</domain>
+                        <identifier>api.example.test</identifier>
+                        <scopes>user,email</scopes>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:tyIgeneral="https://edmm.uni-stuttgart.de/relationtypes" name="HostedOn" type="tyIgeneral:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="PetClinic"/>
+                <TargetElement ref="AWS_Beanstalk"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:tyIgeneral="https://edmm.uni-stuttgart.de/relationtypes" name="ConnectsTo" type="tyIgeneral:ConnectsTo" id="con_ConnectsTo_0">
+                <SourceElement ref="PetClinic"/>
+                <TargetElement ref="MySQL_Database"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:tyIgeneral="https://edmm.uni-stuttgart.de/relationtypes" name="HostedOn" type="tyIgeneral:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="MySQL_Database"/>
+                <TargetElement ref="AWS_Aurora"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:tyIgeneral="https://edmm.uni-stuttgart.de/relationtypes" name="ConnectsTo" type="tyIgeneral:ConnectsTo" id="con_ConnectsTo_1">
+                <SourceElement ref="PetClinic"/>
+                <TargetElement ref="Auth0"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
