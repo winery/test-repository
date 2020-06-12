@@ -25,6 +25,9 @@
                         <password>petclinic</password>
                     </Properties>
                 </Properties>
+                <DeploymentArtifacts>
+                    <DeploymentArtifact name="sql" artifactType="atyIgeneral:SQL" artifactRef="ateIgeneral1:Petclinic-Schema" xmlns:atyIgeneral="https://edmm.uni-stuttgart.de/artifacttypes" xmlns:ateIgeneral1="https://edmm.uni-stuttgart.de/artifacttemplates"/>
+                </DeploymentArtifacts>
             </NodeTemplate>
             <NodeTemplate xmlns:ntyIgeneral="https://edmm.uni-stuttgart.de/nodetypes" name="dbms" minInstances="1" maxInstances="1" type="ntyIgeneral:AWS_Aurora" id="AWS_Aurora" winery:x="1172" winery:y="374">
                 <Properties>
