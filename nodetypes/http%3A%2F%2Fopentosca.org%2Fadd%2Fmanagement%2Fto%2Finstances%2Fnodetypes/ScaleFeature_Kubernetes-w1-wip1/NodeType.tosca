@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes" id="winery-defs-for_ntyIgeneral2-ScaleFeature_Kubernetes-w1-wip1">
+    <NodeType name="ScaleFeature_Kubernetes-w1-wip1" abstract="no" final="no" targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes">
+        <Tags>
+            <Tag name="feature" value="scalable Kubernetes"/>
+            <Tag name="supportedDeploymentTechnologies" value="kubernetes"/>
+        </Tags>
+        <DerivedFrom xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" typeRef="otntyIgeneral2:NodeTypeWithDifferentFetures_w1-wip1"/>
+        <Interfaces>
+            <Interface name="scale">
+                <Operation name="kubernetes"/>
+            </Interface>
+        </Interfaces>
+    </NodeType>
+</Definitions>
