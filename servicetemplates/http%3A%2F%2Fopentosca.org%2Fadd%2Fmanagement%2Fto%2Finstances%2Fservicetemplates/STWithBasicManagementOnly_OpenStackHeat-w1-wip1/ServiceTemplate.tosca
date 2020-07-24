@@ -5,7 +5,7 @@
             <Tag name="retrievedFromDeploymentTechnology" value="OpenStackHeat"/>
         </Tags>
         <TopologyTemplate>
-            <NodeTemplate xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" name="NodeTypeWithDifferentFetures_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral2:NodeTypeWithDifferentFetures_w1-wip1" id="NodeTypeWithDifferentFetures_w1-wip1_0" winery:x="467" winery:y="276">
+            <NodeTemplate xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" name="NodeTypeWithDifferentFeatures_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral2:NodeTypeWithDifferentFeatures_w1-wip1" id="NodeTypeWithDifferentFeatures_w1-wip1_0" winery:x="467" winery:y="276">
                 <Properties>
                     <Properties xmlns="http://www.example.org"/>
                 </Properties>

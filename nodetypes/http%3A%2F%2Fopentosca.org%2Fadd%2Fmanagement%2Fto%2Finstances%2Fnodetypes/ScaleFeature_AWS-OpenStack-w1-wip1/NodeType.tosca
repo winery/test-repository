@@ -5,7 +5,7 @@
             <Tag name="feature" value="scalable AWS and Heat"/>
             <Tag name="supportedDeploymentTechnologies" value="AWS, OpenStackHeat"/>
         </Tags>
-        <DerivedFrom xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" typeRef="otntyIgeneral2:NodeTypeWithDifferentFetures_w1-wip1"/>
+        <DerivedFrom xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" typeRef="otntyIgeneral2:NodeTypeWithDifferentFeatures_w1-wip1"/>
         <Interfaces>
             <Interface name="scale">
                 <Operation name="aws"/>
