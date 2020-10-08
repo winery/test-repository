@@ -1,0 +1,30 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+metadata:
+  targetNamespace: "example.org.tosca.servicetemplates"
+topology_template:
+  node_templates:
+    compute_w1-wip1_0:
+      type: example.org.tosca.nodetypes.compute_w1-wip1
+      metadata:
+        x: "440"
+        y: "352"
+        displayName: "compute_w1-wip1"
+      properties:
+        os: "ubuntu"
+        user: "ubuntu"
+        RAM: 2
+    software_w1-wip1_0:
+      type: example.org.tosca.nodetypes.software_w1-wip1
+      metadata:
+        x: "463"
+        y: "127"
+        displayName: "software_w1-wip1"
+      requirements:
+        - os:
+            node: compute_w1-wip1_0
+            relationship: con_hostedOn_0
+            capability: os
+  relationship_templates:
+    con_hostedOn_0:
+      type: example.org.tosca.relationshiptypes.hostedOn

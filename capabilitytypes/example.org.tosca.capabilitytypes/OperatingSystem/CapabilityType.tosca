@@ -1,0 +1,8 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+capability_types:
+  example.org.tosca.capabilitytypes.OperatingSystem:
+    metadata:
+      targetNamespace: "example.org.tosca.capabilitytypes"
+      abstract: "false"
+      final: "false"

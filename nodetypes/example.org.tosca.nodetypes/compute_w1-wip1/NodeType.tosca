@@ -1,0 +1,24 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+node_types:
+  example.org.tosca.nodetypes.compute_w1-wip1:
+    metadata:
+      targetNamespace: "example.org.tosca.nodetypes"
+      abstract: "false"
+      final: "false"
+    properties:
+      os:
+        type: string
+        default: "ubuntu"
+      user:
+        type: string
+        required: false
+        default: "ubuntu"
+      RAM:
+        type: float
+        required: false
+        default: 2
+    capabilities:
+      os:
+        occurrences: [ 1, UNBOUNDED ]
+        type: example.org.tosca.capabilitytypes.OperatingSystem

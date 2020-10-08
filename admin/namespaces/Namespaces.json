@@ -1,0 +1,38 @@
+{
+  "example.org.tosca.servicetemplates" : {
+    "namespace" : "example.org.tosca.servicetemplates",
+    "prefix" : "steIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "secureCollection" : false,
+    "generatedNamespace" : false,
+    "patternCollection" : false
+  },
+  "example.org.tosca.relationshiptypes" : {
+    "namespace" : "example.org.tosca.relationshiptypes",
+    "prefix" : "ntyIgeneral1",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "secureCollection" : false,
+    "generatedNamespace" : false,
+    "patternCollection" : false
+  },
+  "example.org.tosca.capabilitytypes" : {
+    "namespace" : "example.org.tosca.capabilitytypes",
+    "prefix" : "ctyIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "secureCollection" : false,
+    "generatedNamespace" : false,
+    "patternCollection" : false
+  },
+  "example.org.tosca.nodetypes" : {
+    "namespace" : "example.org.tosca.nodetypes",
+    "prefix" : "ntyIgeneral",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "secureCollection" : false,
+    "generatedNamespace" : false,
+    "patternCollection" : false
+  }
+}

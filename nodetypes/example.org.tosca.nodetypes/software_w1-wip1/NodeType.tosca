@@ -1,0 +1,12 @@
+tosca_definitions_version: tosca_simple_yaml_1_3
+
+node_types:
+  example.org.tosca.nodetypes.software_w1-wip1:
+    metadata:
+      targetNamespace: "example.org.tosca.nodetypes"
+      abstract: "false"
+      final: "false"
+    requirements:
+      - os:
+          capability: example.org.tosca.capabilitytypes.OperatingSystem
+          occurrences: [ 1, 1 ]
