@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/iaas/servicetemplates" id="winery-defs-for_iaas-IAAS-Publications-Tool_w2-wip1">
+    <ServiceTemplate name="IAAS-Publications-Tool_w2-wip1" targetNamespace="http://opentosca.org/iaas/servicetemplates" id="IAAS-Publications-Tool_w2-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:nodetypes="http://opentosca.org/nodetypes" name="OpenStack_Train-w1" minInstances="1" maxInstances="1" type="nodetypes:OpenStack_Train-w1" id="OpenStack_Train-w1" winery:x="488" winery:y="585">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <HypervisorEndpoint>https://idm01.bw-cloud.org:5000/v3</HypervisorEndpoint>
+                        <HypervisorUserName>get_input: OpenStackUser</HypervisorUserName>
+                        <HypervisorUserPassword>get_input: OpenStackPassword</HypervisorUserPassword>
+                        <HypervisorTenantID>get_input: OpenStackProjectId</HypervisorTenantID>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://opentosca.org/nodetypes" name="Ubuntu-VM_18.04-w1" minInstances="1" maxInstances="1" type="nodetypes:Ubuntu-VM_18.04-w1" id="Ubuntu-VM_18.04-w1" winery:x="487" winery:y="433">
+                <Properties>
+                    <Properties xmlns="http://www.example.org">
+                        <VMIP/>
+                        <VMInstanceID/>
+                        <VMType>m1.tiny</VMType>
+                        <VMUserName>ubuntu</VMUserName>
+                        <VMUserPassword>N/A</VMUserPassword>
+                        <VMPrivateKey>get_input: VMPrivateKey</VMPrivateKey>
+                        <VMPublicKey>N/A</VMPublicKey>
+                        <VMKeyPairName>get_input:VMKeyPairName</VMKeyPairName>
+                    </Properties>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
+                <SourceElement ref="Ubuntu-VM_18.04-w1"/>
+                <TargetElement ref="OpenStack_Train-w1"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>

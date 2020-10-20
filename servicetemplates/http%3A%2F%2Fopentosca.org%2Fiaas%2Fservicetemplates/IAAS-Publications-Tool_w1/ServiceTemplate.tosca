@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/iaas/servicetemplates" id="winery-defs-for_otsteIgeneral1-IAAS-Publications-Tool_w1">
+    <ServiceTemplate name="IAAS-Publications-Tool_w1" targetNamespace="http://opentosca.org/iaas/servicetemplates" id="IAAS-Publications-Tool_w1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:nodetypes="http://opentosca.org/nodetypes" name="NGINX_latest-w1" minInstances="1" maxInstances="1" type="nodetypes:NGINX_latest-w1" id="NGINX_latest-w1" winery:x="287" winery:y="303"/>
+            <NodeTemplate xmlns:nodetypes="http://opentosca.org/nodetypes" name="OpenStack_Train-w1" minInstances="1" maxInstances="1" type="nodetypes:OpenStack_Train-w1" id="OpenStack_Train-w1" winery:x="488" winery:y="585">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org">
+                        <HypervisorEndpoint>https://idm01.bw-cloud.org:5000/v3</HypervisorEndpoint>
+                        <HypervisorUserName>get_input: OpenStackUser</HypervisorUserName>
+                        <HypervisorUserPassword>get_input: OpenStackPassword</HypervisorUserPassword>
+                        <HypervisorTenantID>get_input: OpenStackProjectId</HypervisorTenantID>
+                    </ex:Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://opentosca.org/nodetypes" name="Ubuntu-VM_18.04-w1" minInstances="1" maxInstances="1" type="nodetypes:Ubuntu-VM_18.04-w1" id="Ubuntu-VM_18.04-w1" winery:x="487" winery:y="433">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org">
+                        <VMIP/>
+                        <VMInstanceID/>
+                        <VMType>m1.small</VMType>
+                        <VMUserName>ubuntu</VMUserName>
+                        <VMUserPassword>N/A</VMUserPassword>
+                        <VMPrivateKey>get_input: VMPrivateKey</VMPrivateKey>
+                        <VMPublicKey>N/A</VMPublicKey>
+                        <VMKeyPairName>get_input:VMKeyPairName</VMKeyPairName>
+                    </ex:Properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://opentosca.org/nodetypes" name="SpringWebApp_w1" minInstances="1" maxInstances="1" type="nodetypes:SpringWebApp_w1" id="SpringWebApp_w1" winery:x="664" winery:y="108">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org">
+                        <AppName>publications_server</AppName>
+                        <Port>8060</Port>
+                    </ex:Properties>
+                </Properties>
+                <DeploymentArtifacts>
+                    <DeploymentArtifact xmlns:artifacttypes="http://opentosca.org/artifacttypes" xmlns:artifacttemplates="http://opentosca.org/artifacttemplates" name="DA" artifactType="artifacttypes:JAR" artifactRef="artifacttemplates:IAAS-Publications-Backend-DA_w1"/>
+                    <DeploymentArtifact xmlns:artifacttypes="http://opentosca.org/artifacttypes" xmlns:artifacttemplates="http://opentosca.org/artifacttemplates" name="application.properties" artifactType="artifacttypes:ConfigurationArtifact" artifactRef="artifacttemplates:IAAS-Publications-Backend-Properties-DA_w1"/>
+                    <DeploymentArtifact xmlns:artifacttypes="http://opentosca.org/artifacttypes" xmlns:artifacttemplates="http://opentosca.org/artifacttemplates" name="sshkey" artifactType="artifacttypes:ConfigurationArtifact" artifactRef="artifacttemplates:IAAS-Publications-Backend-SSH-DA_w1"/>
+                </DeploymentArtifacts>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes="http://opentosca.org/nodetypes" name="Java_11-w1" minInstances="1" maxInstances="1" type="nodetypes:Java_11-w1" id="Java_11-w1" winery:x="660" winery:y="296"/>
+            <NodeTemplate xmlns:nodetypes="http://opentosca.org/nodetypes" name="NGINX-Application_w1" minInstances="1" maxInstances="1" type="nodetypes:NGINX-Application_w1" id="NGINX-Application_w1" winery:x="271" winery:y="114">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org">
+                        <AppName>publications_frontend</AppName>
+                    </ex:Properties>
+                </Properties>
+                <DeploymentArtifacts>
+                    <DeploymentArtifact xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" xmlns:artifacttemplates="http://opentosca.org/artifacttemplates" name="DA" artifactType="ToscaBaseTypes:ArchiveArtifact" artifactRef="artifacttemplates:IAAS-Publications-Frontend-DA_w1"/>
+                </DeploymentArtifacts>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="NGINX_latest-w1"/>
+                <TargetElement ref="Ubuntu-VM_18.04-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
+                <SourceElement ref="Ubuntu-VM_18.04-w1"/>
+                <TargetElement ref="OpenStack_Train-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="Java_11-w1"/>
+                <TargetElement ref="Ubuntu-VM_18.04-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
+                <SourceElement ref="SpringWebApp_w1"/>
+                <TargetElement ref="Java_11-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_4">
+                <SourceElement ref="NGINX-Application_w1"/>
+                <TargetElement ref="NGINX_latest-w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="ConnectsTo" type="ToscaBaseTypes:ConnectsTo" id="con_ConnectsTo_0">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org">
+                        <ChannelType/>
+                    </ex:Properties>
+                </Properties>
+                <SourceElement ref="NGINX-Application_w1"/>
+                <TargetElement ref="SpringWebApp_w1"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
