@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes" id="winery-defs-for_ntyIgeneral2-TechIndependentFeature_w1-wip1">
+    <NodeType name="TechIndependentFeature_w1-wip1" abstract="no" final="no" targetNamespace="http://opentosca.org/add/management/to/instances/nodetypes">
+        <Tags>
+            <Tag name="feature" value="ping"/>
+            <Tag name="supportedDeploymentTechnologies" value="*"/>
+        </Tags>
+        <DerivedFrom xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" typeRef="otntyIgeneral2:NodeTypeWithDifferentFeatures_w1-wip1"/>
+        <Interfaces>
+            <Interface name="ping">
+                <Operation name="ping"/>
+            </Interface>
+        </Interfaces>
+    </NodeType>
+</Definitions>
