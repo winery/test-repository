@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates1-SshTest_w1-wip1">
+    <ServiceTemplate name="SshTest_w1-wip1" targetNamespace="http://opentosca.org/servicetemplates" id="SshTest_w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="OperatingSystem" minInstances="1" maxInstances="1" type="nodetypes1:OperatingSystem" id="OperatingSystem_0" winery:x="742" winery:y="311">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <VMUserName/>
+                        <VMPrivateKey/>
+                        <VMIP/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
