@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/servicetemplates" id="winery-defs-for_servicetemplates1-InstancePluginsTest_w1-wip1">
+    <ServiceTemplate name="InstancePluginsTest_w1-wip1" targetNamespace="http://opentosca.org/servicetemplates" id="InstancePluginsTest_w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="OperatingSystem" minInstances="1" maxInstances="1" type="nodetypes1:OperatingSystem" id="OperatingSystem_0" winery:x="555" winery:y="469">
+                <Properties>
+                    <properties xmlns="http://opentosca.org/nodetypes/propertiesdefinition/winery">
+                        <VMUserName/>
+                        <VMPrivateKey/>
+                        <VMIP/>
+                        <VMSSHPort/>
+                    </properties>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="nodetypes1:Tomcat" id="Tomcat_0" winery:x="437" winery:y="287"/>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="MySQL-DB" minInstances="1" maxInstances="1" type="nodetypes1:MySQL-DB" id="MySQL-DB_0" winery:x="779" winery:y="95"/>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="MySQL-DBMS" minInstances="1" maxInstances="1" type="nodetypes1:MySQL-DBMS" id="MySQL-DBMS_0" winery:x="775" winery:y="258"/>
+            <NodeTemplate xmlns:ntyIgeneral2="https://examples.opentosca.org/edmm/nodetypes" name="Pet_Clinic_w1" minInstances="1" maxInstances="1" type="ntyIgeneral2:Pet_Clinic_w1" id="Pet_Clinic_w1_0" winery:x="442" winery:y="96"/>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="Tomcat_0"/>
+                <TargetElement ref="OperatingSystem_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="MySQL-DB_0"/>
+                <TargetElement ref="MySQL-DBMS_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
+                <SourceElement ref="MySQL-DBMS_0"/>
+                <TargetElement ref="OperatingSystem_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
+                <SourceElement ref="Pet_Clinic_w1_0"/>
+                <TargetElement ref="Tomcat_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="ConnectsTo" type="ToscaBaseTypes:ConnectsTo" id="con_ConnectsTo_0">
+                <SourceElement ref="Pet_Clinic_w1_0"/>
+                <TargetElement ref="MySQL-DB_0"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
