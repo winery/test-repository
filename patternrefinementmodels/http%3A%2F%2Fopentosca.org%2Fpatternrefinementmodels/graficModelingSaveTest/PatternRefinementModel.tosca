@@ -8,12 +8,8 @@
                 </Properties>
             </NodeTemplate>
         </Detector>
-        <RelationMappings>
-            <RelationMapping xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" relationType="relationshiptypes:RelationshipTypeWithoutProperties" direction="ingoing" validSourceOrTarget="nodetypes:NodeTypeWithoutProperties" detectorNode="d_FirstPattern_w1_0" refinementNode="rs_NodeTypeWithoutProperties_0" id="RelationshipMapping_0"/>
-        </RelationMappings>
-        <PermutationMappings>
-            <PermutationMapping detectorNode="d_FirstPattern_w1_0" refinementNode="rs_NodeTypeWith5Versions_0.3.4-w3_0" id="PermutationMapping_0"/>
-        </PermutationMappings>
+        <RelationMappings/>
+        <PermutationMappings/>
         <RefinementStructure>
             <NodeTemplate xmlns:nodetypes="http://plain.winery.opentosca.org/nodetypes" name="NodeTypeWithoutProperties" minInstances="1" maxInstances="1" type="nodetypes:NodeTypeWithoutProperties" id="rs_NodeTypeWithoutProperties_0" winery:x="951" winery:y="382">
                 <Properties>
@@ -33,15 +29,9 @@
                 <TargetElement ref="rs_NodeTypeWithoutProperties_0"/>
             </RelationshipTemplate>
         </RefinementStructure>
-        <AttributeMappings>
-            <AttributeMapping type="all" detectorNode="d_FirstPattern_w1_0" refinementNode="rs_NodeTypeWithoutProperties_0" id="AttributeMapping_0"/>
-        </AttributeMappings>
-        <StayMappings>
-            <StayMapping detectorNode="d_FirstPattern_w1_0" refinementNode="rs_NodeTypeWith5Versions_0.3.4-w3_0" id="StayMapping_0"/>
-        </StayMappings>
-        <DeploymentArtifactMappings>
-            <DeploymentArtifactMapping xmlns:artifacttypes="http://plain.winery.opentosca.org/artifacttypes" artifactType="artifacttypes:ArtifactTypeWithoutProperties" detectorNode="d_FirstPattern_w1_0" refinementNode="rs_NodeTypeWithoutProperties_0" id="DeploymentArtifactMapping_0"/>
-        </DeploymentArtifactMappings>
+        <AttributeMappings/>
+        <StayMappings/>
+        <DeploymentArtifactMappings/>
         <PermutationOptions/>
     </PatternRefinementModel>
 </Definitions>
