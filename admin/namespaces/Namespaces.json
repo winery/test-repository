@@ -26,6 +26,15 @@
     "secureCollection" : false,
     "generatedNamespace" : false
   },
+  "http://winery.opentosca.org/test/nodetypes" : {
+    "namespace" : "http://winery.opentosca.org/test/nodetypes",
+    "prefix" : "ntyIgeneral4",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
   "http://plain.winery.opentosca.org/nodetypes/propertiesdefinition/winery" : {
     "namespace" : "http://plain.winery.opentosca.org/nodetypes/propertiesdefinition/winery",
     "prefix" : "winery1",
@@ -215,6 +224,15 @@
     "secureCollection" : false,
     "generatedNamespace" : false
   },
+  "http://www.example.org/tosca/patternrefinementmodels" : {
+    "namespace" : "http://www.example.org/tosca/patternrefinementmodels",
+    "prefix" : "patternrefinementmodels2",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
   "https://examples.opentosca.org/edmm/nodetypes" : {
     "namespace" : "https://examples.opentosca.org/edmm/nodetypes",
     "prefix" : "ntyIgeneral2",
@@ -263,6 +281,15 @@
   "http://plain.winery.opentosca.org/policytypes" : {
     "namespace" : "http://plain.winery.opentosca.org/policytypes",
     "prefix" : "policytypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
+  "http://www.example.org/tosca/servicetemplates" : {
+    "namespace" : "http://www.example.org/tosca/servicetemplates",
+    "prefix" : "steIgeneral3",
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : false,
@@ -380,6 +407,15 @@
   "http://plain.winery.opentosca.org/requirementtypes" : {
     "namespace" : "http://plain.winery.opentosca.org/requirementtypes",
     "prefix" : "requirementtypes",
+    "readableName" : "",
+    "upstreamRepository" : "",
+    "patternCollection" : false,
+    "secureCollection" : false,
+    "generatedNamespace" : false
+  },
+  "http://www.example.org/tosca/relationshiptypes" : {
+    "namespace" : "http://www.example.org/tosca/relationshiptypes",
+    "prefix" : "ntyIgeneral3",
     "readableName" : "",
     "upstreamRepository" : "",
     "patternCollection" : false,

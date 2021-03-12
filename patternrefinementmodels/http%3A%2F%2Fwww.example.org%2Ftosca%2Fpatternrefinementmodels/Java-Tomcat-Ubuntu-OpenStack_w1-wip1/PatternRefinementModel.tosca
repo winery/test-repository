@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.example.org/tosca/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels2-Java-Tomcat-Ubuntu-OpenStack_w1-wip1">
+    <PatternRefinementModel name="Java-Tomcat-Ubuntu-OpenStack_w1-wip1" targetNamespace="http://www.example.org/tosca/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="Java" minInstances="1" maxInstances="1" type="ntyIgeneral4:Java_8-Servelet-w1" id="d_Java_8-Servelet-w1_0" winery:x="660" winery:y="219">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:ptyIpatterns="http://plain.opentosca.org/policytypes/patterns" name="behaviorPattern" policyType="ptyIpatterns:AnnotatablePattern_w1-wip1"/>
+                </Policies>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="ntyIgeneral4:Ubuntu_18.04-w2-wip1" id="d_Ubuntu_18.04-w2-wip1_0" winery:x="671" winery:y="587">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="ntyIgeneral4:OpenStack_liberty-12-w1" id="d_OpenStack_liberty-12-w1_0" winery:x="683" winery:y="780">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="FirstPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:FirstPattern_w1" id="d_FirstPattern_w1_0" winery:x="728" winery:y="422">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral5="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral5:hostedOn" id="d_con_hostedOn_0">
+                <SourceElement ref="d_Java_8-Servelet-w1_0"/>
+                <TargetElement ref="d_FirstPattern_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral5="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral5:hostedOn" id="d_con_hostedOn_1">
+                <SourceElement ref="d_FirstPattern_w1_0"/>
+                <TargetElement ref="d_Ubuntu_18.04-w2-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral5="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral5:hostedOn" id="d_con_hostedOn_2">
+                <SourceElement ref="d_Ubuntu_18.04-w2-wip1_0"/>
+                <TargetElement ref="d_OpenStack_liberty-12-w1_0"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings>
+            <RelationMapping xmlns:ntyIgeneral5="http://winery.opentosca.org/test/relationshiptypes" relationType="ntyIgeneral5:hostedOn" direction="ingoing" detectorNode="d_Ubuntu_18.04-w2-wip1_0" refinementNode="rs_Ubuntu_18.04-w2-wip1_0" id="relMap0"/>
+        </RelationMappings>
+        <PermutationMappings/>
+        <RefinementStructure>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="Java" minInstances="1" maxInstances="1" type="ntyIgeneral4:Java_8-Servelet-w1" id="rs_Java_8-Servelet-w1_0" winery:x="859" winery:y="317">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="Tomcat" minInstances="1" maxInstances="1" type="ntyIgeneral4:Tomcat_8.5-w1" id="rs_Tomcat_8.5-w1_0" winery:x="883" winery:y="506">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="ntyIgeneral4:Ubuntu_18.04-w2-wip1" id="rs_Ubuntu_18.04-w2-wip1_0" winery:x="888" winery:y="693">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="ntyIgeneral4:OpenStack_liberty-12-w1" id="rs_OpenStack_liberty-12-w1_0" winery:x="886" winery:y="924">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral5="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral5:hostedOn" id="rs_con_hostedOn_0">
+                <SourceElement ref="rs_Java_8-Servelet-w1_0"/>
+                <TargetElement ref="rs_Tomcat_8.5-w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral5="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral5:hostedOn" id="rs_con_hostedOn_1">
+                <SourceElement ref="rs_Tomcat_8.5-w1_0"/>
+                <TargetElement ref="rs_Ubuntu_18.04-w2-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral5="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral5:hostedOn" id="rs_con_hostedOn_2">
+                <SourceElement ref="rs_Ubuntu_18.04-w2-wip1_0"/>
+                <TargetElement ref="rs_OpenStack_liberty-12-w1_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings/>
+        <StayMappings>
+            <StayMapping detectorNode="d_Java_8-Servelet-w1_0" refinementNode="rs_Java_8-Servelet-w1_0" id="stayMap0"/>
+        </StayMappings>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings/>
+    </PatternRefinementModel>
+</Definitions>

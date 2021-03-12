@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.example.org/tosca/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels2-MySQL-DBMS-WinServer-Vsphere_w1-wip1">
+    <PatternRefinementModel name="MySQL-DBMS-WinServer-Vsphere_w1-wip1" targetNamespace="http://www.example.org/tosca/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="SecondPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:SecondPattern_w1" id="d_SecondPattern_w1_0" winery:x="1033" winery:y="196">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="ThirdPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:ThirdPattern_w1" id="d_ThirdPattern_w1_0" winery:x="1044" winery:y="553">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral4:hostedOn" id="d_con_hostedOn_0">
+                <SourceElement ref="d_SecondPattern_w1_0"/>
+                <TargetElement ref="d_ThirdPattern_w1_0"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings>
+            <RelationMapping xmlns:ntyIgeneral4="http://winery.opentosca.org/test/relationshiptypes" relationType="ntyIgeneral4:hostedOn" direction="ingoing" detectorNode="d_ThirdPattern_w1_0" refinementNode="rs_WindowsServer2019_w1-wip1_0" id="relMap0"/>
+            <RelationMapping xmlns:ntyIgeneral3="http://www.example.org/tosca/relationshiptypes" relationType="ntyIgeneral3:Secure-SQL-Con_w1-wip1" direction="ingoing" detectorNode="d_SecondPattern_w1_0" refinementNode="rs_MySQL-DB_0" id="relMap1"/>
+        </RelationMappings>
+        <PermutationMappings>
+            <PermutationMapping detectorNode="d_SecondPattern_w1_0" refinementNode="rs_MySQL-DB_0" id="permutationMap0"/>
+            <PermutationMapping detectorNode="d_ThirdPattern_w1_0" refinementNode="rs_vSphere_w1-wip1_0" id="permutationMap1"/>
+        </PermutationMappings>
+        <RefinementStructure>
+            <NodeTemplate xmlns:nodetypes2="http://www.example.org/tosca/nodetypes" name="WindowsServer2019_w1-wip1" minInstances="1" maxInstances="1" type="nodetypes2:WindowsServer2019_w1-wip1" id="rs_WindowsServer2019_w1-wip1_0" winery:x="822" winery:y="527">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes2="http://www.example.org/tosca/nodetypes" name="vSphere_w1-wip1" minInstances="1" maxInstances="1" type="nodetypes2:vSphere_w1-wip1" id="rs_vSphere_w1-wip1_0" winery:x="839" winery:y="755">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="MySQL-DB" minInstances="1" maxInstances="1" type="nodetypes1:MySQL-DB" id="rs_MySQL-DB_0" winery:x="836" winery:y="138">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:nodetypes1="http://opentosca.org/nodetypes" name="MySQL-DBMS" minInstances="1" maxInstances="1" type="nodetypes1:MySQL-DBMS" id="rs_MySQL-DBMS_0" winery:x="824" winery:y="328">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Requirements/>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral4:hostedOn" id="rs_con_hostedOn_0">
+                <SourceElement ref="rs_MySQL-DB_0"/>
+                <TargetElement ref="rs_MySQL-DBMS_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral4:hostedOn" id="rs_con_hostedOn_1">
+                <SourceElement ref="rs_MySQL-DBMS_0"/>
+                <TargetElement ref="rs_WindowsServer2019_w1-wip1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/relationshiptypes" name="hostedOn" type="ntyIgeneral4:hostedOn" id="rs_con_hostedOn_2">
+                <SourceElement ref="rs_WindowsServer2019_w1-wip1_0"/>
+                <TargetElement ref="rs_vSphere_w1-wip1_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings/>
+        <StayMappings/>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings/>
+    </PatternRefinementModel>
+</Definitions>
