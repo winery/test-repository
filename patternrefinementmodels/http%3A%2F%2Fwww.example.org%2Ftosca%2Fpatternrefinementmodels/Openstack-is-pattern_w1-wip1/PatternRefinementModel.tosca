@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.example.org/tosca/patternrefinementmodels" id="winery-defs-for_patternrefinementmodels2-Openstack-is-pattern_w1-wip1">
-    <PatternRefinementModel name="Openstack-is-pattern_w1-wip1" targetNamespace="http://www.example.org/tosca/patternrefinementmodels">
+    <PatternRefinementModel isPdrm="yes" name="Openstack-is-pattern_w1-wip1" targetNamespace="http://www.example.org/tosca/patternrefinementmodels">
         <Detector>
             <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="ThirdPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:ThirdPattern_w1" id="d_ThirdPattern_w1_0" winery:x="867" winery:y="390">
                 <Properties>
