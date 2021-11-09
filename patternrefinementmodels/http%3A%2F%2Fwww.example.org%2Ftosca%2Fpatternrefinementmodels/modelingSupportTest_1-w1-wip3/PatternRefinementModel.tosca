@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.example.org/tosca/patternrefinementmodels" id="patternrefinementmodels2-modelingSupportTest_1-w1-wip3">
+    <PatternRefinementModel isPdrm="no" name="modelingSupportTest_1-w1-wip3" targetNamespace="http://www.example.org/tosca/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="FirstPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:FirstPattern_w1" id="d_FirstPattern_w1_0" winery:x="912" winery:y="371">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://docs.oasis-open.org/tosca/ns/simple/yaml/1.3"/>
+                </Properties>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="SecondPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:SecondPattern_w1" id="d_SecondPattern_w1_0" winery:x="926" winery:y="533">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://docs.oasis-open.org/tosca/ns/simple/yaml/1.3"/>
+                </Properties>
+                <Capabilities/>
+                <Policies/>
+                <DeploymentArtifacts/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral="http://plain.winery.org/pattern-based/nodetypes" name="NodeTypeInheritingFromAbstractType" minInstances="1" maxInstances="1" type="ntyIgeneral:NodeTypeInheritingFromAbstractType_1-w1-wip1" id="d_NodeTypeInheritingFromAbstractType_1-w1-wip1_0" winery:x="863" winery:y="186">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <Policies>
+                    <Policy xmlns:ptyIpatterns="http://plain.opentosca.org/policytypes/patterns" name="annotation" policyType="ptyIpatterns:AnnotatablePattern_w1-wip1"/>
+                </Policies>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_1">
+                <Properties>
+                    <Properties xmlns="http://www.example.org" xmlns:ns0="http://docs.oasis-open.org/tosca/ns/simple/yaml/1.3"/>
+                </Properties>
+                <SourceElement ref="d_FirstPattern_w1_0"/>
+                <TargetElement ref="d_SecondPattern_w1_0"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+                <SourceElement ref="d_NodeTypeInheritingFromAbstractType_1-w1-wip1_0"/>
+                <TargetElement ref="d_FirstPattern_w1_0"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings/>
+        <PermutationMappings/>
+        <RefinementStructure/>
+        <AttributeMappings/>
+        <StayMappings/>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings/>
+    </PatternRefinementModel>
+</Definitions>
