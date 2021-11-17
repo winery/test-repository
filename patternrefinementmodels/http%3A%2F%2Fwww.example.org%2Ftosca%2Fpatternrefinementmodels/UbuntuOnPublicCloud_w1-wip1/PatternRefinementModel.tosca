@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.example.org/tosca/patternrefinementmodels" id="patternrefinementmodels2-UbuntuOnPublicCloud_w1-wip1">
+    <PatternRefinementModel isPdrm="no" name="UbuntuOnPublicCloud_w1-wip1" targetNamespace="http://www.example.org/tosca/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="ntyIgeneral4:Ubuntu_18.04-w2-wip1" id="d_Ubuntu_18.04-w2-wip1_0" winery:x="613" winery:y="378">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="ThirdPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:ThirdPattern_w1" id="d_ThirdPattern_w1_0" winery:x="709" winery:y="568">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0">
+                <SourceElement ref="d_Ubuntu_18.04-w2-wip1_0"/>
+                <TargetElement ref="d_ThirdPattern_w1_0"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings/>
+        <PermutationMappings/>
+        <RefinementStructure>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="Ubuntu" minInstances="1" maxInstances="1" type="ntyIgeneral4:Ubuntu_18.04-w2-wip1" id="rs_Ubuntu_18.04-w2-wip1_0" winery:x="713" winery:y="290">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral4="http://winery.opentosca.org/test/nodetypes" name="OpenStack" minInstances="1" maxInstances="1" type="ntyIgeneral4:OpenStack_liberty-12-w1" id="rs_OpenStack_liberty-12-w1_0" winery:x="723" winery:y="540">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
+                <SourceElement ref="rs_Ubuntu_18.04-w2-wip1_0"/>
+                <TargetElement ref="rs_OpenStack_liberty-12-w1_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings/>
+        <StayMappings>
+            <StayMapping detectorNode="d_Ubuntu_18.04-w2-wip1_0" refinementNode="rs_Ubuntu_18.04-w2-wip1_0" id="stayMap0"/>
+        </StayMappings>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings/>
+    </PatternRefinementModel>
+</Definitions>
