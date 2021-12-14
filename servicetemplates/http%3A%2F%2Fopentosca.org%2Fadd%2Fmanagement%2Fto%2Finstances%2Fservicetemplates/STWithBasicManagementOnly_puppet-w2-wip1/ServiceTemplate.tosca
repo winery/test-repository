@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://opentosca.org/add/management/to/instances/servicetemplates" id="winery-defs-for_otsteIgeneral1-STWithBasicManagementOnly_puppet-w2-wip1">
+    <ServiceTemplate name="STWithBasicManagementOnly_puppet-w2-wip1" targetNamespace="http://opentosca.org/add/management/to/instances/servicetemplates" id="STWithBasicManagementOnly_puppet-w2-wip1">
+        <Tags>
+			<Tag name="jsonDeploymentTechnologies" value="[{&quot;id&quot;: &quot;puppet&quot;, &quot;technologyId&quot;: &quot;Puppet&quot;, &quot;managedIds&quot;: [&quot;NodeTypeWithDifferentFeatures_w1-wip1_0&quot;], &quot;properties&quot;: {}}]"/>
+        </Tags>
+        <TopologyTemplate>
+            <NodeTemplate xmlns:otntyIgeneral2="http://opentosca.org/add/management/to/instances/nodetypes" name="NodeTypeWithDifferentFeatures_w1-wip1" minInstances="1" maxInstances="1" type="otntyIgeneral2:NodeTypeWithDifferentFeatures_w1-wip1" id="NodeTypeWithDifferentFeatures_w1-wip1_0" winery:x="467" winery:y="276">
+                <Properties>
+                    <Properties xmlns="http://www.example.org"/>
+                </Properties>
+            </NodeTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
