@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/relationshiptypes" id="relationshiptypes-ConcreteRelationshipType_w1-wip1">
+    <RelationshipType name="ConcreteRelationshipType_w1-wip1" abstract="no" final="no" targetNamespace="http://plain.winery.opentosca.org/relationshiptypes">
+        <DerivedFrom xmlns:relationshiptypes="http://plain.winery.opentosca.org/relationshiptypes" typeRef="relationshiptypes:AbstractRelationshipTypeInhertingInterfaces_w1-wip1"/>
+        <winery:Interfaces>
+            <Interface name="http://docs.oasis-open.org/tosca/ns/2011/12/interfaces/relationship/configure">
+                <Operation name="preConfigureSource"/>
+                <Operation name="preConfigureTarget"/>
+                <Operation name="postConfigureSource"/>
+                <Operation name="postConfigureTarget"/>
+            </Interface>
+        </winery:Interfaces>
+    </RelationshipType>
+</Definitions>

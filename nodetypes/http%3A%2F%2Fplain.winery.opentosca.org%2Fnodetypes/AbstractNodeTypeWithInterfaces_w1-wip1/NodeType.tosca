@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://plain.winery.opentosca.org/nodetypes" id="nodetypes-AbstractNodeTypeWithInterfaces_w1-wip1">
+    <NodeType name="AbstractNodeTypeWithInterfaces_w1-wip1" abstract="no" final="no" targetNamespace="http://plain.winery.opentosca.org/nodetypes">
+        <DerivedFrom xmlns:ntyIgeneral="http://plain.winery.org/pattern-based/nodetypes" typeRef="ntyIgeneral:AbstractNodeTypeWithProperties_1-w1-wip1"/>
+        <Interfaces>
+            <Interface name="http://opentosca.org/interfaces/lifecycle">
+                <Operation name="install"/>
+                <Operation name="start"/>
+                <Operation name="stop"/>
+                <Operation name="uninstall"/>
+            </Interface>
+            <Interface name="secondInterface">
+                <Operation name="test">
+                    <OutputParameters>
+                        <OutputParameter name="success" type="boolean" required="yes"/>
+                    </OutputParameters>
+                </Operation>
+            </Interface>
+        </Interfaces>
+    </NodeType>
+</Definitions>
