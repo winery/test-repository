@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns2-unicorn" targetNamespace="http://winery.opentosca.org/test/ponyuniverse">
+    <tosca:NodeType name="unicorn" targetNamespace="http://winery.opentosca.org/test/ponyuniverse" winery:bordercolor="#e47c98">
+        <tosca:RequirementDefinitions>
+            <tosca:RequirementDefinition xmlns:ns2="http://winery.opentosca.org/test/ponyuniverse" name="ReqWarmFloor" requirementType="ns2:ReqWarmFloor" lowerBound="1" upperBound="unbounded"/>
+            <tosca:RequirementDefinition xmlns:ns2="http://winery.opentosca.org/test/ponyuniverse" name="ReqFood" requirementType="ns2:ReqFood" lowerBound="1" upperBound="unbounded"/>
+        </tosca:RequirementDefinitions>
+    </tosca:NodeType>
+</tosca:Definitions>

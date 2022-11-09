@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns1="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns5-FoodProvider" targetNamespace="http://www.opentosca.org/providers/FoodProvider">
+    <tosca:ServiceTemplate id="FoodProvider" name="FoodProvider" targetNamespace="http://www.opentosca.org/providers/FoodProvider">
+        <tosca:TopologyTemplate>
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="oat" id="oat" type="ns0:oat" winery:location="undefined" winery:x="733" winery:y="45">
+                <tosca:Requirements>
+                    <tosca:Requirement name="ReqCanHostOat" id="requiredAHostingTrough" type="ns0:ReqCanHostOat"/>
+                </tosca:Requirements>
+                <tosca:Capabilities>
+                    <tosca:Capability name="CapDryFood" id="provideDryFood" type="ns0:CapDryFood"/>
+                </tosca:Capabilities>
+            </tosca:NodeTemplate>
+            <tosca:NodeTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="trough" id="trough" type="ns0:trough" winery:location="undefined" winery:x="727" winery:y="391">
+                <tosca:Capabilities>
+                    <tosca:Capability name="CapCanHostOat" id="CanHostOat" type="ns0:CapCanHostOat"/>
+                </tosca:Capabilities>
+            </tosca:NodeTemplate>
+            <tosca:RelationshipTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" name="con_19" id="con_19" type="ns0:hostedOn">
+                <tosca:SourceElement ref="oat"/>
+                <tosca:TargetElement ref="trough"/>
+            </tosca:RelationshipTemplate>
+        </tosca:TopologyTemplate>
+    </tosca:ServiceTemplate>
+</tosca:Definitions>

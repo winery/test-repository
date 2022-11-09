@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns2-standsOn" targetNamespace="http://winery.opentosca.org/test/ponyuniverse">
+    <tosca:RelationshipType name="standsOn" abstract="no" final="no" targetNamespace="http://winery.opentosca.org/test/ponyuniverse" winery:color="#1d4c86">
+        <tosca:DerivedFrom xmlns:ns2="http://winery.opentosca.org/test/ponyuniverse" typeRef="ns2:hostedOn"/>
+        <tosca:ValidSource xmlns:ns2="http://winery.opentosca.org/test/ponyuniverse" typeRef="ns2:ReqWarmFloor"/>
+        <tosca:ValidTarget xmlns:ns2="http://winery.opentosca.org/test/ponyuniverse" typeRef="ns2:CapWarmFloor"/>
+    </tosca:RelationshipType>
+</tosca:Definitions>

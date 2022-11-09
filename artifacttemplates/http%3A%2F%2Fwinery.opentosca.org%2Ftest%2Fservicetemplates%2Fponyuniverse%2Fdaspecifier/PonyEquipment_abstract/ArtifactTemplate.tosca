@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns8-PonyEquipment_abstract" targetNamespace="http://winery.opentosca.org/test/servicetemplates/ponyuniverse/daspecifier">
+    <tosca:ArtifactTemplate xmlns:ns0="http://winery.opentosca.org/test/ponyuniverse" type="ns0:PonyEquipment" id="PonyEquipment_abstract"/>
+</tosca:Definitions>

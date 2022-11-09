@@ -519,6 +519,14 @@
     "patternCollection" : false,
     "secureCollection" : false
   },
+  "http://winery.opentosca.org/test/ponyuniverse" : {
+    "namespace" : "http://winery.opentosca.org/test/ponyuniverse",
+    "prefix" : "ponyuniverse",
+    "readableName" : "",
+    "generatedNamespace" : false,
+    "patternCollection" : false,
+    "secureCollection" : false
+  },
   "http://www.eclipse.org/winery/model/selfservice" : {
     "namespace" : "http://www.eclipse.org/winery/model/selfservice",
     "prefix" : "selfservice",

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tosca:Definitions xmlns:tosca="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:ns2="http://www.eclipse.org/winery/model/selfservice" id="winery-defs-for_ns9-PastureProvider" targetNamespace="http://www.opentosca.org/providers/PastureProvider">
+    <tosca:ServiceTemplate id="PastureProvider" name="PastureProvider" targetNamespace="http://www.opentosca.org/providers/PastureProvider">
+        <tosca:TopologyTemplate>
+            <tosca:NodeTemplate xmlns:ns4="http://winery.opentosca.org/test/ponyuniverse" name="pasture" id="pasture" type="ns4:pasture" winery:location="undefined" winery:x="841" winery:y="245">
+                <tosca:Capabilities>
+                    <tosca:Capability name="CapWarmFloor" id="placeforaPony" type="ns4:CapWarmFloor"/>
+                </tosca:Capabilities>
+            </tosca:NodeTemplate>
+        </tosca:TopologyTemplate>
+    </tosca:ServiceTemplate>
+</tosca:Definitions>
