@@ -57,6 +57,5 @@
     "edmmType" : "saas",
     "toscaType" : "{https://edmm.uni-stuttgart.de/nodetypes}SaaS"
   } ],
-  "edmmTypeMapping" : [ ],
   "edmmTypes" : [ "auth0", "aws_aurora", "aws_beanstalk", "compute", "database", "dbaas", "dbms", "go", "mom", "mongodb", "mongodb_schema", "mysql_database", "mysql_dbms", "paas", "platform", "rabbitmq", "base", "saas", "software_component", "tomcat", "web_application", "web_server", "depends_on", "connects_to", "hosted_on" ]
 }
