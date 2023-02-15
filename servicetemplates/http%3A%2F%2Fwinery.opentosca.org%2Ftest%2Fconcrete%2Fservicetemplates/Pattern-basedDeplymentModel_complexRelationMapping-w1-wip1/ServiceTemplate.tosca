@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://winery.opentosca.org/test/concrete/servicetemplates" id="steIgeneral1-Pattern-basedDeplymentModel_complexRelationMapping-w1-wip1">
+    <ServiceTemplate name="Pattern-basedDeplymentModel_complexRelationMapping-w1-wip1" targetNamespace="http://winery.opentosca.org/test/concrete/servicetemplates" id="Pattern-basedDeplymentModel_complexRelationMapping-w1-wip1">
+        <TopologyTemplate>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="Infrastructure-As-A-Service_w1" minInstances="1" maxInstances="1" type="ot-patterns:Infrastructure-As-A-Service_w1" id="Infrastructure-As-A-Service_w1" winery:x="597" winery:y="343"/>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="ThirdPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:ThirdPattern_w1" id="ThirdPattern_w1" winery:x="650" winery:y="576"/>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="FifthPattern_w1" minInstances="1" maxInstances="1" type="ot-patterns:FifthPattern_w1" id="FifthPattern_w1" winery:x="1036" winery:y="139"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://plain.winery.org/pattern-based/nodetypes" name="NodeTypeInheritingFromAbstractType" minInstances="1" maxInstances="1" type="ntyIgeneral:NodeTypeInheritingFromAbstractType_1-w1-wip1" id="NodeTypeInheritingFromAbstractType_1-w1-wip1_0" winery:x="606" winery:y="91"/>
+            <NodeTemplate xmlns:ntyIgeneral="http://plain.winery.org/pattern-based/nodetypes" name="NodeTypeInheritingFromAbstractType" minInstances="1" maxInstances="1" type="ntyIgeneral:NodeTypeInheritingFromAbstractType_1-w1-wip1" id="NodeTypeInheritingFromAbstractType_1-w1-wip1_1" winery:x="309" winery:y="157"/>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_0">
+                <SourceElement ref="NodeTypeInheritingFromAbstractType_1-w1-wip1_0"/>
+                <TargetElement ref="Infrastructure-As-A-Service_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_1">
+                <SourceElement ref="FifthPattern_w1"/>
+                <TargetElement ref="Infrastructure-As-A-Service_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="ConnectsTo" type="ToscaBaseTypes:ConnectsTo" id="con_ConnectsTo_0">
+                <SourceElement ref="NodeTypeInheritingFromAbstractType_1-w1-wip1_0"/>
+                <TargetElement ref="FifthPattern_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_2">
+                <SourceElement ref="Infrastructure-As-A-Service_w1"/>
+                <TargetElement ref="ThirdPattern_w1"/>
+            </RelationshipTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="con_HostedOn_3">
+                <SourceElement ref="NodeTypeInheritingFromAbstractType_1-w1-wip1_1"/>
+                <TargetElement ref="Infrastructure-As-A-Service_w1"/>
+            </RelationshipTemplate>
+        </TopologyTemplate>
+    </ServiceTemplate>
+</Definitions>
