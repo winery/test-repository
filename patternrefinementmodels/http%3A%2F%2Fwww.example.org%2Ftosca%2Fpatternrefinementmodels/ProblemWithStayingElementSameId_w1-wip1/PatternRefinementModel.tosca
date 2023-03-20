@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Definitions xmlns="http://docs.oasis-open.org/tosca/ns/2011/12" xmlns:winery="http://www.opentosca.org/winery/extensions/tosca/2013/02/12" xmlns:selfservice="http://www.eclipse.org/winery/model/selfservice" xmlns:testwineryopentoscaorg="http://test.winery.opentosca.org" targetNamespace="http://www.example.org/tosca/patternrefinementmodels" id="patternrefinementmodels2-ProblemWithStayingElementSameId_w1-wip1">
+    <PatternRefinementModel isPdrm="no" name="ProblemWithStayingElementSameId_w1-wip1" targetNamespace="http://www.example.org/tosca/patternrefinementmodels">
+        <Detector>
+            <NodeTemplate xmlns:ot-patterns="http://plain.winery.opentosca.org/patterns" name="Infrastructure-As-A-Service_w1" minInstances="1" maxInstances="1" type="ot-patterns:Infrastructure-As-A-Service_w1" id="d_Infrastructure-As-A-Service_w1_0" winery:x="625" winery:y="401">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org"/>
+                </Properties>
+                <Capabilities/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral1="http://plain.winery.opentosca.org/placement/nodetypes" name="CloudProvider1_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:CloudProvider1_w1-wip1" id="d_CloudProvider1_w1-wip1_0" winery:x="573" winery:y="644">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org"/>
+                </Properties>
+                <Capabilities/>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="d_con_HostedOn_0">
+                <SourceElement ref="d_Infrastructure-As-A-Service_w1_0"/>
+                <TargetElement ref="d_CloudProvider1_w1-wip1_0"/>
+            </RelationshipTemplate>
+        </Detector>
+        <RelationMappings>
+            <RelationMapping xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" relationType="ToscaBaseTypes:HostedOn" direction="ingoing" detectorNode="d_Infrastructure-As-A-Service_w1_0" refinementNode="rs_Ubuntu_w1-wip1_0" id="relMap0"/>
+        </RelationMappings>
+        <PermutationMappings/>
+        <RefinementStructure>
+            <NodeTemplate xmlns:ntyIgeneral1="http://plain.winery.opentosca.org/placement/nodetypes" name="CloudProvider1_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:CloudProvider1_w1-wip1" id="rs_CloudProvider1_w1-wip1_0" winery:x="607" winery:y="635">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org"/>
+                </Properties>
+                <Capabilities/>
+            </NodeTemplate>
+            <NodeTemplate xmlns:ntyIgeneral1="http://plain.winery.opentosca.org/placement/nodetypes" name="Ubuntu_w1-wip1" minInstances="1" maxInstances="1" type="ntyIgeneral1:Ubuntu_w1-wip1" id="rs_Ubuntu_w1-wip1_0" winery:x="616" winery:y="470">
+                <Properties>
+                    <ex:Properties xmlns:ex="http://www.example.org" xmlns="http://www.example.org"/>
+                </Properties>
+                <Capabilities/>
+            </NodeTemplate>
+            <RelationshipTemplate xmlns:ToscaBaseTypes="http://docs.oasis-open.org/tosca/ns/2011/12/ToscaBaseTypes" name="HostedOn" type="ToscaBaseTypes:HostedOn" id="rs_con_HostedOn_0">
+                <SourceElement ref="rs_Ubuntu_w1-wip1_0"/>
+                <TargetElement ref="rs_CloudProvider1_w1-wip1_0"/>
+            </RelationshipTemplate>
+        </RefinementStructure>
+        <AttributeMappings/>
+        <StayMappings>
+            <StayMapping detectorNode="d_CloudProvider1_w1-wip1_0" refinementNode="rs_CloudProvider1_w1-wip1_0" id="stayMap0"/>
+        </StayMappings>
+        <DeploymentArtifactMappings/>
+        <PermutationOptions/>
+        <BehaviorPatternMappings/>
+    </PatternRefinementModel>
+</Definitions>
